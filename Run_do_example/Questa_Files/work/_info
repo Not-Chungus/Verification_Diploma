@@ -1,0 +1,85 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/IEEE_Digital/Installation/questasim64_10.6c/examples
+T_opt
+!s110 1772739374
+V[QQZ?e[9oDnhY?HZC7EDl0
+04 12 4 work N_bit_ALU_tb fast 0
+=1-d85ed3a67a6e-69a9db2e-6c-c88
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+vN_bit_ALU
+Z1 !s110 1772739373
+!i10b 1
+!s100 7_`[gee]>G8c`S18bgXYn2
+IS9l2EzThZbR2<?T7PEjOj2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dF:/Verification_Diploma/Run_do_example/Questa_Files
+w1755469194
+8../Do_File_Demo_code/N_bit_ALU.v
+F../Do_File_Demo_code/N_bit_ALU.v
+L0 1
+Z4 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z5 !s108 1772739373.000000
+Z6 !s107 ../Do_File_Demo_code/N_bit_ALU_tb.v|../Do_File_Demo_code/N_bit_ALU.v|../Do_File_Demo_code/N_bit_HalfAdder.v|
+Z7 !s90 -reportprogress|300|../Do_File_Demo_code/N_bit_HalfAdder.v|../Do_File_Demo_code/N_bit_ALU.v|../Do_File_Demo_code/N_bit_ALU_tb.v|
+!i113 0
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+n@n_bit_@a@l@u
+vN_bit_ALU_tb
+R1
+!i10b 1
+!s100 B<T@3kc:IFbISB1ZeM=zZ3
+IRdG5]CFDIkN1DN39A6VOL0
+R2
+R3
+w1755466312
+8../Do_File_Demo_code/N_bit_ALU_tb.v
+F../Do_File_Demo_code/N_bit_ALU_tb.v
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R0
+n@n_bit_@a@l@u_tb
+vN_bit_HalfAdder
+R1
+!i10b 1
+!s100 P8J?O0D3XYMC2FSg`>MAP3
+InlUE7[ADX8ATmJ=QPC7aC0
+R2
+R3
+w1755469238
+8../Do_File_Demo_code/N_bit_HalfAdder.v
+F../Do_File_Demo_code/N_bit_HalfAdder.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R0
+n@n_bit_@half@adder
