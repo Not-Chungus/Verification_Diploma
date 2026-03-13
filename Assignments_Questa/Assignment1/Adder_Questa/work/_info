@@ -1,0 +1,105 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Verification_Diploma/Labs_Questa/Lab1
+T_opt
+!s110 1773353296
+VfdcU1300_FT]e3=QUbRA=2
+04 8 4 work adder_tb fast 0
+=1-d85ed3a67a6e-69b33950-d4-4dc
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.6c;65
+R0
+T_opt1
+Z4 !s110 1773352831
+VbX8l^PYd=C:<`FJ=IVa;j1
+04 9 4 work adder__tb fast 0
+=1-d85ed3a67a6e-69b3377f-23b-2f5c
+R1
+R2
+n@_opt1
+R3
+R0
+vadder
+Z5 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z6 !s110 1773353332
+!i10b 1
+!s100 FLWBWGW5=h3EF:d:O[ECP2
+IUT8TML0d;nP@;PMDHEcN?1
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder_v_unit
+S1
+Z8 dF:/Verification_Diploma/Assignments_Questa/Assignment1/Adder_Questa
+w1773350738
+8../../../VS_code/Session1/Assignment1/Adder/adder.v
+F../../../VS_code/Session1/Assignment1/Adder/adder.v
+L0 1
+Z9 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z10 !s108 1773353332.000000
+Z11 !s107 ../../../VS_code/Session1/Assignment1/Adder/adder__tb.sv|../../../VS_code/Session1/Assignment1/Adder/adder.v|
+Z12 !s90 -reportprogress|300|-sv|../../../VS_code/Session1/Assignment1/Adder/adder.v|../../../VS_code/Session1/Assignment1/Adder/adder__tb.sv|+cover|-covercells|
+!i113 0
+Z13 !s102 +cover -covercells
+Z14 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vadder__tb
+R5
+R4
+!i10b 1
+!s100 g_f>9cc70FRE>@]n59d191
+I]o^=f9PZNG`fe5ZFV2HM?1
+R7
+Z15 !s105 adder__tb_sv_unit
+S1
+R8
+w1773352711
+Z16 8../../../VS_code/Session1/Assignment1/Adder/adder__tb.sv
+Z17 F../../../VS_code/Session1/Assignment1/Adder/adder__tb.sv
+L0 1
+R9
+r1
+!s85 0
+31
+!s108 1773352831.000000
+R11
+R12
+!i113 0
+R13
+R14
+R2
+vadder_tb
+R5
+R6
+!i10b 1
+!s100 f86;1RNE5b14ez5L3884U2
+I7ETa:Ci5V9zBzL6jBf1G01
+R7
+R15
+S1
+R8
+w1773353272
+R16
+R17
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R2

@@ -1,0 +1,93 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/Verification_Diploma/Assignments_Questa/Assignment1/Adder_Questa
+T_opt
+Z0 !s110 1773363563
+V4^DIS]_EKc[l:fGJ4Ia]Y1
+04 15 4 work priority_enc_tb fast 0
+=1-d85ed3a67a6e-69b3616b-26e-7940
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+vadder_tb
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1773360214
+!i10b 1
+!s100 n>@]=GGneAhoIB8Y1aMH:1
+I9Kj;i=5G7oYgB[]`VQmcd1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder__tb_sv_unit
+S1
+Z4 dF:/Verification_Diploma/Assignments_Questa/Assignment1/Encoder_Questa
+w1773355198
+8F:/Verification_Diploma/VS_code/Session1/Assignment1/Adder/adder__tb.sv
+FF:/Verification_Diploma/VS_code/Session1/Assignment1/Adder/adder__tb.sv
+L0 1
+Z5 OL;L;10.6c;65
+r1
+!s85 0
+31
+!s108 1773360213.000000
+!s107 F:/Verification_Diploma/VS_code/Session1/Assignment1/Adder/adder__tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|F:/Verification_Diploma/VS_code/Session1/Assignment1/Adder/adder__tb.sv|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vpriority_enc
+R2
+R0
+!i10b 1
+!s100 7`9n0JVT7a6Bi7U5g^USb3
+IE_QMZGbA[CiVbBLKY:j7f3
+R3
+!s105 priority_enc_v_unit
+S1
+R4
+w1773361459
+8../../../VS_code/Session1/Assignment1/Priority_encoder/priority_enc.v
+F../../../VS_code/Session1/Assignment1/Priority_encoder/priority_enc.v
+L0 1
+R5
+r1
+!s85 0
+31
+Z6 !s108 1773363563.000000
+Z7 !s107 ../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv|../../../VS_code/Session1/Assignment1/Priority_encoder/priority_enc.v|
+Z8 !s90 -reportprogress|300|-sv|../../../VS_code/Session1/Assignment1/Priority_encoder/priority_enc.v|../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv|+cover|-covercells|
+!i113 0
+Z9 !s102 +cover -covercells
+Z10 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vpriority_enc_tb
+R2
+R0
+!i10b 1
+!s100 dokcg]7e8Jlo^KWZ2oQcE0
+Ij74Ol0Zi[;;eKQ0H5[9GG0
+R3
+!s105 Priority_enc_tb_sv_unit
+S1
+R4
+w1773363556
+8../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv
+F../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1

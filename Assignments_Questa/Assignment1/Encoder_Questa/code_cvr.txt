@@ -1,0 +1,397 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: ../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           35        33         2      94.2
+
+================================Statement Details================================
+
+Statement Coverage for file ../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv --
+NOTE: The modification timestamp for source file '../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv' has been altered since compilation.
+
+    1                                                module priority_enc_tb;
+    2                                                
+    3                                                reg clk, rst;
+    4                                                reg [3:0] D;
+    5                                                
+    6                                                wire [1:0] Y;
+    7                                                wire valid;
+    8                                                
+    9                                                integer error_count;
+    10                                               integer correct_count;
+    11                                               
+    12                                               priority_enc uut ( // Instantiate the Unit Under Test (UUT)
+    13                                                   .clk(clk),
+    14                                                   .rst(rst),
+    15                                                   .D(D),
+    16                                                   .Y(Y),
+    17                                                   .valid(valid)
+    18                                               );
+    19                                               
+    20                                               
+    21                                               initial begin  // Create the clock (2ns period)
+    22              1                          1         clk = 0; 
+    23              1                          1         forever
+    24              1                         39             #5 clk = ~clk;
+    24              2                         38     
+    25                                               end
+    26                                               
+    27                                               initial begin
+    28                                                   integer i;
+    29                                               
+    30              1                          1         $display("===================================================TestBench Start===================================================");
+    31              1                          1         error_count = 0;
+    32              1                          1         correct_count = 0;
+    33              1                          1         D = 4'b0000;
+    34              1                          1         rst = 0;
+    35                                                   
+    36                                                   // Test 1: Reset Behavior
+    37              1                          1         assert_reset(D);
+    38                                               
+    39                                                 
+    40              1                          1         for (i = 0; i < 16; i = i + 1) begin
+    40              2                         16     
+    41              1                         16             D = i;
+    42              1                         16             check_result(D);
+    43                                                   end
+    44                                               
+    45              1                          1         D = 4'b0000;
+    46              1                          1         check_result(D);  //to toggle H-L D[3] for coverage
+    47                                               
+    48              1                          1         assert_reset(D);
+    49                                               
+    50                                                   
+    51                                               
+    52              1                          1         $display("%t: At end of test error count is %0d and correct count = %0d", $time, error_count, correct_count);
+    53              1                          1         $display("====================================================TestBench End====================================================");
+    54              1                          1         $stop;
+    55                                               end
+    56                                               
+    57                                               // Task to check Y and valid bit
+    58                                               task check_result (input [3:0] D);
+    59                                                   
+    60              1                         19         @(negedge clk);
+    61                                                   if (Y !== Y_expected(D) || valid !== valid_expected(D)) begin
+    62              1                    ***0***             error_count = error_count + 1;
+    63              1                    ***0***             $display("%t: Error: For D= %b, Y should be %0d (got %0d) and valid should be %b (got %b)", 
+    64                                                                $time, D, Y_expected(D), Y, valid_expected(D), valid);
+    65                                                   end
+    66                                                   else
+    67              1                         19             correct_count = correct_count + 1;
+    68                                               endtask
+    69                                               
+    70                                               function valid_expected (input [3:0] D_val);
+    71                                               
+    72                                                   if(D_val == 4'b0000)
+    73              1                          4             return 1'b0;
+    74                                                   else
+    75              1                         15             return 1'b1; 
+    76                                               
+    77                                               endfunction
+    78                                               
+    79                                               function [1:0] Y_expected (input [3:0] Din); //Golden Model
+    80                                               
+    81                                                   if(rst)
+    82              1                          2             return 2'b00;
+    83                                                   else begin
+    84                                                       if(Din[0] == 1)
+    85              1                          8                 return 2'b11;
+    86                                                       else if(Din[1] == 1)
+    87              1                          4                 return 2'b10;
+    88                                                       else if(Din[2] == 1)
+    89              1                          2                 return 2'b01;
+    90                                                       else if(Din[3] == 1)
+    91              1                          1                 return 2'b00;
+    92                                                       else
+    93              1                          2                 return 2'b00;  //as we made the dont care result in design, so they can go along
+    94                                                   end
+    95                                               endfunction
+    96                                               
+    97                                               task assert_reset(input [3:0] D);
+    98              1                          2         @(negedge clk)
+    99              1                          2         rst = 1;
+    100             1                          2         check_result(D); //Y should equal to 0 regardless of D
+    101                                                  @(negedge clk)
+    102                                                  rst = 0;
+    103                                              endtask
+    104                                              
+    105                                              endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                        11        10         1      90.9
+
+================================Branch Details================================
+
+Branch Coverage for file ../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv --
+NOTE: The modification timestamp for source file '../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv' has been altered since compilation.
+
+------------------------------------IF Branch------------------------------------
+    61                                        19     Count coming in to IF
+    61              1                    ***0***         if (Y !== Y_expected(D) || valid !== valid_expected(D)) begin
+    66              1                         19         else
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    72                                        19     Count coming in to IF
+    72              1                          4         if(D_val == 4'b0000)
+    74              1                         15         else
+Branch totals: 2 hits of 2 branches = 100.0%
+
+------------------------------------IF Branch------------------------------------
+    81                                        19     Count coming in to IF
+    81              1                          2         if(rst)
+    83              1                         17         else begin
+Branch totals: 2 hits of 2 branches = 100.0%
+
+------------------------------------IF Branch------------------------------------
+    84                                        17     Count coming in to IF
+    84              1                          8             if(Din[0] == 1)
+    86              1                          4             else if(Din[1] == 1)
+    88              1                          2             else if(Din[2] == 1)
+    90              1                          1             else if(Din[3] == 1)
+    92              1                          2             else
+Branch totals: 5 hits of 5 branches = 100.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              2         0         2       0.0
+
+================================Condition Details================================
+
+Condition Coverage for file ../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv --
+NOTE: The modification timestamp for source file '../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv' has been altered since compilation.
+
+----------------Focused Condition View-------------------
+Line       61 Item    1  ((Y !== Y_expected(D)) || (valid !== valid_expected(D)))
+Condition totals: 0 of 2 input terms covered = 0.0%
+
+                     Input Term   Covered  Reason for no coverage   Hint
+                    -----------  --------  -----------------------  --------------
+          (Y !== Y_expected(D))         N  '_1' not hit             Hit '_1'
+  (valid !== valid_expected(D))         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                       Non-masking condition(s)      
+ ---------  ---------  --------------------             -------------------------     
+  Row   1:          1  (Y !== Y_expected(D))_0          ~(valid !== valid_expected(D))
+  Row   2:    ***0***  (Y !== Y_expected(D))_1          -                             
+  Row   3:          1  (valid !== valid_expected(D))_0  ~(Y !== Y_expected(D))        
+  Row   4:    ***0***  (valid !== valid_expected(D))_1  ~(Y !== Y_expected(D))        
+
+
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    146        27       119      18.4
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../../../VS_code/Session1/Assignment1/Priority_encoder/Priority_enc_tb.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          3                                    rst           1           1      100.00 
+          3                                    clk           1           1      100.00 
+          4                                   D[3]           1           1      100.00 
+          4                                   D[2]           1           1      100.00 
+          4                                   D[1]           1           1      100.00 
+          4                                   D[0]           1           1      100.00 
+          6                                   Y[1]           1           1      100.00 
+          6                                   Y[0]           1           1      100.00 
+          7                                  valid           1           1      100.00 
+          9                         error_count[9]           0           0        0.00 
+          9                         error_count[8]           0           0        0.00 
+          9                         error_count[7]           0           0        0.00 
+          9                         error_count[6]           0           0        0.00 
+          9                         error_count[5]           0           0        0.00 
+          9                         error_count[4]           0           0        0.00 
+          9                         error_count[3]           0           0        0.00 
+          9                        error_count[31]           0           0        0.00 
+          9                        error_count[30]           0           0        0.00 
+          9                         error_count[2]           0           0        0.00 
+          9                        error_count[29]           0           0        0.00 
+          9                        error_count[28]           0           0        0.00 
+          9                        error_count[27]           0           0        0.00 
+          9                        error_count[26]           0           0        0.00 
+          9                        error_count[25]           0           0        0.00 
+          9                        error_count[24]           0           0        0.00 
+          9                        error_count[23]           0           0        0.00 
+          9                        error_count[22]           0           0        0.00 
+          9                        error_count[21]           0           0        0.00 
+          9                        error_count[20]           0           0        0.00 
+          9                         error_count[1]           0           0        0.00 
+          9                        error_count[19]           0           0        0.00 
+          9                        error_count[18]           0           0        0.00 
+          9                        error_count[17]           0           0        0.00 
+          9                        error_count[16]           0           0        0.00 
+          9                        error_count[15]           0           0        0.00 
+          9                        error_count[14]           0           0        0.00 
+          9                        error_count[13]           0           0        0.00 
+          9                        error_count[12]           0           0        0.00 
+          9                        error_count[11]           0           0        0.00 
+          9                        error_count[10]           0           0        0.00 
+          9                         error_count[0]           0           0        0.00 
+         10                       correct_count[9]           0           0        0.00 
+         10                       correct_count[8]           0           0        0.00 
+         10                       correct_count[7]           0           0        0.00 
+         10                       correct_count[6]           0           0        0.00 
+         10                       correct_count[5]           0           0        0.00 
+         10                       correct_count[4]           0           1       50.00 
+         10                       correct_count[3]           1           1      100.00 
+         10                      correct_count[31]           0           0        0.00 
+         10                      correct_count[30]           0           0        0.00 
+         10                       correct_count[2]           1           1      100.00 
+         10                      correct_count[29]           0           0        0.00 
+         10                      correct_count[28]           0           0        0.00 
+         10                      correct_count[27]           0           0        0.00 
+         10                      correct_count[26]           0           0        0.00 
+         10                      correct_count[25]           0           0        0.00 
+         10                      correct_count[24]           0           0        0.00 
+         10                      correct_count[23]           0           0        0.00 
+         10                      correct_count[22]           0           0        0.00 
+         10                      correct_count[21]           0           0        0.00 
+         10                      correct_count[20]           0           0        0.00 
+         10                       correct_count[1]           1           1      100.00 
+         10                      correct_count[19]           0           0        0.00 
+         10                      correct_count[18]           0           0        0.00 
+         10                      correct_count[17]           0           0        0.00 
+         10                      correct_count[16]           0           0        0.00 
+         10                      correct_count[15]           0           0        0.00 
+         10                      correct_count[14]           0           0        0.00 
+         10                      correct_count[13]           0           0        0.00 
+         10                      correct_count[12]           0           0        0.00 
+         10                      correct_count[11]           0           0        0.00 
+         10                      correct_count[10]           0           0        0.00 
+         10                       correct_count[0]           1           1      100.00 
+
+Total Node Count     =         73 
+Toggled Node Count   =         13 
+Untoggled Node Count =         60 
+
+Toggle Coverage      =       18.4% (27 of 146 bins)
+
+=================================================================================
+=== File: ../../../VS_code/Session1/Assignment1/Priority_encoder/priority_enc.v
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            9         9         0     100.0
+
+================================Statement Details================================
+
+Statement Coverage for file ../../../VS_code/Session1/Assignment1/Priority_encoder/priority_enc.v --
+
+    1                                                module priority_enc (
+    2                                                input  clk,
+    3                                                input  rst,
+    4                                                input  [3:0] D,	
+    5                                                output reg [1:0] Y,   //
+    6                                                output reg valid
+    7                                                );
+    8                                                
+    9               1                         19     always @(posedge clk) begin
+    10                                                 if (rst) begin
+    11              1                          2          Y <= 2'b00;
+    12              1                          2     	 valid <= ~(|D)? 1'b0: 1'b1; //
+    13                                                 end else begin
+    14                                                 	casex (D)
+    15              1                          1       		4'b1000: Y <= 0;
+    16              1                          2       		4'bX100: Y <= 1;
+    17              1                          4       		4'bXX10: Y <= 2;
+    18              1                          8       		4'bXXX1: Y <= 3;
+    19              1                          2     		default: Y <= 0;  //
+    20                                                 	endcase               
+    21              1                         17       	valid <= ~(|D)? 1'b0: 1'b1;   //
+    22                                                   end
+    23                                               end
+    24                                               endmodule
+    25                                               
+    26                                               
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         7         7         0     100.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../../../VS_code/Session1/Assignment1/Priority_encoder/priority_enc.v --
+
+------------------------------------IF Branch------------------------------------
+    10                                        19     Count coming in to IF
+    10              1                          2       if (rst) begin
+    13              1                         17       end else begin
+Branch totals: 2 hits of 2 branches = 100.0%
+
+------------------------------------CASE Branch------------------------------------
+    14                                        17     Count coming in to CASE
+    15              1                          1       		4'b1000: Y <= 0;
+    16              1                          2       		4'bX100: Y <= 1;
+    17              1                          4       		4'bXX10: Y <= 2;
+    18              1                          8       		4'bXXX1: Y <= 3;
+    19              1                          2     		default: Y <= 0;  //
+Branch totals: 5 hits of 5 branches = 100.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     18        18         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../../../VS_code/Session1/Assignment1/Priority_encoder/priority_enc.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          2                                    clk           1           1      100.00 
+          3                                    rst           1           1      100.00 
+          4                                   D[3]           1           1      100.00 
+          4                                   D[2]           1           1      100.00 
+          4                                   D[1]           1           1      100.00 
+          4                                   D[0]           1           1      100.00 
+          5                                   Y[1]           1           1      100.00 
+          5                                   Y[0]           1           1      100.00 
+          6                                  valid           1           1      100.00 
+
+Total Node Count     =          9 
+Toggled Node Count   =          9 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (18 of 18 bins)
+
+
+Total Coverage By File (code coverage only, filtered view): 54.3%
+

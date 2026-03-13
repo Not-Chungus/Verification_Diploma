@@ -1,0 +1,347 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: ../../../VS_code/Session1/Assignment1/Adder/adder.v
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            3         3         0     100.0
+
+================================Statement Details================================
+
+Statement Coverage for file ../../../VS_code/Session1/Assignment1/Adder/adder.v --
+
+    1                                                module adder (
+    2                                                    input clk,
+    3                                                    input reset,
+    4                                                    input signed [3:0] A, // Input data A in 2'
+    5                                                    input signed [3:0] B, // Input data B in 2'
+    6                                                
+    7                                                    output reg signed [4:0] C // Adder output 
+    8                                                    );
+    9                                                
+    10                                               // Register output C
+    11              1                         15     always @(posedge clk or posedge reset) begin //active high 
+    12                                                   if (reset)
+    13              1                          6             C <= 5'b0;
+    14                                                   else
+    15              1                          9             C <= A + B;
+    16                                               end
+    17                                               
+    18                                               endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         2         2         0     100.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../../../VS_code/Session1/Assignment1/Adder/adder.v --
+
+------------------------------------IF Branch------------------------------------
+    12                                        15     Count coming in to IF
+    12              1                          6         if (reset)
+    14              1                          9         else
+Branch totals: 2 hits of 2 branches = 100.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     30        30         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../../../VS_code/Session1/Assignment1/Adder/adder.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          2                                    clk           1           1      100.00 
+          3                                  reset           1           1      100.00 
+          4                                   A[3]           1           1      100.00 
+          4                                   A[2]           1           1      100.00 
+          4                                   A[1]           1           1      100.00 
+          4                                   A[0]           1           1      100.00 
+          5                                   B[3]           1           1      100.00 
+          5                                   B[2]           1           1      100.00 
+          5                                   B[1]           1           1      100.00 
+          5                                   B[0]           1           1      100.00 
+          7                                   C[4]           1           1      100.00 
+          7                                   C[3]           1           1      100.00 
+          7                                   C[2]           1           1      100.00 
+          7                                   C[1]           1           1      100.00 
+          7                                   C[0]           1           1      100.00 
+
+Total Node Count     =         15 
+Toggled Node Count   =         15 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (30 of 30 bins)
+
+=================================================================================
+=== File: ../../../VS_code/Session1/Assignment1/Adder/adder__tb.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           49        47         2      95.9
+
+================================Statement Details================================
+
+Statement Coverage for file ../../../VS_code/Session1/Assignment1/Adder/adder__tb.sv --
+
+    1                                                module adder_tb;
+    2                                                
+    3                                                // inputs to instantiated Adder
+    4                                                reg clk, reset;
+    5                                                reg signed [3:0] A; // Input data A: 2's complement
+    6                                                reg signed [3:0] B; // Input data B: 2's complement
+    7                                                
+    8                                                // Output of Adder
+    9                                                wire signed [4:0] C; // Adder output: 2's complement
+    10                                               
+    11                                               integer error_count; // 32-bit signed
+    12                                               integer correct_count; // 32-bit signed
+    13                                               
+    14                                               localparam MAXPOS = 7, ZERO = 0, MAXNEG = -8;
+    15                                               
+    16                                               adder a1 (
+    17                                                   .clk(clk),
+    18                                                   .reset(reset),
+    19                                                   .A(A),        // Input data A: signed
+    20                                                   .B(B),        // Input data B: signed
+    21                                                   .C(C)         // Adder output: signed
+    22                                               );
+    23                                               
+    24                                               // Create the clock and reset
+    25                                               initial begin
+    26              1                          1         clk = 0;
+    27              1                          1         forever
+    28              1                         25             #1 clk = ~clk;
+    28              2                         24     
+    29                                               end
+    30                                               
+    31                                               initial begin
+    32              1                          1         $display("===================================================TestBench Start===================================================");
+    33              1                          1         error_count = 0;
+    34              1                          1         correct_count = 0;
+    35              1                          1         A = 0;
+    36              1                          1         B = 0;
+    37                                               
+    38                                                   // ADDER_1
+    39              1                          1         assert_reset;
+    40                                               
+    41                                                   // Apply all permutations of max pos, max neg, and 0
+    42                                               
+    43                                                   // ADDER_2
+    44              1                          1         A=MAXNEG; B=MAXNEG;
+    44              2                          1     
+    45              1                          1         check_result(-16);
+    46                                                   // ADDER_3
+    47              1                          1         A=MAXNEG; B=ZERO;
+    47              2                          1     
+    48              1                          1         check_result(MAXNEG);
+    49                                                   // ADDER_8
+    50              1                          1         A=MAXPOS; B=MAXNEG;
+    50              2                          1     
+    51              1                          1         check_result(-1);
+    52                                                   // ADDER_4
+    53              1                          1         A=MAXNEG; B=MAXPOS;
+    53              2                          1     
+    54              1                          1         check_result(-1);
+    55                                                   //reset
+    56              1                          1         assert_reset;
+    57                                                   // ADDER_5
+    58              1                          1         A=ZERO; B=MAXNEG;
+    58              2                          1     
+    59              1                          1         check_result(MAXNEG);
+    60                                                   // ADDER_6
+    61              1                          1         A=ZERO; B=ZERO;
+    61              2                          1     
+    62              1                          1         check_result(ZERO);
+    63                                                   // ADDER_7
+    64              1                          1         A=ZERO; B=MAXPOS;
+    64              2                          1     
+    65              1                          1         check_result(MAXPOS);
+    66                                                   //reset
+    67              1                          1         assert_reset;
+    68                                                   // ADDER_9
+    69              1                          1         A=MAXPOS; B=ZERO;
+    69              2                          1     
+    70              1                          1         check_result(MAXPOS);
+    71                                                   // ADDER_10
+    72              1                          1         A=MAXPOS; B=MAXPOS;
+    72              2                          1     
+    73              1                          1         check_result(14);
+    74                                               
+    75              1                          1         $display("%t: At end of test error count is %0d and correct count = %0d", $time, error_count, correct_count);
+    76              1                          1         $display("====================================================TestBench End====================================================");
+    77              1                          1         $stop;
+    78                                               end
+    79                                               
+    80                                               task check_result (input signed [4:0] expected_result);
+    81              1                         12         @(negedge clk);
+    82                                                   if (expected_result !== C) begin
+    83              1                    ***0***             error_count = error_count + 1;
+    84              1                    ***0***             $display("%t: Error: For A= %0d, and B=%0d C should equal %0d but is %0d ", $time, A, B, expected_result, C);
+    85                                                   end
+    86                                                   else
+    87              1                         12             correct_count = correct_count + 1;
+    88                                               endtask
+    89                                               
+    90                                               task assert_reset;
+    91                                                   //assert reset
+    92              1                          3         reset = 1;
+    93              1                          3         check_result(0);
+    94                                                   //desert reset
+    95              1                          3         reset = 0;
+    96                                               endtask
+    97                                               
+    98                                               endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         2         1         1      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../../../VS_code/Session1/Assignment1/Adder/adder__tb.sv --
+
+------------------------------------IF Branch------------------------------------
+    82                                        12     Count coming in to IF
+    82              1                    ***0***         if (expected_result !== C) begin
+    86              1                         12         else
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    158        37       121      23.4
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../../../VS_code/Session1/Assignment1/Adder/adder__tb.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          4                                  reset           1           1      100.00 
+          4                                    clk           1           1      100.00 
+          5                                   A[3]           1           1      100.00 
+          5                                   A[2]           1           1      100.00 
+          5                                   A[1]           1           1      100.00 
+          5                                   A[0]           1           1      100.00 
+          6                                   B[3]           1           1      100.00 
+          6                                   B[2]           1           1      100.00 
+          6                                   B[1]           1           1      100.00 
+          6                                   B[0]           1           1      100.00 
+          9                                   C[4]           1           1      100.00 
+          9                                   C[3]           1           1      100.00 
+          9                                   C[2]           1           1      100.00 
+          9                                   C[1]           1           1      100.00 
+          9                                   C[0]           1           1      100.00 
+         11                         error_count[9]           0           0        0.00 
+         11                         error_count[8]           0           0        0.00 
+         11                         error_count[7]           0           0        0.00 
+         11                         error_count[6]           0           0        0.00 
+         11                         error_count[5]           0           0        0.00 
+         11                         error_count[4]           0           0        0.00 
+         11                         error_count[3]           0           0        0.00 
+         11                        error_count[31]           0           0        0.00 
+         11                        error_count[30]           0           0        0.00 
+         11                         error_count[2]           0           0        0.00 
+         11                        error_count[29]           0           0        0.00 
+         11                        error_count[28]           0           0        0.00 
+         11                        error_count[27]           0           0        0.00 
+         11                        error_count[26]           0           0        0.00 
+         11                        error_count[25]           0           0        0.00 
+         11                        error_count[24]           0           0        0.00 
+         11                        error_count[23]           0           0        0.00 
+         11                        error_count[22]           0           0        0.00 
+         11                        error_count[21]           0           0        0.00 
+         11                        error_count[20]           0           0        0.00 
+         11                         error_count[1]           0           0        0.00 
+         11                        error_count[19]           0           0        0.00 
+         11                        error_count[18]           0           0        0.00 
+         11                        error_count[17]           0           0        0.00 
+         11                        error_count[16]           0           0        0.00 
+         11                        error_count[15]           0           0        0.00 
+         11                        error_count[14]           0           0        0.00 
+         11                        error_count[13]           0           0        0.00 
+         11                        error_count[12]           0           0        0.00 
+         11                        error_count[11]           0           0        0.00 
+         11                        error_count[10]           0           0        0.00 
+         11                         error_count[0]           0           0        0.00 
+         12                       correct_count[9]           0           0        0.00 
+         12                       correct_count[8]           0           0        0.00 
+         12                       correct_count[7]           0           0        0.00 
+         12                       correct_count[6]           0           0        0.00 
+         12                       correct_count[5]           0           0        0.00 
+         12                       correct_count[4]           0           0        0.00 
+         12                       correct_count[3]           0           1       50.00 
+         12                      correct_count[31]           0           0        0.00 
+         12                      correct_count[30]           0           0        0.00 
+         12                       correct_count[2]           1           1      100.00 
+         12                      correct_count[29]           0           0        0.00 
+         12                      correct_count[28]           0           0        0.00 
+         12                      correct_count[27]           0           0        0.00 
+         12                      correct_count[26]           0           0        0.00 
+         12                      correct_count[25]           0           0        0.00 
+         12                      correct_count[24]           0           0        0.00 
+         12                      correct_count[23]           0           0        0.00 
+         12                      correct_count[22]           0           0        0.00 
+         12                      correct_count[21]           0           0        0.00 
+         12                      correct_count[20]           0           0        0.00 
+         12                       correct_count[1]           1           1      100.00 
+         12                      correct_count[19]           0           0        0.00 
+         12                      correct_count[18]           0           0        0.00 
+         12                      correct_count[17]           0           0        0.00 
+         12                      correct_count[16]           0           0        0.00 
+         12                      correct_count[15]           0           0        0.00 
+         12                      correct_count[14]           0           0        0.00 
+         12                      correct_count[13]           0           0        0.00 
+         12                      correct_count[12]           0           0        0.00 
+         12                      correct_count[11]           0           0        0.00 
+         12                      correct_count[10]           0           0        0.00 
+         12                       correct_count[0]           1           1      100.00 
+
+Total Node Count     =         79 
+Toggled Node Count   =         18 
+Untoggled Node Count =         61 
+
+Toggle Coverage      =       23.4% (37 of 158 bins)
+
+
+Total Coverage By File (code coverage only, filtered view): 68.9%
+
