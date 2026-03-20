@@ -1,0 +1,475 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: ../../../VS_code/Session1/Assignment1/ALU/ALU.v
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            9         9         0     100.0
+
+================================Statement Details================================
+
+Statement Coverage for file ../../../VS_code/Session1/Assignment1/ALU/ALU.v --
+
+    1                                                module ALU_4_bit (
+    2                                                    input  clk,
+    3                                                    input  reset,
+    4                                                    input  [1:0] Opcode,	// The opcode
+    5                                                    input  signed [3:0] A,	// Input data A in 2's complement
+    6                                                    input  signed [3:0] B,	// Input data B in 2's complement
+    7                                                
+    8                                                    output reg signed [4:0] C // ALU output in 2's complement
+    9                                                
+    10                                               	);
+    11                                               
+    12                                                  reg signed [4:0] 	    Alu_out; // ALU output in 2's complement
+    13                                               
+    14                                                  localparam 		    Add	           = 2'b00; // A + B
+    15                                                  localparam 		    Sub	           = 2'b01; // A - B
+    16                                                  localparam 		    Not_A	         = 2'b10; // ~A
+    17                                                  localparam 		    ReductionOR_B  = 2'b11; // |B
+    18                                               
+    19                                                  // Do the operation
+    20              1                         41        always @* begin
+    21                                                     case (Opcode)
+    22              1                         10           	Add:            Alu_out = A + B;
+    23              1                         10           	Sub:            Alu_out = A - B;
+    24              1                         10           	Not_A:          Alu_out = ~A;
+    25              1                         10           	ReductionOR_B:  Alu_out = |B;
+    26              1                          1             default:  Alu_out = 5'b0;
+    27                                                     endcase
+    28                                                  end // always @ *
+    29                                               
+    30                                                  // Register output C
+    31              1                         37        always @(posedge clk or posedge reset) begin
+    32                                                     if (reset)
+    33              1                          4     	     C <= 5'b0;
+    34                                                     else
+    35              1                         33     	     C<= Alu_out;
+    36                                                  end
+    37                                               
+    38                                               endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         7         7         0     100.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../../../VS_code/Session1/Assignment1/ALU/ALU.v --
+
+------------------------------------CASE Branch------------------------------------
+    21                                        41     Count coming in to CASE
+    22              1                         10           	Add:            Alu_out = A + B;
+    23              1                         10           	Sub:            Alu_out = A - B;
+    24              1                         10           	Not_A:          Alu_out = ~A;
+    25              1                         10           	ReductionOR_B:  Alu_out = |B;
+    26              1                          1             default:  Alu_out = 5'b0;
+Branch totals: 5 hits of 5 branches = 100.0%
+
+------------------------------------IF Branch------------------------------------
+    32                                        37     Count coming in to IF
+    32              1                          4           if (reset)
+    34              1                         33           else
+Branch totals: 2 hits of 2 branches = 100.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                     44        44         0     100.0
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../../../VS_code/Session1/Assignment1/ALU/ALU.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          2                                    clk           1           1      100.00 
+          3                                  reset           1           1      100.00 
+          4                              Opcode[1]           1           1      100.00 
+          4                              Opcode[0]           1           1      100.00 
+          5                                   A[3]           1           1      100.00 
+          5                                   A[2]           1           1      100.00 
+          5                                   A[1]           1           1      100.00 
+          5                                   A[0]           1           1      100.00 
+          6                                   B[3]           1           1      100.00 
+          6                                   B[2]           1           1      100.00 
+          6                                   B[1]           1           1      100.00 
+          6                                   B[0]           1           1      100.00 
+          8                                   C[4]           1           1      100.00 
+          8                                   C[3]           1           1      100.00 
+          8                                   C[2]           1           1      100.00 
+          8                                   C[1]           1           1      100.00 
+          8                                   C[0]           1           1      100.00 
+         12                             Alu_out[4]           1           1      100.00 
+         12                             Alu_out[3]           1           1      100.00 
+         12                             Alu_out[2]           1           1      100.00 
+         12                             Alu_out[1]           1           1      100.00 
+         12                             Alu_out[0]           1           1      100.00 
+
+Total Node Count     =         22 
+Toggled Node Count   =         22 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =      100.0% (44 of 44 bins)
+
+=================================================================================
+=== File: ../../../VS_code/Session1/Assignment1/ALU/ALU_tb.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                          105       100         5      95.2
+
+================================Statement Details================================
+
+Statement Coverage for file ../../../VS_code/Session1/Assignment1/ALU/ALU_tb.sv --
+NOTE: The modification timestamp for source file '../../../VS_code/Session1/Assignment1/ALU/ALU_tb.sv' has been altered since compilation.
+
+    1                                                module ALU_tb;
+    2                                                
+    3                                                
+    4                                                
+    5                                                reg  clk,reset;
+    6                                                reg  [1:0] Opcode;	// The opcode
+    7                                                reg  signed [3:0] A;	// Input data A in 2's complement
+    8                                                reg  signed [3:0] B;	// Input data B in 2's complement
+    9                                                
+    10                                               wire  signed [4:0] C; // ALU output in 2's complement
+    11                                               logic signed [4:0] expected_C;
+    12                                               
+    13                                               integer error_count;
+    14                                               integer correct_count;
+    15                                               
+    16                                               ALU_4_bit uut ( // Instantiate the Unit Under Test (UUT)
+    17                                                   .clk(clk),
+    18                                                   .reset(reset),
+    19                                                   .Opcode(Opcode),
+    20                                                   .A(A),
+    21                                                   .B(B),
+    22                                                   .C(C)
+    23                                               );
+    24                                               
+    25                                               
+    26                                               initial begin  // Create the clock (2ns period)
+    27              1                          1         clk = 0; 
+    28              1                          1         forever
+    29              1                         91             #5 clk = ~clk;
+    29              2                         90     
+    30                                               end
+    31                                               
+    32                                               localparam MAXPOS = 7, ZERO = 0, MAXNEG = -8;
+    33                                               localparam 		    Add	           = 2'b00; // A + B
+    34                                               localparam 		    Sub	           = 2'b01; // A - B
+    35                                               localparam 		    Not_A	       = 2'b10; // ~A
+    36                                               localparam 		    ReductionOR_B  = 2'b11; // |B
+    37                                               
+    38                                               initial begin
+    39              1                          1         A = 0;
+    40              1                          1         B = 0;
+    41              1                          1         error_count = 0;
+    42              1                          1         correct_count = 0;
+    43              1                          1         $display("===================================================TestBench Start===================================================");
+    44                                               
+    45                                                   // Test 1: Reset Behavior
+    46              1                          1         assert_check;
+    47              1                          1     
+    48                                                   // Test 2: ADD Operation
+    49                                                   A = MAXNEG; B = MAXNEG; Opcode = Add; compute_expected;
+    50              1                          1         A = MAXPOS; B = MAXPOS; compute_expected;
+    50              2                          1     
+    50              3                          1     
+    50              4                          1     
+    51              1                          1         A = MAXPOS; B = MAXNEG; compute_expected;
+    51              2                          1     
+    51              3                          1     
+    52              1                          1         A = MAXNEG; B = MAXPOS; compute_expected;
+    52              2                          1     
+    52              3                          1     
+    53              1                          1         A = 0; B = MAXPOS; compute_expected;
+    53              2                          1     
+    53              3                          1     
+    54              1                          1         A = MAXNEG; B = 0; compute_expected;
+    54              2                          1     
+    54              3                          1     
+    55              1                          1         A = 0; B = MAXNEG; compute_expected;
+    55              2                          1     
+    55              3                          1     
+    56              1                          1         A = MAXPOS; B = 0; compute_expected;
+    56              2                          1     
+    56              3                          1     
+    57              1                          1         A = 0; B = 0; compute_expected;
+    57              2                          1     
+    57              3                          1     
+    58              1                          1     
+    58              2                          1     
+    58              3                          1     
+    59                                                   // Test 3: SUB Operation
+    60                                                   A = MAXNEG; B = MAXNEG; Opcode = Sub; compute_expected;
+    61              1                          1         A = MAXPOS; B = MAXPOS; compute_expected;
+    61              2                          1     
+    61              3                          1     
+    61              4                          1     
+    62              1                          1         A = MAXPOS; B = MAXNEG; compute_expected;
+    62              2                          1     
+    62              3                          1     
+    63              1                          1         A = MAXNEG; B = MAXPOS; compute_expected;
+    63              2                          1     
+    63              3                          1     
+    64              1                          1         A = 0; B = MAXPOS; compute_expected;
+    64              2                          1     
+    64              3                          1     
+    65              1                          1         A = MAXNEG; B = 0; compute_expected;
+    65              2                          1     
+    65              3                          1     
+    66              1                          1         A = 0; B = MAXNEG; compute_expected;
+    66              2                          1     
+    66              3                          1     
+    67              1                          1         A = MAXPOS; B = 0; compute_expected;
+    67              2                          1     
+    67              3                          1     
+    68              1                          1         A = 0; B = 0; compute_expected;
+    68              2                          1     
+    68              3                          1     
+    69              1                          1     
+    69              2                          1     
+    69              3                          1     
+    70                                                   // Test 4: ~A (Bitwise Inversion)
+    71                                                   repeat(10) begin
+    72              1                         10             Opcode = Not_A;
+    73              1                         10             A = $random;
+    74              1                         10             compute_expected;
+    75              1                         10         end
+    76                                               
+    77                                                   // Test 4 (cont): |B (Reduction OR)
+    78                                                   Opcode = ReductionOR_B;
+    79              1                          1         repeat(10) begin
+    80              1                         10             B = $random;
+    81              1                         10             compute_expected;
+    82              1                         10         end
+    83                                               
+    84                                                   // Test 5: All opcodes for fixed values
+    85                                                   A = 3;
+    86              1                          1         B = -2;
+    87              1                          1         Opcode = 2'b00; compute_expected;
+    88              1                          1         Opcode = 2'b01; compute_expected;
+    88              2                          1     
+    89              1                          1         Opcode = 2'b10; compute_expected;
+    89              2                          1     
+    90              1                          1         Opcode = 2'b11; compute_expected;
+    90              2                          1     
+    91              1                          1     
+    91              2                          1     
+    92                                                   // Test 6: Final check and wrap-up
+    93                                                   assert_check;
+    94              1                          1         $display("%t: At end of test error count is %0d and correct count = %0d", $time, error_count, correct_count);
+    95              1                          1         $display("====================================================TestBench End====================================================");
+    96              1                          1         $stop;
+    97              1                          1     end
+    98                                               
+    99                                               task compute_expected;
+    100                                                  if (Opcode == Add) expected_C = A + B;
+    101             1                         10         else if (Opcode == Sub) expected_C = A - B;
+    102             1                         10         else if (Opcode == Not_A) expected_C = ~A;
+    103             1                         11         else if (Opcode == ReductionOR_B) expected_C = |B;
+    104             1                         11         else expected_C = 5'b00;
+    105             1                    ***0***     
+    106                                                  check_result;
+    107             1                         42     endtask
+    108                                              
+    109                                              task assert_check;
+    110                                                  @(negedge clk)
+    111             1                          2         reset = 1;
+    112             1                          2         @(negedge clk);
+    113                                                  if (C !== 0) begin
+    114             1                    ***0***             error_count = error_count + 1;
+    115             1                    ***0***             $display("Error Reseting");
+    116                                                  end
+    117                                                  else
+    118             1                          2             correct_count = correct_count + 1;
+    119             1                          2         reset = 0;
+    120                                              endtask
+    121                                              
+    122                                              task check_result;
+    123             1                         42         @(negedge clk);
+    124                                                  if (C !== expected_C) begin
+    125             1                    ***0***             error_count = error_count + 1;
+    126             1                    ***0***             $display("%t: Error: For A=%0d, B=%0d, C should equal %0d but is %0d", 
+    127                                                               $time, A, B, expected_C, C);
+    128                                                  end
+    129                                                  else
+    130             1                         42             correct_count = correct_count + 1;
+    131                                              endtask
+    132                                              
+    133                                              endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         9         6         3      66.6
+
+================================Branch Details================================
+
+Branch Coverage for file ../../../VS_code/Session1/Assignment1/ALU/ALU_tb.sv --
+NOTE: The modification timestamp for source file '../../../VS_code/Session1/Assignment1/ALU/ALU_tb.sv' has been altered since compilation.
+
+------------------------------------IF Branch------------------------------------
+    101                                       42     Count coming in to IF
+    101             1                         10         else if (Opcode == Sub) expected_C = A - B;
+    102             1                         10         else if (Opcode == Not_A) expected_C = ~A;
+    103             1                         11         else if (Opcode == ReductionOR_B) expected_C = |B;
+    104             1                         11         else expected_C = 5'b00;
+    105             1                    ***0***     
+Branch totals: 4 hits of 5 branches = 80.0%
+
+------------------------------------IF Branch------------------------------------
+    113                                        2     Count coming in to IF
+    113             1                    ***0***         if (C !== 0) begin
+    117             1                          2         else
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    124                                       42     Count coming in to IF
+    124             1                    ***0***         if (C !== expected_C) begin
+    129             1                         42         else
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    172        55       117      31.9
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../../../VS_code/Session1/Assignment1/ALU/ALU_tb.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          5                                  reset           1           1      100.00 
+          5                                    clk           1           1      100.00 
+          6                              Opcode[1]           1           1      100.00 
+          6                              Opcode[0]           1           1      100.00 
+          7                                   A[3]           1           1      100.00 
+          7                                   A[2]           1           1      100.00 
+          7                                   A[1]           1           1      100.00 
+          7                                   A[0]           1           1      100.00 
+          8                                   B[3]           1           1      100.00 
+          8                                   B[2]           1           1      100.00 
+          8                                   B[1]           1           1      100.00 
+          8                                   B[0]           1           1      100.00 
+         10                                   C[4]           1           1      100.00 
+         10                                   C[3]           1           1      100.00 
+         10                                   C[2]           1           1      100.00 
+         10                                   C[1]           1           1      100.00 
+         10                                   C[0]           1           1      100.00 
+         11                          expected_C[4]           1           1      100.00 
+         11                          expected_C[3]           1           1      100.00 
+         11                          expected_C[2]           1           1      100.00 
+         11                          expected_C[1]           1           1      100.00 
+         11                          expected_C[0]           1           1      100.00 
+         13                         error_count[9]           0           0        0.00 
+         13                         error_count[8]           0           0        0.00 
+         13                         error_count[7]           0           0        0.00 
+         13                         error_count[6]           0           0        0.00 
+         13                         error_count[5]           0           0        0.00 
+         13                         error_count[4]           0           0        0.00 
+         13                         error_count[3]           0           0        0.00 
+         13                        error_count[31]           0           0        0.00 
+         13                        error_count[30]           0           0        0.00 
+         13                         error_count[2]           0           0        0.00 
+         13                        error_count[29]           0           0        0.00 
+         13                        error_count[28]           0           0        0.00 
+         13                        error_count[27]           0           0        0.00 
+         13                        error_count[26]           0           0        0.00 
+         13                        error_count[25]           0           0        0.00 
+         13                        error_count[24]           0           0        0.00 
+         13                        error_count[23]           0           0        0.00 
+         13                        error_count[22]           0           0        0.00 
+         13                        error_count[21]           0           0        0.00 
+         13                        error_count[20]           0           0        0.00 
+         13                         error_count[1]           0           0        0.00 
+         13                        error_count[19]           0           0        0.00 
+         13                        error_count[18]           0           0        0.00 
+         13                        error_count[17]           0           0        0.00 
+         13                        error_count[16]           0           0        0.00 
+         13                        error_count[15]           0           0        0.00 
+         13                        error_count[14]           0           0        0.00 
+         13                        error_count[13]           0           0        0.00 
+         13                        error_count[12]           0           0        0.00 
+         13                        error_count[11]           0           0        0.00 
+         13                        error_count[10]           0           0        0.00 
+         13                         error_count[0]           0           0        0.00 
+         14                       correct_count[9]           0           0        0.00 
+         14                       correct_count[8]           0           0        0.00 
+         14                       correct_count[7]           0           0        0.00 
+         14                       correct_count[6]           0           0        0.00 
+         14                       correct_count[5]           0           1       50.00 
+         14                       correct_count[4]           1           1      100.00 
+         14                       correct_count[3]           1           1      100.00 
+         14                      correct_count[31]           0           0        0.00 
+         14                      correct_count[30]           0           0        0.00 
+         14                       correct_count[2]           1           1      100.00 
+         14                      correct_count[29]           0           0        0.00 
+         14                      correct_count[28]           0           0        0.00 
+         14                      correct_count[27]           0           0        0.00 
+         14                      correct_count[26]           0           0        0.00 
+         14                      correct_count[25]           0           0        0.00 
+         14                      correct_count[24]           0           0        0.00 
+         14                      correct_count[23]           0           0        0.00 
+         14                      correct_count[22]           0           0        0.00 
+         14                      correct_count[21]           0           0        0.00 
+         14                      correct_count[20]           0           0        0.00 
+         14                       correct_count[1]           1           1      100.00 
+         14                      correct_count[19]           0           0        0.00 
+         14                      correct_count[18]           0           0        0.00 
+         14                      correct_count[17]           0           0        0.00 
+         14                      correct_count[16]           0           0        0.00 
+         14                      correct_count[15]           0           0        0.00 
+         14                      correct_count[14]           0           0        0.00 
+         14                      correct_count[13]           0           0        0.00 
+         14                      correct_count[12]           0           0        0.00 
+         14                      correct_count[11]           0           0        0.00 
+         14                      correct_count[10]           0           0        0.00 
+         14                       correct_count[0]           1           1      100.00 
+
+Total Node Count     =         86 
+Toggled Node Count   =         27 
+Untoggled Node Count =         59 
+
+Toggle Coverage      =       31.9% (55 of 172 bins)
+
+
+Total Coverage By File (code coverage only, filtered view): 74.2%
+

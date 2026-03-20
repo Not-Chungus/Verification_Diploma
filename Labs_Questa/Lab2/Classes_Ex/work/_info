@@ -1,0 +1,95 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/IEEE_Digital/Installation/questasim64_10.6c/examples
+T_opt
+Z0 !s110 1774014819
+VJeQm2EeX1_ZW7]UnWN1Xj1
+04 7 4 work testing fast 0
+=1-d85ed3a67a6e-69bd5163-19e-1c74
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+XMemTrans_sv_unit
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 DXx4 work 3 pkg 0 22 :_>7ORP[Ca03AV9W^fbb11
+V>5XCIVC:DT5GV23ml3oaI2
+r1
+!s85 0
+31
+!i10b 1
+!s100 gY3aVcjA`;lMU=AM>e@Qg1
+I>5XCIVC:DT5GV23ml3oaI2
+!i103 1
+S1
+Z4 dF:/Verification_Diploma/Labs_Questa/Lab2/Classes_Ex
+Z5 w1774014611
+Z6 8../../../VS_code/Session2/Lab2/Classes_Ex/MemTrans.sv
+Z7 F../../../VS_code/Session2/Lab2/Classes_Ex/MemTrans.sv
+L0 1
+Z8 OL;L;10.6c;65
+Z9 !s108 1774014819.000000
+Z10 !s107 ../../../VS_code/Session2/Lab2/Classes_Ex/Packege.sv|../../../VS_code/Session2/Lab2/Classes_Ex/MemTrans.sv|
+Z11 !s90 -reportprogress|300|-sv|../../../VS_code/Session2/Lab2/Classes_Ex/MemTrans.sv|../../../VS_code/Session2/Lab2/Classes_Ex/Packege.sv|+cover|-covercells|
+!i113 0
+Z12 !s102 +cover -covercells
+Z13 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@mem@trans_sv_unit
+Xpkg
+R2
+R0
+!i10b 1
+!s100 FZ<oJ:2Z3iWBcb>inoa3a3
+I:_>7ORP[Ca03AV9W^fbb11
+V:_>7ORP[Ca03AV9W^fbb11
+S1
+R4
+w1774013955
+8../../../VS_code/Session2/Lab2/Classes_Ex/Packege.sv
+F../../../VS_code/Session2/Lab2/Classes_Ex/Packege.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+vtesting
+R2
+R3
+DXx4 work 16 MemTrans_sv_unit 0 22 >5XCIVC:DT5GV23ml3oaI2
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ke8lOlT<B3R^X8Q7QVezk2
+I0GQk1l^RZ`jVaTN:7OBcV3
+!s105 MemTrans_sv_unit
+S1
+R4
+R5
+R6
+R7
+L0 4
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1

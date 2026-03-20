@@ -1,0 +1,896 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: ../../../VS_code/Session1/Assignment1/DSP/DSP.v
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           17        17         0     100.0
+
+================================Statement Details================================
+
+Statement Coverage for file ../../../VS_code/Session1/Assignment1/DSP/DSP.v --
+
+    1                                                module DSP(A, B, C, D, clk, rst_n, P);
+    2                                                
+    3                                                parameter OPERATION = "ADD";
+    4                                                input  [17:0] A, B, D;
+    5                                                input  [47:0] C;
+    6                                                input clk, rst_n;
+    7                                                output reg  [47:0] P;
+    8                                                
+    9                                                reg  [17:0] A_reg_stg1, A_reg_stg2, B_reg, D_reg,
+    10                                               adder_out_stg;
+    11                                               reg  [47:0] C_reg, mult_out;
+    12                                               
+    13              1                      40006     always @(posedge clk or negedge rst_n) begin
+    14                                               	if (!rst_n) begin
+    15                                               		// reset
+    16              1                          4     		 A_reg_stg1 <= 0;
+    17              1                          4     		 A_reg_stg2 <= 0;
+    18              1                          4     		 B_reg <= 0;   //missing C_reg reset sequence
+    19              1                          4     		 C_reg <= 0;
+    20              1                          4     		 D_reg <= 0;
+    21              1                          4     		 adder_out_stg <= 0; 
+    22              1                          4     		 mult_out <= 0;
+    23              1                          4     		 P <= 0;
+    24                                               	end
+    25                                               	else begin
+    26              1                      40002     		A_reg_stg1 <= A;
+    27              1                      40002     		A_reg_stg2 <= A_reg_stg1;
+    28              1                      40002     		B_reg <= B;
+    29              1                      40002     		C_reg <= C;
+    30              1                      40002     		D_reg <= D; 
+    31                                               		if (OPERATION == "ADD") begin      
+    32              1                      40002     			adder_out_stg <= D_reg + B_reg;
+    33              1                      40002     			P <= mult_out + C_reg;
+    34                                               		end
+    35                                               		else if (OPERATION == "SUBTRACT") begin
+    36                                               			adder_out_stg <= D_reg - B_reg;
+    37                                               			P <= mult_out - C_reg;
+    38                                               		end //missing else default [may cause problems]
+    39              1                      40002     		mult_out <= A_reg_stg2 * adder_out_stg; 
+    40                                               	end 
+    41                                               end
+    42                                               
+    43                                               endmodule
+    44                                               
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         2         2         0     100.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../../../VS_code/Session1/Assignment1/DSP/DSP.v --
+
+------------------------------------IF Branch------------------------------------
+    14                                     40006     Count coming in to IF
+    14              1                          4     	if (!rst_n) begin
+    25              1                      40002     	else begin
+Branch totals: 2 hits of 2 branches = 100.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    676       652        24      96.4
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../../../VS_code/Session1/Assignment1/DSP/DSP.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          4                                   D[9]           1           1      100.00 
+          4                                   D[8]           1           1      100.00 
+          4                                   D[7]           1           1      100.00 
+          4                                   D[6]           1           1      100.00 
+          4                                   D[5]           1           1      100.00 
+          4                                   D[4]           1           1      100.00 
+          4                                   D[3]           1           1      100.00 
+          4                                   D[2]           1           1      100.00 
+          4                                   D[1]           1           1      100.00 
+          4                                  D[17]           1           1      100.00 
+          4                                  D[16]           1           1      100.00 
+          4                                  D[15]           1           1      100.00 
+          4                                  D[14]           1           1      100.00 
+          4                                  D[13]           1           1      100.00 
+          4                                  D[12]           1           1      100.00 
+          4                                  D[11]           1           1      100.00 
+          4                                  D[10]           1           1      100.00 
+          4                                   D[0]           1           1      100.00 
+          4                                   B[9]           1           1      100.00 
+          4                                   B[8]           1           1      100.00 
+          4                                   B[7]           1           1      100.00 
+          4                                   B[6]           1           1      100.00 
+          4                                   B[5]           1           1      100.00 
+          4                                   B[4]           1           1      100.00 
+          4                                   B[3]           1           1      100.00 
+          4                                   B[2]           1           1      100.00 
+          4                                   B[1]           1           1      100.00 
+          4                                  B[17]           1           1      100.00 
+          4                                  B[16]           1           1      100.00 
+          4                                  B[15]           1           1      100.00 
+          4                                  B[14]           1           1      100.00 
+          4                                  B[13]           1           1      100.00 
+          4                                  B[12]           1           1      100.00 
+          4                                  B[11]           1           1      100.00 
+          4                                  B[10]           1           1      100.00 
+          4                                   B[0]           1           1      100.00 
+          4                                   A[9]           1           1      100.00 
+          4                                   A[8]           1           1      100.00 
+          4                                   A[7]           1           1      100.00 
+          4                                   A[6]           1           1      100.00 
+          4                                   A[5]           1           1      100.00 
+          4                                   A[4]           1           1      100.00 
+          4                                   A[3]           1           1      100.00 
+          4                                   A[2]           1           1      100.00 
+          4                                   A[1]           1           1      100.00 
+          4                                  A[17]           1           1      100.00 
+          4                                  A[16]           1           1      100.00 
+          4                                  A[15]           1           1      100.00 
+          4                                  A[14]           1           1      100.00 
+          4                                  A[13]           1           1      100.00 
+          4                                  A[12]           1           1      100.00 
+          4                                  A[11]           1           1      100.00 
+          4                                  A[10]           1           1      100.00 
+          4                                   A[0]           1           1      100.00 
+          5                                   C[9]           1           1      100.00 
+          5                                   C[8]           1           1      100.00 
+          5                                   C[7]           1           1      100.00 
+          5                                   C[6]           1           1      100.00 
+          5                                   C[5]           1           1      100.00 
+          5                                   C[4]           1           1      100.00 
+          5                                  C[47]           1           1      100.00 
+          5                                  C[46]           1           1      100.00 
+          5                                  C[45]           1           1      100.00 
+          5                                  C[44]           1           1      100.00 
+          5                                  C[43]           1           1      100.00 
+          5                                  C[42]           1           1      100.00 
+          5                                  C[41]           1           1      100.00 
+          5                                  C[40]           1           1      100.00 
+          5                                   C[3]           1           1      100.00 
+          5                                  C[39]           1           1      100.00 
+          5                                  C[38]           1           1      100.00 
+          5                                  C[37]           1           1      100.00 
+          5                                  C[36]           1           1      100.00 
+          5                                  C[35]           1           1      100.00 
+          5                                  C[34]           1           1      100.00 
+          5                                  C[33]           1           1      100.00 
+          5                                  C[32]           1           1      100.00 
+          5                                  C[31]           1           1      100.00 
+          5                                  C[30]           1           1      100.00 
+          5                                   C[2]           1           1      100.00 
+          5                                  C[29]           1           1      100.00 
+          5                                  C[28]           1           1      100.00 
+          5                                  C[27]           1           1      100.00 
+          5                                  C[26]           1           1      100.00 
+          5                                  C[25]           1           1      100.00 
+          5                                  C[24]           1           1      100.00 
+          5                                  C[23]           1           1      100.00 
+          5                                  C[22]           1           1      100.00 
+          5                                  C[21]           1           1      100.00 
+          5                                  C[20]           1           1      100.00 
+          5                                   C[1]           1           1      100.00 
+          5                                  C[19]           1           1      100.00 
+          5                                  C[18]           1           1      100.00 
+          5                                  C[17]           1           1      100.00 
+          5                                  C[16]           1           1      100.00 
+          5                                  C[15]           1           1      100.00 
+          5                                  C[14]           1           1      100.00 
+          5                                  C[13]           1           1      100.00 
+          5                                  C[12]           1           1      100.00 
+          5                                  C[11]           1           1      100.00 
+          5                                  C[10]           1           1      100.00 
+          5                                   C[0]           1           1      100.00 
+          6                                  rst_n           1           1      100.00 
+          6                                    clk           1           1      100.00 
+          7                                   P[9]           1           1      100.00 
+          7                                   P[8]           1           1      100.00 
+          7                                   P[7]           1           1      100.00 
+          7                                   P[6]           1           1      100.00 
+          7                                   P[5]           1           1      100.00 
+          7                                   P[4]           1           1      100.00 
+          7                                  P[47]           1           1      100.00 
+          7                                  P[46]           1           1      100.00 
+          7                                  P[45]           1           1      100.00 
+          7                                  P[44]           1           1      100.00 
+          7                                  P[43]           1           1      100.00 
+          7                                  P[42]           1           1      100.00 
+          7                                  P[41]           1           1      100.00 
+          7                                  P[40]           1           1      100.00 
+          7                                   P[3]           1           1      100.00 
+          7                                  P[39]           1           1      100.00 
+          7                                  P[38]           1           1      100.00 
+          7                                  P[37]           1           1      100.00 
+          7                                  P[36]           1           1      100.00 
+          7                                  P[35]           1           1      100.00 
+          7                                  P[34]           1           1      100.00 
+          7                                  P[33]           1           1      100.00 
+          7                                  P[32]           1           1      100.00 
+          7                                  P[31]           1           1      100.00 
+          7                                  P[30]           1           1      100.00 
+          7                                   P[2]           1           1      100.00 
+          7                                  P[29]           1           1      100.00 
+          7                                  P[28]           1           1      100.00 
+          7                                  P[27]           1           1      100.00 
+          7                                  P[26]           1           1      100.00 
+          7                                  P[25]           1           1      100.00 
+          7                                  P[24]           1           1      100.00 
+          7                                  P[23]           1           1      100.00 
+          7                                  P[22]           1           1      100.00 
+          7                                  P[21]           1           1      100.00 
+          7                                  P[20]           1           1      100.00 
+          7                                   P[1]           1           1      100.00 
+          7                                  P[19]           1           1      100.00 
+          7                                  P[18]           1           1      100.00 
+          7                                  P[17]           1           1      100.00 
+          7                                  P[16]           1           1      100.00 
+          7                                  P[15]           1           1      100.00 
+          7                                  P[14]           1           1      100.00 
+          7                                  P[13]           1           1      100.00 
+          7                                  P[12]           1           1      100.00 
+          7                                  P[11]           1           1      100.00 
+          7                                  P[10]           1           1      100.00 
+          7                                   P[0]           1           1      100.00 
+          9                               D_reg[9]           1           1      100.00 
+          9                               D_reg[8]           1           1      100.00 
+          9                               D_reg[7]           1           1      100.00 
+          9                               D_reg[6]           1           1      100.00 
+          9                               D_reg[5]           1           1      100.00 
+          9                               D_reg[4]           1           1      100.00 
+          9                               D_reg[3]           1           1      100.00 
+          9                               D_reg[2]           1           1      100.00 
+          9                               D_reg[1]           1           1      100.00 
+          9                              D_reg[17]           1           1      100.00 
+          9                              D_reg[16]           1           1      100.00 
+          9                              D_reg[15]           1           1      100.00 
+          9                              D_reg[14]           1           1      100.00 
+          9                              D_reg[13]           1           1      100.00 
+          9                              D_reg[12]           1           1      100.00 
+          9                              D_reg[11]           1           1      100.00 
+          9                              D_reg[10]           1           1      100.00 
+          9                               D_reg[0]           1           1      100.00 
+          9                               B_reg[9]           1           1      100.00 
+          9                               B_reg[8]           1           1      100.00 
+          9                               B_reg[7]           1           1      100.00 
+          9                               B_reg[6]           1           1      100.00 
+          9                               B_reg[5]           1           1      100.00 
+          9                               B_reg[4]           1           1      100.00 
+          9                               B_reg[3]           1           1      100.00 
+          9                               B_reg[2]           1           1      100.00 
+          9                               B_reg[1]           1           1      100.00 
+          9                              B_reg[17]           1           1      100.00 
+          9                              B_reg[16]           1           1      100.00 
+          9                              B_reg[15]           1           1      100.00 
+          9                              B_reg[14]           1           1      100.00 
+          9                              B_reg[13]           1           1      100.00 
+          9                              B_reg[12]           1           1      100.00 
+          9                              B_reg[11]           1           1      100.00 
+          9                              B_reg[10]           1           1      100.00 
+          9                               B_reg[0]           1           1      100.00 
+          9                          A_reg_stg2[9]           1           1      100.00 
+          9                          A_reg_stg2[8]           1           1      100.00 
+          9                          A_reg_stg2[7]           1           1      100.00 
+          9                          A_reg_stg2[6]           1           1      100.00 
+          9                          A_reg_stg2[5]           1           1      100.00 
+          9                          A_reg_stg2[4]           1           1      100.00 
+          9                          A_reg_stg2[3]           1           1      100.00 
+          9                          A_reg_stg2[2]           1           1      100.00 
+          9                          A_reg_stg2[1]           1           1      100.00 
+          9                         A_reg_stg2[17]           1           1      100.00 
+          9                         A_reg_stg2[16]           1           1      100.00 
+          9                         A_reg_stg2[15]           1           1      100.00 
+          9                         A_reg_stg2[14]           1           1      100.00 
+          9                         A_reg_stg2[13]           1           1      100.00 
+          9                         A_reg_stg2[12]           1           1      100.00 
+          9                         A_reg_stg2[11]           1           1      100.00 
+          9                         A_reg_stg2[10]           1           1      100.00 
+          9                          A_reg_stg2[0]           1           1      100.00 
+          9                          A_reg_stg1[9]           1           1      100.00 
+          9                          A_reg_stg1[8]           1           1      100.00 
+          9                          A_reg_stg1[7]           1           1      100.00 
+          9                          A_reg_stg1[6]           1           1      100.00 
+          9                          A_reg_stg1[5]           1           1      100.00 
+          9                          A_reg_stg1[4]           1           1      100.00 
+          9                          A_reg_stg1[3]           1           1      100.00 
+          9                          A_reg_stg1[2]           1           1      100.00 
+          9                          A_reg_stg1[1]           1           1      100.00 
+          9                         A_reg_stg1[17]           1           1      100.00 
+          9                         A_reg_stg1[16]           1           1      100.00 
+          9                         A_reg_stg1[15]           1           1      100.00 
+          9                         A_reg_stg1[14]           1           1      100.00 
+          9                         A_reg_stg1[13]           1           1      100.00 
+          9                         A_reg_stg1[12]           1           1      100.00 
+          9                         A_reg_stg1[11]           1           1      100.00 
+          9                         A_reg_stg1[10]           1           1      100.00 
+          9                          A_reg_stg1[0]           1           1      100.00 
+         10                       adder_out_stg[9]           1           1      100.00 
+         10                       adder_out_stg[8]           1           1      100.00 
+         10                       adder_out_stg[7]           1           1      100.00 
+         10                       adder_out_stg[6]           1           1      100.00 
+         10                       adder_out_stg[5]           1           1      100.00 
+         10                       adder_out_stg[4]           1           1      100.00 
+         10                       adder_out_stg[3]           1           1      100.00 
+         10                       adder_out_stg[2]           1           1      100.00 
+         10                       adder_out_stg[1]           1           1      100.00 
+         10                      adder_out_stg[17]           1           1      100.00 
+         10                      adder_out_stg[16]           1           1      100.00 
+         10                      adder_out_stg[15]           1           1      100.00 
+         10                      adder_out_stg[14]           1           1      100.00 
+         10                      adder_out_stg[13]           1           1      100.00 
+         10                      adder_out_stg[12]           1           1      100.00 
+         10                      adder_out_stg[11]           1           1      100.00 
+         10                      adder_out_stg[10]           1           1      100.00 
+         10                       adder_out_stg[0]           1           1      100.00 
+         11                            mult_out[9]           1           1      100.00 
+         11                            mult_out[8]           1           1      100.00 
+         11                            mult_out[7]           1           1      100.00 
+         11                            mult_out[6]           1           1      100.00 
+         11                            mult_out[5]           1           1      100.00 
+         11                            mult_out[4]           1           1      100.00 
+         11                           mult_out[47]           0           0        0.00 
+         11                           mult_out[46]           0           0        0.00 
+         11                           mult_out[45]           0           0        0.00 
+         11                           mult_out[44]           0           0        0.00 
+         11                           mult_out[43]           0           0        0.00 
+         11                           mult_out[42]           0           0        0.00 
+         11                           mult_out[41]           0           0        0.00 
+         11                           mult_out[40]           0           0        0.00 
+         11                            mult_out[3]           1           1      100.00 
+         11                           mult_out[39]           0           0        0.00 
+         11                           mult_out[38]           0           0        0.00 
+         11                           mult_out[37]           0           0        0.00 
+         11                           mult_out[36]           0           0        0.00 
+         11                           mult_out[35]           1           1      100.00 
+         11                           mult_out[34]           1           1      100.00 
+         11                           mult_out[33]           1           1      100.00 
+         11                           mult_out[32]           1           1      100.00 
+         11                           mult_out[31]           1           1      100.00 
+         11                           mult_out[30]           1           1      100.00 
+         11                            mult_out[2]           1           1      100.00 
+         11                           mult_out[29]           1           1      100.00 
+         11                           mult_out[28]           1           1      100.00 
+         11                           mult_out[27]           1           1      100.00 
+         11                           mult_out[26]           1           1      100.00 
+         11                           mult_out[25]           1           1      100.00 
+         11                           mult_out[24]           1           1      100.00 
+         11                           mult_out[23]           1           1      100.00 
+         11                           mult_out[22]           1           1      100.00 
+         11                           mult_out[21]           1           1      100.00 
+         11                           mult_out[20]           1           1      100.00 
+         11                            mult_out[1]           1           1      100.00 
+         11                           mult_out[19]           1           1      100.00 
+         11                           mult_out[18]           1           1      100.00 
+         11                           mult_out[17]           1           1      100.00 
+         11                           mult_out[16]           1           1      100.00 
+         11                           mult_out[15]           1           1      100.00 
+         11                           mult_out[14]           1           1      100.00 
+         11                           mult_out[13]           1           1      100.00 
+         11                           mult_out[12]           1           1      100.00 
+         11                           mult_out[11]           1           1      100.00 
+         11                           mult_out[10]           1           1      100.00 
+         11                            mult_out[0]           1           1      100.00 
+         11                               C_reg[9]           1           1      100.00 
+         11                               C_reg[8]           1           1      100.00 
+         11                               C_reg[7]           1           1      100.00 
+         11                               C_reg[6]           1           1      100.00 
+         11                               C_reg[5]           1           1      100.00 
+         11                               C_reg[4]           1           1      100.00 
+         11                              C_reg[47]           1           1      100.00 
+         11                              C_reg[46]           1           1      100.00 
+         11                              C_reg[45]           1           1      100.00 
+         11                              C_reg[44]           1           1      100.00 
+         11                              C_reg[43]           1           1      100.00 
+         11                              C_reg[42]           1           1      100.00 
+         11                              C_reg[41]           1           1      100.00 
+         11                              C_reg[40]           1           1      100.00 
+         11                               C_reg[3]           1           1      100.00 
+         11                              C_reg[39]           1           1      100.00 
+         11                              C_reg[38]           1           1      100.00 
+         11                              C_reg[37]           1           1      100.00 
+         11                              C_reg[36]           1           1      100.00 
+         11                              C_reg[35]           1           1      100.00 
+         11                              C_reg[34]           1           1      100.00 
+         11                              C_reg[33]           1           1      100.00 
+         11                              C_reg[32]           1           1      100.00 
+         11                              C_reg[31]           1           1      100.00 
+         11                              C_reg[30]           1           1      100.00 
+         11                               C_reg[2]           1           1      100.00 
+         11                              C_reg[29]           1           1      100.00 
+         11                              C_reg[28]           1           1      100.00 
+         11                              C_reg[27]           1           1      100.00 
+         11                              C_reg[26]           1           1      100.00 
+         11                              C_reg[25]           1           1      100.00 
+         11                              C_reg[24]           1           1      100.00 
+         11                              C_reg[23]           1           1      100.00 
+         11                              C_reg[22]           1           1      100.00 
+         11                              C_reg[21]           1           1      100.00 
+         11                              C_reg[20]           1           1      100.00 
+         11                               C_reg[1]           1           1      100.00 
+         11                              C_reg[19]           1           1      100.00 
+         11                              C_reg[18]           1           1      100.00 
+         11                              C_reg[17]           1           1      100.00 
+         11                              C_reg[16]           1           1      100.00 
+         11                              C_reg[15]           1           1      100.00 
+         11                              C_reg[14]           1           1      100.00 
+         11                              C_reg[13]           1           1      100.00 
+         11                              C_reg[12]           1           1      100.00 
+         11                              C_reg[11]           1           1      100.00 
+         11                              C_reg[10]           1           1      100.00 
+         11                               C_reg[0]           1           1      100.00 
+
+Total Node Count     =        338 
+Toggled Node Count   =        326 
+Untoggled Node Count =         12 
+
+Toggle Coverage      =       96.4% (652 of 676 bins)
+
+=================================================================================
+=== File: ../../../VS_code/Session1/Assignment1/DSP/DSP_tb.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                           40        37         3      92.5
+
+================================Statement Details================================
+
+Statement Coverage for file ../../../VS_code/Session1/Assignment1/DSP/DSP_tb.sv --
+NOTE: The modification timestamp for source file '../../../VS_code/Session1/Assignment1/DSP/DSP_tb.sv' has been altered since compilation.
+
+    1                                                module DSP_tb;
+    2                                                
+    3                                                reg  [17:0] A, B, D;
+    4                                                reg  [47:0] C;
+    5                                                reg clk, rst_n;
+    6                                                
+    7                                                wire [47:0] P;
+    8                                                
+    9                                                
+    10                                               reg  [17:0] adder_out;
+    11                                               reg [47:0] mult_out, expected_P;
+    12                                               
+    13                                               integer error_count;
+    14                                               integer correct_count;
+    15                                               
+    16                                               DSP uut (.*);
+    17                                               
+    18                                               
+    19                                               initial begin  // Create the clock (2ns period)
+    20                                                   clk = 0; 
+    21              1                          1         forever
+    22              1                          1             #5 clk = ~clk;
+    23              1                      80013     end
+    23              2                      80012     
+    24                                               
+    25                                               
+    26                                               initial begin
+    27                                                   A = 0;
+    28              1                          1         B = 0;
+    29              1                          1         C = 0;
+    30              1                          1         D = 0;
+    31              1                          1         rst_n = 1;
+    32              1                          1         error_count = 0;
+    33              1                          1         correct_count = 0;
+    34              1                          1         $display("===================================================TestBench Start===================================================");
+    35              1                          1     
+    36                                                   // Test 1: Reset Behavior
+    37                                                   assert_check;
+    38              1                          1     
+    39                                                   // Test 2: Loop of rand i/p(s)
+    40                                                   repeat(10000) begin
+    41              1                      10000             A = $random();
+    42              1                      10000             B = $random();
+    43              1                      10000             C = $random();
+    44              1                      10000             D = $random();
+    45              1                      10000     
+    46                                                       compute_expected(); //Golden model
+    47              1                      10000     
+    48                                                       check_result();  
+    49              1                      10000     
+    50                                               
+    51                                                   end
+    52                                               
+    53                                                   // Test 6: Final check and wrap-up
+    54                                                   assert_check;
+    55              1                          1         $display("%t: At end of test error count is %0d and correct count = %0d", $time, error_count, correct_count);
+    56              1                          1         $display("====================================================TestBench End====================================================");
+    57              1                          1         $stop;
+    58              1                          1     end
+    59                                               
+    60                                               
+    61                                               task compute_expected; //Golden Model
+    62                                                   
+    63                                                   adder_out = B + D;  //dont need FFs the simulator simulates their delay
+    64              1                      10000         mult_out = adder_out * A;  //because lines are executed sequentially in initial block
+    65              1                      10000         expected_P = mult_out + C;
+    66              1                      10000     
+    67                                               endtask
+    68                                               
+    69                                               task assert_check;
+    70                                                   @(negedge clk)
+    71              1                          2         rst_n = 0;
+    72              1                          2         @(negedge clk);
+    73              1                          2         if (P !== 0) begin
+    74                                                       error_count = error_count + 1;
+    75              1                    ***0***             $display("Error Reseting");
+    76              1                    ***0***         end
+    77                                                   else
+    78                                                       correct_count = correct_count + 1;
+    79              1                          2         @(negedge clk)
+    80              1                          2         rst_n = 1;
+    81              1                          2     endtask
+    82                                               
+    83                                               task check_result;
+    84                                                   repeat(4) @(negedge clk); //Total latency is 4 cycles
+    85              1                      40000         if (P !== expected_P) begin
+    85              2                      40000     
+    86                                                       error_count = error_count + 1;
+    87              1                      10000             $display("%t: Error: For A=%0h, B=%0h, C=%0h, D=%0h, P should equal %0h but is %0h", 
+    88              1                      10000                      $time, A, B, C, D, expected_P, P);
+    89                                                   end
+    90                                                   else
+    91                                                       correct_count = correct_count + 1;
+    92              1                    ***0***     endtask
+    93                                               
+    94                                               endmodule
+
+Branch Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Branches                         4         2         2      50.0
+
+================================Branch Details================================
+
+Branch Coverage for file ../../../VS_code/Session1/Assignment1/DSP/DSP_tb.sv --
+NOTE: The modification timestamp for source file '../../../VS_code/Session1/Assignment1/DSP/DSP_tb.sv' has been altered since compilation.
+
+------------------------------------IF Branch------------------------------------
+    74                                         2     Count coming in to IF
+    74              1                    ***0***             error_count = error_count + 1;
+    78              1                          2             correct_count = correct_count + 1;
+Branch totals: 1 hit of 2 branches = 50.0%
+
+------------------------------------IF Branch------------------------------------
+    86                                     10000     Count coming in to IF
+    86              1                      10000             error_count = error_count + 1;
+    91              1                    ***0***             correct_count = correct_count + 1;
+Branch totals: 1 hit of 2 branches = 50.0%
+
+
+Condition Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Condition Terms              0         0         0     100.0
+Expression Coverage:
+    Enabled Coverage            Active   Covered    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FEC Expression Terms             0         0         0     100.0
+FSM Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    FSMs                                                       100.0
+        States                       0         0         0     100.0
+        Transitions                  0         0         0     100.0
+Toggle Coverage:
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                    566       468        98      82.6
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../../../VS_code/Session1/Assignment1/DSP/DSP_tb.sv --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+          3                                   D[9]           1           1      100.00 
+          3                                   D[8]           1           1      100.00 
+          3                                   D[7]           1           1      100.00 
+          3                                   D[6]           1           1      100.00 
+          3                                   D[5]           1           1      100.00 
+          3                                   D[4]           1           1      100.00 
+          3                                   D[3]           1           1      100.00 
+          3                                   D[2]           1           1      100.00 
+          3                                   D[1]           1           1      100.00 
+          3                                  D[17]           1           1      100.00 
+          3                                  D[16]           1           1      100.00 
+          3                                  D[15]           1           1      100.00 
+          3                                  D[14]           1           1      100.00 
+          3                                  D[13]           1           1      100.00 
+          3                                  D[12]           1           1      100.00 
+          3                                  D[11]           1           1      100.00 
+          3                                  D[10]           1           1      100.00 
+          3                                   D[0]           1           1      100.00 
+          3                                   B[9]           1           1      100.00 
+          3                                   B[8]           1           1      100.00 
+          3                                   B[7]           1           1      100.00 
+          3                                   B[6]           1           1      100.00 
+          3                                   B[5]           1           1      100.00 
+          3                                   B[4]           1           1      100.00 
+          3                                   B[3]           1           1      100.00 
+          3                                   B[2]           1           1      100.00 
+          3                                   B[1]           1           1      100.00 
+          3                                  B[17]           1           1      100.00 
+          3                                  B[16]           1           1      100.00 
+          3                                  B[15]           1           1      100.00 
+          3                                  B[14]           1           1      100.00 
+          3                                  B[13]           1           1      100.00 
+          3                                  B[12]           1           1      100.00 
+          3                                  B[11]           1           1      100.00 
+          3                                  B[10]           1           1      100.00 
+          3                                   B[0]           1           1      100.00 
+          3                                   A[9]           1           1      100.00 
+          3                                   A[8]           1           1      100.00 
+          3                                   A[7]           1           1      100.00 
+          3                                   A[6]           1           1      100.00 
+          3                                   A[5]           1           1      100.00 
+          3                                   A[4]           1           1      100.00 
+          3                                   A[3]           1           1      100.00 
+          3                                   A[2]           1           1      100.00 
+          3                                   A[1]           1           1      100.00 
+          3                                  A[17]           1           1      100.00 
+          3                                  A[16]           1           1      100.00 
+          3                                  A[15]           1           1      100.00 
+          3                                  A[14]           1           1      100.00 
+          3                                  A[13]           1           1      100.00 
+          3                                  A[12]           1           1      100.00 
+          3                                  A[11]           1           1      100.00 
+          3                                  A[10]           1           1      100.00 
+          3                                   A[0]           1           1      100.00 
+          4                                   C[9]           1           1      100.00 
+          4                                   C[8]           1           1      100.00 
+          4                                   C[7]           1           1      100.00 
+          4                                   C[6]           1           1      100.00 
+          4                                   C[5]           1           1      100.00 
+          4                                   C[4]           1           1      100.00 
+          4                                  C[47]           1           1      100.00 
+          4                                  C[46]           1           1      100.00 
+          4                                  C[45]           1           1      100.00 
+          4                                  C[44]           1           1      100.00 
+          4                                  C[43]           1           1      100.00 
+          4                                  C[42]           1           1      100.00 
+          4                                  C[41]           1           1      100.00 
+          4                                  C[40]           1           1      100.00 
+          4                                   C[3]           1           1      100.00 
+          4                                  C[39]           1           1      100.00 
+          4                                  C[38]           1           1      100.00 
+          4                                  C[37]           1           1      100.00 
+          4                                  C[36]           1           1      100.00 
+          4                                  C[35]           1           1      100.00 
+          4                                  C[34]           1           1      100.00 
+          4                                  C[33]           1           1      100.00 
+          4                                  C[32]           1           1      100.00 
+          4                                  C[31]           1           1      100.00 
+          4                                  C[30]           1           1      100.00 
+          4                                   C[2]           1           1      100.00 
+          4                                  C[29]           1           1      100.00 
+          4                                  C[28]           1           1      100.00 
+          4                                  C[27]           1           1      100.00 
+          4                                  C[26]           1           1      100.00 
+          4                                  C[25]           1           1      100.00 
+          4                                  C[24]           1           1      100.00 
+          4                                  C[23]           1           1      100.00 
+          4                                  C[22]           1           1      100.00 
+          4                                  C[21]           1           1      100.00 
+          4                                  C[20]           1           1      100.00 
+          4                                   C[1]           1           1      100.00 
+          4                                  C[19]           1           1      100.00 
+          4                                  C[18]           1           1      100.00 
+          4                                  C[17]           1           1      100.00 
+          4                                  C[16]           1           1      100.00 
+          4                                  C[15]           1           1      100.00 
+          4                                  C[14]           1           1      100.00 
+          4                                  C[13]           1           1      100.00 
+          4                                  C[12]           1           1      100.00 
+          4                                  C[11]           1           1      100.00 
+          4                                  C[10]           1           1      100.00 
+          4                                   C[0]           1           1      100.00 
+          5                                  rst_n           1           1      100.00 
+          5                                    clk           1           1      100.00 
+          7                                   P[9]           1           1      100.00 
+          7                                   P[8]           1           1      100.00 
+          7                                   P[7]           1           1      100.00 
+          7                                   P[6]           1           1      100.00 
+          7                                   P[5]           1           1      100.00 
+          7                                   P[4]           1           1      100.00 
+          7                                  P[47]           1           1      100.00 
+          7                                  P[46]           1           1      100.00 
+          7                                  P[45]           1           1      100.00 
+          7                                  P[44]           1           1      100.00 
+          7                                  P[43]           1           1      100.00 
+          7                                  P[42]           1           1      100.00 
+          7                                  P[41]           1           1      100.00 
+          7                                  P[40]           1           1      100.00 
+          7                                   P[3]           1           1      100.00 
+          7                                  P[39]           1           1      100.00 
+          7                                  P[38]           1           1      100.00 
+          7                                  P[37]           1           1      100.00 
+          7                                  P[36]           1           1      100.00 
+          7                                  P[35]           1           1      100.00 
+          7                                  P[34]           1           1      100.00 
+          7                                  P[33]           1           1      100.00 
+          7                                  P[32]           1           1      100.00 
+          7                                  P[31]           1           1      100.00 
+          7                                  P[30]           1           1      100.00 
+          7                                   P[2]           1           1      100.00 
+          7                                  P[29]           1           1      100.00 
+          7                                  P[28]           1           1      100.00 
+          7                                  P[27]           1           1      100.00 
+          7                                  P[26]           1           1      100.00 
+          7                                  P[25]           1           1      100.00 
+          7                                  P[24]           1           1      100.00 
+          7                                  P[23]           1           1      100.00 
+          7                                  P[22]           1           1      100.00 
+          7                                  P[21]           1           1      100.00 
+          7                                  P[20]           1           1      100.00 
+          7                                   P[1]           1           1      100.00 
+          7                                  P[19]           1           1      100.00 
+          7                                  P[18]           1           1      100.00 
+          7                                  P[17]           1           1      100.00 
+          7                                  P[16]           1           1      100.00 
+          7                                  P[15]           1           1      100.00 
+          7                                  P[14]           1           1      100.00 
+          7                                  P[13]           1           1      100.00 
+          7                                  P[12]           1           1      100.00 
+          7                                  P[11]           1           1      100.00 
+          7                                  P[10]           1           1      100.00 
+          7                                   P[0]           1           1      100.00 
+         10                           adder_out[9]           1           1      100.00 
+         10                           adder_out[8]           1           1      100.00 
+         10                           adder_out[7]           1           1      100.00 
+         10                           adder_out[6]           1           1      100.00 
+         10                           adder_out[5]           1           1      100.00 
+         10                           adder_out[4]           1           1      100.00 
+         10                           adder_out[3]           1           1      100.00 
+         10                           adder_out[2]           1           1      100.00 
+         10                           adder_out[1]           1           1      100.00 
+         10                          adder_out[17]           1           1      100.00 
+         10                          adder_out[16]           1           1      100.00 
+         10                          adder_out[15]           1           1      100.00 
+         10                          adder_out[14]           1           1      100.00 
+         10                          adder_out[13]           1           1      100.00 
+         10                          adder_out[12]           1           1      100.00 
+         10                          adder_out[11]           1           1      100.00 
+         10                          adder_out[10]           1           1      100.00 
+         10                           adder_out[0]           1           1      100.00 
+         11                               mult_out           1           1      100.00 
+         12                          expected_P[9]           1           1      100.00 
+         12                          expected_P[8]           1           1      100.00 
+         12                          expected_P[7]           1           1      100.00 
+         12                          expected_P[6]           1           1      100.00 
+         12                          expected_P[5]           1           1      100.00 
+         12                          expected_P[4]           1           1      100.00 
+         12                         expected_P[47]           1           1      100.00 
+         12                         expected_P[46]           1           1      100.00 
+         12                         expected_P[45]           1           1      100.00 
+         12                         expected_P[44]           1           1      100.00 
+         12                         expected_P[43]           1           1      100.00 
+         12                         expected_P[42]           1           1      100.00 
+         12                         expected_P[41]           1           1      100.00 
+         12                         expected_P[40]           1           1      100.00 
+         12                          expected_P[3]           1           1      100.00 
+         12                         expected_P[39]           1           1      100.00 
+         12                         expected_P[38]           1           1      100.00 
+         12                         expected_P[37]           1           1      100.00 
+         12                         expected_P[36]           1           1      100.00 
+         12                         expected_P[35]           1           1      100.00 
+         12                         expected_P[34]           1           1      100.00 
+         12                         expected_P[33]           1           1      100.00 
+         12                         expected_P[32]           1           1      100.00 
+         12                         expected_P[31]           1           1      100.00 
+         12                         expected_P[30]           1           1      100.00 
+         12                          expected_P[2]           1           1      100.00 
+         12                         expected_P[29]           1           1      100.00 
+         12                         expected_P[28]           1           1      100.00 
+         12                         expected_P[27]           1           1      100.00 
+         12                         expected_P[26]           1           1      100.00 
+         12                         expected_P[25]           1           1      100.00 
+         12                         expected_P[24]           1           1      100.00 
+         12                         expected_P[23]           1           1      100.00 
+         12                         expected_P[22]           1           1      100.00 
+         12                         expected_P[21]           1           1      100.00 
+         12                         expected_P[20]           1           1      100.00 
+         12                          expected_P[1]           1           1      100.00 
+         12                         expected_P[19]           1           1      100.00 
+         12                         expected_P[18]           1           1      100.00 
+         12                         expected_P[17]           1           1      100.00 
+         12                         expected_P[16]           1           1      100.00 
+         12                         expected_P[15]           1           1      100.00 
+         12                         expected_P[14]           1           1      100.00 
+         12                         expected_P[13]           1           1      100.00 
+         12                         expected_P[12]           1           1      100.00 
+         12                         expected_P[11]           1           1      100.00 
+         12                         expected_P[10]           1           1      100.00 
+         12                          expected_P[0]           1           1      100.00 
+         14                         error_count[9]           1           1      100.00 
+         14                         error_count[8]           1           1      100.00 
+         14                         error_count[7]           1           1      100.00 
+         14                         error_count[6]           1           1      100.00 
+         14                         error_count[5]           1           1      100.00 
+         14                         error_count[4]           1           1      100.00 
+         14                         error_count[3]           1           1      100.00 
+         14                        error_count[31]           0           0        0.00 
+         14                        error_count[30]           0           0        0.00 
+         14                         error_count[2]           1           1      100.00 
+         14                        error_count[29]           0           0        0.00 
+         14                        error_count[28]           0           0        0.00 
+         14                        error_count[27]           0           0        0.00 
+         14                        error_count[26]           0           0        0.00 
+         14                        error_count[25]           0           0        0.00 
+         14                        error_count[24]           0           0        0.00 
+         14                        error_count[23]           0           0        0.00 
+         14                        error_count[22]           0           0        0.00 
+         14                        error_count[21]           0           0        0.00 
+         14                        error_count[20]           0           0        0.00 
+         14                         error_count[1]           1           1      100.00 
+         14                        error_count[19]           0           0        0.00 
+         14                        error_count[18]           0           0        0.00 
+         14                        error_count[17]           0           0        0.00 
+         14                        error_count[16]           0           0        0.00 
+         14                        error_count[15]           0           0        0.00 
+         14                        error_count[14]           0           0        0.00 
+         14                        error_count[13]           0           1       50.00 
+         14                        error_count[12]           1           1      100.00 
+         14                        error_count[11]           1           1      100.00 
+         14                        error_count[10]           1           1      100.00 
+         14                         error_count[0]           1           1      100.00 
+         15                       correct_count[9]           0           0        0.00 
+         15                       correct_count[8]           0           0        0.00 
+         15                       correct_count[7]           0           0        0.00 
+         15                       correct_count[6]           0           0        0.00 
+         15                       correct_count[5]           0           0        0.00 
+         15                       correct_count[4]           0           0        0.00 
+         15                       correct_count[3]           0           0        0.00 
+         15                      correct_count[31]           0           0        0.00 
+         15                      correct_count[30]           0           0        0.00 
+         15                       correct_count[2]           0           0        0.00 
+         15                      correct_count[29]           0           0        0.00 
+         15                      correct_count[28]           0           0        0.00 
+         15                      correct_count[27]           0           0        0.00 
+         15                      correct_count[26]           0           0        0.00 
+         15                      correct_count[25]           0           0        0.00 
+         15                      correct_count[24]           0           0        0.00 
+         15                      correct_count[23]           0           0        0.00 
+         15                      correct_count[22]           0           0        0.00 
+         15                      correct_count[21]           0           0        0.00 
+         15                      correct_count[20]           0           0        0.00 
+         15                       correct_count[1]           0           1       50.00 
+         15                      correct_count[19]           0           0        0.00 
+         15                      correct_count[18]           0           0        0.00 
+         15                      correct_count[17]           0           0        0.00 
+         15                      correct_count[16]           0           0        0.00 
+         15                      correct_count[15]           0           0        0.00 
+         15                      correct_count[14]           0           0        0.00 
+         15                      correct_count[13]           0           0        0.00 
+         15                      correct_count[12]           0           0        0.00 
+         15                      correct_count[11]           0           0        0.00 
+         15                      correct_count[10]           0           0        0.00 
+         15                       correct_count[0]           1           1      100.00 
+
+Total Node Count     =        283 
+Toggled Node Count   =        233 
+Untoggled Node Count =         50 
+
+Toggle Coverage      =       82.6% (468 of 566 bins)
+
+
+Total Coverage By File (code coverage only, filtered view): 83.8%
+
