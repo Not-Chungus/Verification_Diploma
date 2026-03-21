@@ -1,16 +1,17 @@
 module ALSU(A, B, cin, serial_in, red_op_A, red_op_B, opcode, bypass_A, bypass_B, clk, rst, direction, leds, out);
 
 parameter INPUT_PRIORITY = "A";
-parameter FULL_ADDER = "ON";
+parameter FULL_ADDER = "ON"; //to allow use of cin
 
 input clk, cin, rst, red_op_A, red_op_B, bypass_A, bypass_B, direction, serial_in;
 input [2:0] opcode;
 input signed [2:0] A, B;
+
 output reg [15:0] leds;
 output reg signed [5:0] out;
 
 reg red_op_A_reg, red_op_B_reg, bypass_A_reg, bypass_B_reg, direction_reg, serial_in_reg;
-reg signed [1:0] cin_reg;
+reg cin_reg;
 reg [2:0] opcode_reg;
 reg signed [2:0] A_reg, B_reg;
 
@@ -75,8 +76,8 @@ always @(posedge clk or posedge rst) begin
     else if (invalid) 
         out <= 0;
     else begin
-        case (opcode)
-          3'h0: begin 
+        case (opcode_reg)
+          3'h0: begin //OR
             if (red_op_A_reg && red_op_B_reg)
               out <= (INPUT_PRIORITY == "A")? |A_reg: |B_reg;
             else if (red_op_A_reg) 
@@ -86,7 +87,7 @@ always @(posedge clk or posedge rst) begin
             else 
               out <= A_reg | B_reg;
           end
-          3'h1: begin
+          3'h1: begin //XOR
             if (red_op_A_reg && red_op_B_reg)
               out <= (INPUT_PRIORITY == "A")? ^A_reg: ^B_reg;
             else if (red_op_A_reg) 
@@ -96,20 +97,28 @@ always @(posedge clk or posedge rst) begin
             else 
               out <= A_reg ^ B_reg;
           end
-          3'h2: out <= A_reg + B_reg;
+          3'h2: begin
+            if (FULL_ADDER == "ON")
+              out <= A_reg + B_reg + cin_reg;
+            else
+              out <= A_reg + B_reg;
+          end
           3'h3: out <= A_reg * B_reg;
-          3'h4: begin
+          3'h4: begin //SHIFT
             if (direction_reg)
               out <= {out[4:0], serial_in_reg};
             else
               out <= {serial_in_reg, out[5:1]};
           end
-          3'h5: begin
+          3'h5: begin //ROTATE
             if (direction_reg)
               out <= {out[4:0], out[5]};
             else
               out <= {out[0], out[5:1]};
           end
+          3'h6: out <= 0;
+          3'h7: out <= 0;
+          default:    out <= 0;
         endcase
     end 
   end
