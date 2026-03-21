@@ -1,0 +1,95 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/Verification_Diploma/Labs_Questa/Lab2/Classes_Ex
+T_opt
+!s110 1774079810
+VFjL4EgjOEn7SX8C?86Bzg2
+04 17 4 work testing_rand_dist fast 0
+=1-d85ed3a67a6e-69be4f41-390-29f8
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+Xclass_pkg
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1774079809
+!i10b 1
+!s100 hQKg>TZXila@QH78a[_LP1
+I`9f]kA=d7Di@MHSR:F5TY1
+V`9f]kA=d7Di@MHSR:F5TY1
+S1
+Z2 dF:/Verification_Diploma/Labs_Questa/Lab2/Constraint_Ex
+w1774079643
+8../../../VS_code/Session2/Lab2/constraint_Ex/Package.sv
+F../../../VS_code/Session2/Lab2/constraint_Ex/Package.sv
+L0 33
+Z3 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z4 !s108 1774079809.000000
+Z5 !s107 ../../../VS_code/Session2/Lab2/constraint_Ex/Package.sv|../../../VS_code/Session2/Lab2/constraint_Ex/Exercise2.sv|
+Z6 !s90 -reportprogress|300|-sv|../../../VS_code/Session2/Lab2/constraint_Ex/Exercise2.sv|../../../VS_code/Session2/Lab2/constraint_Ex/Package.sv|+cover|-covercells|
+!i113 0
+Z7 !s102 +cover -covercells
+Z8 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+XExercise2_sv_unit
+R1
+Z9 DXx4 work 9 class_pkg 0 22 `9f]kA=d7Di@MHSR:F5TY1
+V23@5fzCUQ=e09=0VWdNQm3
+r1
+!s85 0
+31
+!i10b 1
+!s100 E=n70GiYEMXn4LkiY1F:J3
+I23@5fzCUQ=e09=0VWdNQm3
+!i103 1
+S1
+R2
+Z10 w1774079806
+Z11 8../../../VS_code/Session2/Lab2/constraint_Ex/Exercise2.sv
+Z12 F../../../VS_code/Session2/Lab2/constraint_Ex/Exercise2.sv
+L0 27
+R3
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R0
+n@exercise2_sv_unit
+vtesting_rand_dist
+R1
+R9
+DXx4 work 17 Exercise2_sv_unit 0 22 23@5fzCUQ=e09=0VWdNQm3
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 Ho[=LlB^jH5z_hbD9bfkL3
+IKa?hV;jE0inP6QAzWZlIQ2
+!s105 Exercise2_sv_unit
+S1
+R2
+R10
+R11
+R12
+L0 28
+R3
+R4
+R5
+R6
+!i113 0
+R7
+R8
+R0

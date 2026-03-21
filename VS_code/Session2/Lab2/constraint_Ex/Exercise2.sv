@@ -1,23 +1,47 @@
-import pkg::*;
-
-
+//v1
+/*
+import class_pkg::*;
 module testing_rand_dist;
 
 
     initial begin
-        Exercise2 memt1, memt2;
+        Exercise2 memt;
+        memt = new;
 
-        mem1 = new(.address(4'd2));
-        mem2 = new(.address(4'd4), .data_in(8'd3));
+        repeat(20) begin
+            assert(memt.randomize());
+            $display("For memt:");
+            memt.print();
+            #10;
+        end
 
-        $display("For mem1t:");
-        memt1.print();
+        $stop;
 
-        $display("For mem2t:");
-        memt2.print();
     end
 
+endmodule
+*/
+
+//v2
+
+import class_pkg::*;
+module testing_rand_dist;
 
 
+    initial begin
+        Exercise2 memt;
+        memt = new;
+
+        repeat(10000) begin
+            assert(memt.randomize());
+            memt.count();
+            #10;
+        end
+
+        memt.categories_print();
+
+        $stop;
+
+    end
 
 endmodule
