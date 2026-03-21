@@ -41,14 +41,15 @@ initial begin
     cntrl = new;
     correct_count = 0; error_count = 0;
     expected_count_out = 0; expected_max_count = 0; expected_zero = 1;
+    $display("===================================================TestBench Start===================================================");
+
 
     //Test Series 1: Assert reset
     assert_reset();
 
     //Test Series 2: Randomization loop
-    repeat(1000) begin
-        assert(cntrl.randomize());
-        @(negedge clk)
+    repeat(1000) begin  //take care when repeating for sequential testbenches 
+        assert(cntrl.randomize());                // as we check and stimulate after 1 tick
     //use obejct's values
         rst_n = cntrl.rst_n;
         load_n = cntrl.load_n;
@@ -58,14 +59,20 @@ initial begin
         data_load = $random;
         
 
-        @(negedge clk);
         compute_expected(); //Golden model
+
+        @(negedge clk);  //cant check at negedge, why???
         check_result();
+        #1;
 
     end
 
     //Test Series 3: Assert reset again
     assert_reset();
+
+
+    $display("%t: At end of test error count is %0d and correct count = %0d", $time, error_count, correct_count);
+    $display("====================================================TestBench End====================================================");
     $stop;
 
 end
@@ -75,7 +82,9 @@ end
 
 task check_result;
    
-    if (count_out !== expected_count_out) begin
+    if ((count_out  !== expected_count_out) ||
+        (max_count  !== expected_max_count) ||
+        (zero       !== expected_zero)) begin
         error_count = error_count + 1;
         $display("========================================================================");
         $display("Error: rst_n = %b | load_n = %b | ce = %b | up_down = %b" , rst_n, load_n, ce,up_down);
@@ -119,6 +128,7 @@ task assert_reset;
     end
     else
         correct_count = correct_count + 1;
+    @(negedge clk);
     rst_n = 1;
 endtask
 
