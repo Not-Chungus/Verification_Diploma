@@ -1,0 +1,15 @@
+D:/Verification_Diploma/VS_code/Session2/Assignment2/Q2_Counter/package.sv {1 {vlog -work work -vopt -sv -stats=none D:/Verification_Diploma/VS_code/Session2/Assignment2/Q2_Counter/package.sv
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling package class_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} D:/Verification_Diploma/VS_code/Session2/Assignment2/Q2_Counter/counter.v {1 {vlog -work work -vopt -stats=none D:/Verification_Diploma/VS_code/Session2/Assignment2/Q2_Counter/counter.v
+QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}}

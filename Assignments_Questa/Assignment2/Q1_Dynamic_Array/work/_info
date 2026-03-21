@@ -1,0 +1,52 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.1 2024.02, Feb  1 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2024.1/examples
+T_opt
+!s110 1774087902
+VP[716gA4QF[Y:Lhj=b9nj3
+04 22 4 work testing_dynamic_arrays fast 0
+=1-ec8eb5a2f25c-69be6edd-352-1cf8
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2024.1;79
+vtesting_dynamic_arrays
+2../../../VS_code/Session2/Assignment2/Q1_Dynamic_Array/Dynamic_array.sv
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1774087900
+!i10b 1
+!s100 C>C6Ta[<OFNn28i;T_W2P2
+I;J?49n5Zdbn_m?GLaUPXk3
+S1
+dD:/Verification_Diploma/Assignments_Questa/Assignment2/Q1_Dynamic_Array
+w1774087693
+8../../../VS_code/Session2/Assignment2/Q1_Dynamic_Array/Dynamic_array.sv
+F../../../VS_code/Session2/Assignment2/Q1_Dynamic_Array/Dynamic_array.sv
+!i122 4
+L0 1 39
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2024.1;79
+r1
+!s85 0
+31
+!s108 1774087900.000000
+!s107 ../../../VS_code/Session2/Assignment2/Q1_Dynamic_Array/Dynamic_array.sv|
+!s90 -reportprogress|300|-sv|../../../VS_code/Session2/Assignment2/Q1_Dynamic_Array/Dynamic_array.sv|+cover|-covercells|
+!i113 0
+!s102 +cover -covercells
+o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
