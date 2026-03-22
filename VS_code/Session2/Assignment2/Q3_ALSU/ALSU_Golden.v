@@ -54,12 +54,14 @@ end
 
 // LEDs blink on invalid
 always @(posedge clk or posedge rst) begin
-    if (rst)
-        leds <= 16'h0000;
-    else if (invalid)
+  if(rst) begin
+      leds <= 0;
+  end else begin
+      if (invalid)
         leds <= ~leds;
-    else
-        leds <= 16'h0000;
+      else
+        leds <= 0;
+  end
 end
 
 // Reference output model
@@ -86,7 +88,7 @@ always @(posedge clk or posedge rst) begin
                     else if (red_op_B_reg)
                         out <= {{5{1'b0}}, |B_reg};
                     else
-                        out <= {{3{(A_reg | B_reg)[2]}}, (A_reg | B_reg)};
+                        out <= A_reg | B_reg;
                 end
 
                 3'h1: begin // XOR
@@ -97,17 +99,14 @@ always @(posedge clk or posedge rst) begin
                     else if (red_op_B_reg)
                         out <= {{5{1'b0}}, ^B_reg};
                     else
-                        out <= {{3{(A_reg ^ B_reg)[2]}}, (A_reg ^ B_reg)};
+                        out <= A_reg ^ B_reg;
                 end
 
                 3'h2: begin // ADD
                     if (FULL_ADDER == "ON")
-                        out <= $signed({{3{A_reg[2]}}, A_reg}) +
-                               $signed({{3{B_reg[2]}}, B_reg}) +
-                               cin_reg;
+                        out <= A_reg + B_reg + cin_reg;
                     else
-                        out <= $signed({{3{A_reg[2]}}, A_reg}) +
-                               $signed({{3{B_reg[2]}}, B_reg});
+                        out <= A_reg + B_reg;
                 end
 
                 3'h3: begin // MULT

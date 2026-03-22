@@ -1,0 +1,24 @@
+F:/Verification_Diploma/VS_code/Session2/Assignment2/Q3_ALSU/ALSU_Golden.v {1 {vlog -work work -vopt -stats=none F:/Verification_Diploma/VS_code/Session2/Assignment2/Q3_ALSU/ALSU_Golden.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module ALSU_golden
+
+Top level modules:
+	ALSU_golden
+
+} {} {}} F:/Verification_Diploma/VS_code/Session2/Assignment2/Q3_ALSU/ALSU.v {1 {vlog -work work -vopt -stats=none F:/Verification_Diploma/VS_code/Session2/Assignment2/Q3_ALSU/ALSU.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module ALSU
+
+Top level modules:
+	ALSU
+
+} {} {}} F:/Verification_Diploma/VS_code/Session2/Assignment2/Q3_ALSU/ALSU_tb.sv {1 {vlog -work work -vopt -sv -stats=none F:/Verification_Diploma/VS_code/Session2/Assignment2/Q3_ALSU/ALSU_tb.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package ALSU_tb_sv_unit
+-- Importing package class_pkg
+-- Compiling module ALSU_tb
+
+Top level modules:
+	ALSU_tb
+
+} {} {}}
