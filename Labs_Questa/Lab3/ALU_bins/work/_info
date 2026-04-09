@@ -1,0 +1,146 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/Verification_Diploma/Labs_Questa/Lab3/Screen_Class
+T_opt
+Z0 !s110 1775667370
+VFh:FNC>OSO]f@o0nDQegS1
+04 6 4 work ALU_tb fast 0
+=1-d85ed3a67a6e-69d688aa-227-8c14
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+valu_seq
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 DXx4 work 11 testing_pkg 0 22 iz<M]`oZTIdB?dP8W`^Pi1
+DXx4 work 11 alu_sv_unit 0 22 B6dYlnB7:4?o5<8c2mb2J2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 i85odHa5oz>:R5i=7g`J>3
+IA9LEiOB9HW4A9UD?_fXYO3
+!s105 alu_sv_unit
+S1
+Z5 dF:/Verification_Diploma/Labs_Questa/Lab3/ALU_bins
+Z6 w1775663993
+Z7 8../../../VS_code/Session3/Lab3/FunctionalEx1/alu.sv
+Z8 F../../../VS_code/Session3/Lab3/FunctionalEx1/alu.sv
+L0 2
+Z9 OL;L;10.6c;65
+Z10 !s108 1775667370.000000
+Z11 !s107 ../../../VS_code/Session3/Lab3/FunctionalEx1/alu_tb.sv|../../../VS_code/Session3/Lab3/FunctionalEx1/alu.sv|../../../VS_code/Session3/Lab3/FunctionalEx1/Package.sv|
+Z12 !s90 -reportprogress|300|-sv|../../../VS_code/Session3/Lab3/FunctionalEx1/Package.sv|../../../VS_code/Session3/Lab3/FunctionalEx1/alu.sv|../../../VS_code/Session3/Lab3/FunctionalEx1/alu_tb.sv|+cover|-covercells|
+!i113 0
+Z13 !s102 +cover -covercells
+Z14 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Xalu_sv_unit
+R2
+R3
+VB6dYlnB7:4?o5<8c2mb2J2
+r1
+!s85 0
+31
+!i10b 1
+!s100 n]HL>]iHX5WTXFb;OA=eo1
+IB6dYlnB7:4?o5<8c2mb2J2
+!i103 1
+S1
+R5
+R6
+R7
+R8
+L0 1
+R9
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R1
+vALU_tb
+R2
+R3
+DXx4 work 14 alu_tb_sv_unit 0 22 o_SA;T=MB:JXgHKFGJJkB2
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 GXcJ@Sz_Z6Oi]PZ^_AE]@3
+IoFjPc:16oJAoNdb@;M0k40
+!s105 alu_tb_sv_unit
+S1
+R5
+Z15 w1775667364
+Z16 8../../../VS_code/Session3/Lab3/FunctionalEx1/alu_tb.sv
+Z17 F../../../VS_code/Session3/Lab3/FunctionalEx1/alu_tb.sv
+L0 2
+R9
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R1
+n@a@l@u_tb
+Xalu_tb_sv_unit
+R2
+R3
+Vo_SA;T=MB:JXgHKFGJJkB2
+r1
+!s85 0
+31
+!i10b 1
+!s100 ;kWgBA8ZcNBOVZko8D?Ho1
+Io_SA;T=MB:JXgHKFGJJkB2
+!i103 1
+S1
+R5
+R15
+R16
+R17
+L0 1
+R9
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R1
+Xtesting_pkg
+R2
+R0
+!i10b 1
+!s100 [nh>_YHNFjDR`43bI^XL61
+Iiz<M]`oZTIdB?dP8W`^Pi1
+Viz<M]`oZTIdB?dP8W`^Pi1
+S1
+R5
+w1775666806
+8../../../VS_code/Session3/Lab3/FunctionalEx1/Package.sv
+F../../../VS_code/Session3/Lab3/FunctionalEx1/Package.sv
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R1

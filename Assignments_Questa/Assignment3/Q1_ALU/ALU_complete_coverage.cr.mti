@@ -1,0 +1,31 @@
+F:/Verification_Diploma/VS_code/Session3/Assignment3/Q1_ALU/alu.sv {2 {vlog -work work -vopt -sv -stats=none F:/Verification_Diploma/VS_code/Session3/Assignment3/Q1_ALU/alu.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+** Warning: F:/Verification_Diploma/VS_code/Session3/Assignment3/Q1_ALU/alu.sv(1): (vlog-13233) Design unit "alu_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package alu_sv_unit
+-- Importing package testing_pkg
+** Warning: ../../../VS_code/Session3/Assignment3/Q1_ALU/Package.sv(37): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+-- Compiling module alu_seq
+
+Top level modules:
+	alu_seq
+
+} {} {}} F:/Verification_Diploma/VS_code/Session3/Assignment3/Q1_ALU/alu_tb.sv {2 {vlog -work work -vopt -sv -stats=none F:/Verification_Diploma/VS_code/Session3/Assignment3/Q1_ALU/alu_tb.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+** Warning: F:/Verification_Diploma/VS_code/Session3/Assignment3/Q1_ALU/alu_tb.sv(1): (vlog-13233) Design unit "alu_tb_sv_unit" already exists and will be overwritten. Overwriting SystemVerilog $unit with different source files.
+-- Compiling package alu_tb_sv_unit
+-- Importing package testing_pkg
+** Warning: ../../../VS_code/Session3/Assignment3/Q1_ALU/Package.sv(37): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+-- Compiling module ALU_tb
+
+Top level modules:
+	ALU_tb
+
+} {} {}} F:/Verification_Diploma/VS_code/Session3/Assignment3/Q1_ALU/Package.sv {2 {vlog -work work -vopt -sv -stats=none F:/Verification_Diploma/VS_code/Session3/Assignment3/Q1_ALU/Package.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package testing_pkg
+** Warning: F:/Verification_Diploma/VS_code/Session3/Assignment3/Q1_ALU/Package.sv(37): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
+
+Top level modules:
+	--none--
+
+} {} {}}
