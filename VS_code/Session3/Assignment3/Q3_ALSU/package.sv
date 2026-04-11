@@ -12,11 +12,15 @@ package class_pkg;
         rand logic [2:0] opcode;
         rand logic signed [2:0] A, B;
 
+        bit clk;
+        opcode_e my_arr[6];
+
+    //========================================CONSTRAINTS========================================
         constraint Reset { //off for 90% of the time
             rst dist {0:/90 , 1:/10};
         }
 
-        constraint Inputs { //MAXs and Zero 80% of the time for ADD and MULT
+        constraint Input { //MAXs and Zero 80% of the time for ADD and MULT
             if((opcode == ADD) | (opcode == MULT)){
                 A dist {MAXPOS:=40,
                     MAXNEG:=40,
@@ -45,7 +49,7 @@ package class_pkg;
             }
         }
 
-        constraint Reduction_Operations {       //selected has one bit set 
+        constraint Reduction_Operations {       //selected has one bit set (
             if(opcode inside {OR, XOR}){  //unslected has all low
                 if(red_op_A){
                     A dist { 4:=80, 1:=80, 2:=80, [-3:0]:=20, 3:=20 };
@@ -57,6 +61,49 @@ package class_pkg;
                 }
             }                  
         }
+
+        constraint opcode_rand_array {
+
+
+        }
+
+    //========================================COVER GROUPS========================================
+    covergroup CovPort; //@(posedge clk)
+        A_cp: coverpoint A iff(1)
+        {
+            bins A_data_0 = {ZERO};
+            bins A_data_max = {MAXPOS};
+            bins A_data_min = {MAXNEG};
+            bins A_data_default = default;
+            bins A_data_walkingones[] = {001,010,100} iff(red_op_A);
+        }
+
+        B_cp: coverpoint B iff(1)
+        {
+            bins B_data_0 = {ZERO};
+            bins B_data_max = {MAXPOS};
+            bins B_data_min = {MAXNEG};
+            bins B_data_default = default;
+            bins B_data_walkingones[] = {001,010,100} iff(!red_op_A && red_op_B);
+        }
+
+        ALU_cp: coverpoint opcode iff(1)
+        {
+            bins Bins_shift[] = {SHIFT,ROTATE};
+            bins Bins_arith[] = {ADD, MULT};
+            bins Bins_bitwise[] = {OR, XOR};
+            illegal_bins Bins_invalid = {INVALID_6, INVALID_7};
+            bins Bins_trans = (0 => 1 => 2 => 3 => 4 => 5);
+        }
+
+
+    endgroup
+
+    function new();
+        CovPort = new();
+    endfunction
+
+
 
     endclass
 

@@ -27,16 +27,27 @@ ALSU_golden #(
 integer correct_count = 0;
 integer error_count = 0;
 
+//clk========================================
 initial begin
     clk = 0; 
-    forever
+    forever begin
         #5 clk = ~clk;
+        cntrl.clk = clk;
+    end
 end
+
+//Sampling for Bins==========================
+always @(posedge clk)
+    myport.sample();
+always @(posedge rst or posedge bypass_A or posedge bypass_B)
+    myport.stop();
+//event for .start??
 
 
 initial begin
     RandomControl cntrl;
     cntrl = new;
+    CovPort myport;
     correct_count = 0; error_count = 0;
     expected_out = 0; expected_leds = 0;
     $display("===================================================TestBench Start===================================================");
@@ -54,7 +65,7 @@ initial begin
         opcode = opcode_e'(cntrl.opcode);
 
         cin = cntrl.cin; rst = cntrl.rst ;
-        red_op_A=cntrl.red_op_A; red_op_B = cntrl.red_op_B; 
+        red_op_A = cntrl.red_op_A; red_op_B = cntrl.red_op_B; 
         bypass_A = cntrl.bypass_A; bypass_B = cntrl.bypass_B;
         direction= cntrl.direction; serial_in = cntrl.serial_in;
     
