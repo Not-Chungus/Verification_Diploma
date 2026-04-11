@@ -1,0 +1,143 @@
+m255
+K4
+z2
+!s11f vlog 2024.1 2024.02, Feb  1 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2024.1/examples
+vALSU
+2D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU.v
+Z0 !s110 1775939691
+!i10b 1
+!s100 zY[`KMel71XkzjMkSPV6d1
+IoL9^?d>ce8WJ8_hD?_G]I3
+Z1 dD:/Verification_Diploma/Assignments_Questa/Assignment3/Q3_ALSU
+Z2 w1775933338
+8D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU.v
+FD:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU.v
+!i122 69
+L0 1 127
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2024.1;79
+r1
+!s85 0
+31
+Z5 !s108 1775939691.000000
+!s107 D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU.v|
+!i113 0
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+n@a@l@s@u
+vALSU_golden
+2D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU_Golden.v
+R0
+!i10b 1
+!s100 ]]ciG3K1i41ASRB<BeUIZ0
+I>DchZGhUd1oSO:7Aic^C_0
+R1
+R2
+8D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU_Golden.v
+FD:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU_Golden.v
+!i122 70
+L0 1 138
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU_Golden.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/ALSU_Golden.v|
+!i113 0
+R6
+R7
+n@a@l@s@u_golden
+vALSU_tb
+Z8 2../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU.v|../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU_Golden.v|../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU_tb.sv|../../../VS_code/Session3/Assignment3/Q3_ALSU/package.sv
+Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z10 DXx4 work 9 class_pkg 0 22 GWY9@@16JIWRLc3;mk1[Q1
+DXx4 work 15 ALSU_tb_sv_unit 0 22 5H4XfWJ04[DoFOB]HB0>R2
+Z11 !s110 1775939106
+R3
+r1
+!s85 0
+!i10b 1
+!s100 7R0QG=Wz@fcz8mFz?fCH61
+INQS8:o1?JYPo4EFI;<E0m1
+!s105 ALSU_tb_sv_unit
+S1
+R1
+Z12 w1775938900
+Z13 8../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU_tb.sv
+Z14 F../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU_tb.sv
+!i122 53
+L0 2 179
+R4
+31
+Z15 !s108 1775939106.000000
+Z16 !s107 ../../../VS_code/Session3/Assignment3/Q3_ALSU/package.sv|../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU_tb.sv|../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU_Golden.v|../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU.v|
+Z17 !s90 -reportprogress|300|-sv|../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU.v|../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU_Golden.v|../../../VS_code/Session3/Assignment3/Q3_ALSU/ALSU_tb.sv|../../../VS_code/Session3/Assignment3/Q3_ALSU/package.sv|+cover|-covercells|
+!i113 0
+Z18 !s102 +cover -covercells
+Z19 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+n@a@l@s@u_tb
+XALSU_tb_sv_unit
+R8
+R9
+R10
+R11
+V5H4XfWJ04[DoFOB]HB0>R2
+r1
+!s85 0
+!i10b 1
+!s100 A7Qk;Dgm3N1Me<d53knjg0
+I5H4XfWJ04[DoFOB]HB0>R2
+!i103 1
+S1
+R1
+R12
+R13
+R14
+!i122 53
+Z20 L0 1 0
+R4
+31
+R15
+R16
+R17
+!i113 0
+R18
+R19
+R7
+n@a@l@s@u_tb_sv_unit
+Xclass_pkg
+2D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/package.sv
+R9
+R0
+!i10b 1
+!s100 ng08Vb_5oAL`@[fF7K<?P1
+IYJlN4za>zZ]nJ6Ie_VIB71
+S1
+R1
+w1775939348
+8D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/package.sv
+FD:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/package.sv
+!i122 71
+R20
+VYJlN4za>zZ]nJ6Ie_VIB71
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/package.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Verification_Diploma/VS_code/Session3/Assignment3/Q3_ALSU/package.sv|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7

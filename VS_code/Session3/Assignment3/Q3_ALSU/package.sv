@@ -13,7 +13,7 @@ package class_pkg;
         rand logic signed [2:0] A, B;
 
         bit clk;
-        opcode_e my_arr[6];
+        rand opcode_e my_opcodes[6];
 
     //========================================CONSTRAINTS========================================
         constraint Reset { //off for 90% of the time
@@ -62,8 +62,11 @@ package class_pkg;
             }                  
         }
 
-        constraint opcode_rand_array {
-
+        constraint opcode_rand_array {//"constraint 8"
+            unique {my_opcodes};
+            foreach(my_opcodes[i]){
+                my_opcodes[i] inside {[OR:ROTATE]};
+            }
 
         }
 
@@ -87,7 +90,7 @@ package class_pkg;
             bins B_data_walkingones[] = {001,010,100} iff(!red_op_A && red_op_B);
         }
 
-        ALU_cp: coverpoint opcode iff(1)
+        ALU_cp: coverpoint opcode iff(1) 
         {
             bins Bins_shift[] = {SHIFT,ROTATE};
             bins Bins_arith[] = {ADD, MULT};
@@ -96,13 +99,12 @@ package class_pkg;
             bins Bins_trans = (0 => 1 => 2 => 3 => 4 => 5);
         }
 
-
     endgroup
+
 
     function new();
         CovPort = new();
     endfunction
-
 
 
     endclass

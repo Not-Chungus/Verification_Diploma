@@ -27,6 +27,11 @@ ALSU_golden #(
 integer correct_count = 0;
 integer error_count = 0;
 
+//Class and Objects
+RandomControl cntrl = new();
+CovPort myport = new();
+
+
 //clk========================================
 initial begin
     clk = 0; 
@@ -36,18 +41,9 @@ initial begin
     end
 end
 
-//Sampling for Bins==========================
-always @(posedge clk)
-    myport.sample();
-always @(posedge rst or posedge bypass_A or posedge bypass_B)
-    myport.stop();
-//event for .start??
-
 
 initial begin
-    RandomControl cntrl;
-    cntrl = new;
-    CovPort myport;
+    
     correct_count = 0; error_count = 0;
     expected_out = 0; expected_leds = 0;
     $display("===================================================TestBench Start===================================================");
@@ -56,7 +52,8 @@ initial begin
     //Test Series 1: Assert reset
     assert_reset();
 
-    //Test Series 2: Randomization loop
+    //Test Series 2: [First loop: constraint 8 is off]
+    cntrl.opcode_rand_array.constraint_mode(0);
     repeat(1000) begin  //take care when repeating for sequential testbenches 
         assert(cntrl.randomize());                // as we check and stimulate after 1 tick
     //use obejct's values
@@ -73,13 +70,39 @@ initial begin
         @(negedge clk);
         @(negedge clk);
 
-
         check_result();
         #1;
 
     end
 
-    //Test Series 3: Assert reset again
+    //Test Series 3: [Second loop: constraint 8 only on, else disabled]
+    //no bypasses,reduction or resetting
+    cntrl.constraint_mode(0);
+    cntrl.opcode_rand_array.constraint_mode(1);
+    repeat(1000) begin  //take care when repeating for sequential testbenches 
+        assert(cntrl.randomize());                // as we check and stimulate after 1 tick
+    //use obejct's values
+        A = cntrl.A;
+        B = cntrl.B;
+        
+
+        cin = cntrl.cin; rst = 0;
+        red_op_A = 0; red_op_B = 0; 
+        bypass_A = 0; bypass_B = 0;
+        direction= cntrl.direction; serial_in = cntrl.serial_in;
+
+        foreach(cntrl.my_opcodes[i])begin //6 iterations * 1000 times
+            opcode = opcode_e'(cntrl.opcode); //all valid from const 8
+            //wait for two clock cycles
+            @(negedge clk); //all 6 iterations share the same i/p
+            @(negedge clk);
+
+            check_result();
+            #1;
+        end
+    end
+
+    //Test Series 4: Assert reset again
     assert_reset();
 
 
@@ -136,6 +159,25 @@ task assert_reset;
     rst = 0;
 endtask
 
+
+//Sampling for Bins==========================
+always @(posedge clk)
+    myport.sample();
+always @(posedge rst or posedge bypass_A or posedge bypass_B)
+    myport.stop();
+always @(negedge rst or negedge bypass_A or negedge bypass_B) begin
+    if(!rst && !bypass_A && !bypass_B)
+        myport.start();
+    else
+        myport.stop();
+end
+//or:
+/*always @(rst, bypass_A, bypass_B) begin
+    if (rst || bypass_A || bypass_B) 
+        myport.stop();
+    else 
+        myport.start();
+end*/
 
 
 endmodule
