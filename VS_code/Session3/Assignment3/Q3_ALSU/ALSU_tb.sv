@@ -29,8 +29,7 @@ integer error_count = 0;
 
 //Class and Objects
 RandomControl cntrl = new();
-CovPort myport = new();
-
+//CovPort myport;  ?
 
 //clk========================================
 initial begin
@@ -79,20 +78,20 @@ initial begin
     //no bypasses,reduction or resetting
     cntrl.constraint_mode(0);
     cntrl.opcode_rand_array.constraint_mode(1);
-    repeat(1000) begin  //take care when repeating for sequential testbenches 
+    repeat(3000) begin  //take care when repeating for sequential testbenches 
         assert(cntrl.randomize());                // as we check and stimulate after 1 tick
     //use obejct's values
         A = cntrl.A;
         B = cntrl.B;
         
-
         cin = cntrl.cin; rst = 0;
         red_op_A = 0; red_op_B = 0; 
         bypass_A = 0; bypass_B = 0;
         direction= cntrl.direction; serial_in = cntrl.serial_in;
 
         foreach(cntrl.my_opcodes[i])begin //6 iterations * 1000 times
-            opcode = opcode_e'(cntrl.opcode); //all valid from const 8
+            cntrl.opcode = cntrl.my_opcodes[i]; //all valid from const 8
+            opcode = opcode_e'(cntrl.opcode); //we didnt drive opcode directly to log bins
             //wait for two clock cycles
             @(negedge clk); //all 6 iterations share the same i/p
             @(negedge clk);
@@ -101,8 +100,33 @@ initial begin
             #1;
         end
     end
+/*
+    //Test Series 4: Directed tests for transition of opcode by ascending order
+    repeat(100) begin
+        assert(cntrl.randomize());
+        A = cntrl.A;
+        B = cntrl.B;
+        cin = cntrl.cin; rst = 0;
+        red_op_A = 0; red_op_B = 0; 
+        bypass_A = 0; bypass_B = 0;
+        direction= cntrl.direction; serial_in = cntrl.serial_in;
 
-    //Test Series 4: Assert reset again
+        foreach(cntrl.my_opcodes[i])begin
+            cntrl.opcode = i;
+            opcode = opcode_e'(cntrl.opcode);
+            //wait for two clock cycles
+            @(negedge clk); //all 6 iterations in order share the same i/p
+            @(negedge clk);
+
+            check_result();
+            #1;
+
+        end
+    end
+*/
+
+    cntrl.constraint_mode(1);
+    //Test Series 5: Assert reset again
     assert_reset();
 
 
@@ -141,9 +165,6 @@ endtask
 
 
 
-
-
-
 task assert_reset;
     @(negedge clk);
     rst = 1;
@@ -162,22 +183,25 @@ endtask
 
 //Sampling for Bins==========================
 always @(posedge clk)
-    myport.sample();
+    cntrl.CovPort.sample();
 always @(posedge rst or posedge bypass_A or posedge bypass_B)
-    myport.stop();
+    cntrl.CovPort.stop();
 always @(negedge rst or negedge bypass_A or negedge bypass_B) begin
     if(!rst && !bypass_A && !bypass_B)
-        myport.start();
-    else
-        myport.stop();
+        cntrl.CovPort.start();
+    else 
+        cntrl.CovPort.stop();
 end
+
 //or:
-/*always @(rst, bypass_A, bypass_B) begin
+/*
+always @(rst or bypass_A or bypass_B) begin
     if (rst || bypass_A || bypass_B) 
         myport.stop();
     else 
         myport.start();
-end*/
+end
+*/
 
 
 endmodule

@@ -8,7 +8,7 @@ package class_pkg;
 
 
     class RandomControl;
-        rand logic rst,red_op_A, red_op_B, bypass_A, bypass_B, cin, direction, serial_in;
+        rand logic rst, red_op_A, red_op_B, bypass_A, bypass_B, cin, direction, serial_in;
         rand logic [2:0] opcode;
         rand logic signed [2:0] A, B;
 
@@ -78,7 +78,7 @@ package class_pkg;
             bins A_data_max = {MAXPOS};
             bins A_data_min = {MAXNEG};
             bins A_data_default = default;
-            bins A_data_walkingones[] = {001,010,100} iff(red_op_A);
+            bins A_data_walkingones[] = {3'b001,3'b010,3'b100} iff(red_op_A);
         }
 
         B_cp: coverpoint B iff(1)
@@ -87,7 +87,7 @@ package class_pkg;
             bins B_data_max = {MAXPOS};
             bins B_data_min = {MAXNEG};
             bins B_data_default = default;
-            bins B_data_walkingones[] = {001,010,100} iff(!red_op_A && red_op_B);
+            bins B_data_walkingones[] = {3'b001,3'b010,3'b100} iff(!red_op_A && red_op_B);
         }
 
         ALU_cp: coverpoint opcode iff(1) 
@@ -96,14 +96,16 @@ package class_pkg;
             bins Bins_arith[] = {ADD, MULT};
             bins Bins_bitwise[] = {OR, XOR};
             illegal_bins Bins_invalid = {INVALID_6, INVALID_7};
-            bins Bins_trans = (0 => 1 => 2 => 3 => 4 => 5);
+            bins Bins_trans = (0 => 0 => 1 => 1 => 2 => 2 => 3 => 3 => 4 => 4 => 5 => 5);
+            //the transition sequence is like this as we wait two cycles before changing
+            //opcode in the testbench
         }
 
     endgroup
 
 
     function new();
-        CovPort = new();
+        CovPort = new;
     endfunction
 
 

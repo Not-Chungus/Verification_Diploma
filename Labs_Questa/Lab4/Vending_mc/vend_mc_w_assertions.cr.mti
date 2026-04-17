@@ -1,0 +1,29 @@
+F:/Verification_Diploma/VS_code/Session4/Lab4/Vending_Machine/vending_machine_mon.sv {1 {vlog -work work -vopt -sv -stats=none F:/Verification_Diploma/VS_code/Session4/Lab4/Vending_Machine/vending_machine_mon.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module vending_machine_monitor
+
+Top level modules:
+	vending_machine_monitor
+
+} {} {}} F:/Verification_Diploma/VS_code/Session4/Lab4/Vending_Machine/vending_machine_sva.sv {1 {vlog -work work -vopt -sv -stats=none F:/Verification_Diploma/VS_code/Session4/Lab4/Vending_Machine/vending_machine_sva.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module vending_machine_sva
+
+Top level modules:
+	vending_machine_sva
+
+} {} {}} F:/Verification_Diploma/VS_code/Session4/Lab4/Vending_Machine/vending_machine_if.sv {1 {vlog -work work -vopt -sv -stats=none F:/Verification_Diploma/VS_code/Session4/Lab4/Vending_Machine/vending_machine_if.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling interface vending_machine_if
+
+Top level modules:
+	--none--
+
+} {} {}} F:/Verification_Diploma/VS_code/Session4/Lab4/Vending_Machine/vending_machine_top.sv {1 {vlog -work work -vopt -sv -stats=none F:/Verification_Diploma/VS_code/Session4/Lab4/Vending_Machine/vending_machine_top.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module vending_machine_top
+
+Top level modules:
+	vending_machine_top
+
+} {} {}}

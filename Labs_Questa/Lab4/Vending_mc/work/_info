@@ -1,0 +1,169 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/IEEE_Digital/Installation/questasim64_10.6c/examples
+T_opt
+!s110 1776175758
+VMooJNBR=3BLY3TJi=QmS]3
+04 19 4 work vending_machine_top fast 0
+=1-d85ed3a67a6e-69de4a8e-d5-56c8
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+vvending_machine
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1776175753
+!i10b 1
+!s100 `:OzD6KU6DmH5eGRPLRf13
+IaAN@`DM<9;VYCHIHPoU321
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 vending_machine_sv_unit
+S1
+Z3 dF:/Verification_Diploma/Labs_Questa/Lab4/Vending_mc
+w1776175303
+8../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine.sv
+F../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine.sv
+L0 8
+Z4 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z5 !s108 1776175753.000000
+Z6 !s107 ../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_top.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_tb.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_sva.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_mon.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_if.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine.sv|
+Z7 !s90 -reportprogress|300|-sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_if.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_mon.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_sva.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_tb.sv|../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_top.sv|+cover|
+!i113 0
+Z8 !s102 +cover
+Z9 o-sv +cover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+Yvending_machine_if
+R1
+Z10 !s110 1776175754
+!i10b 1
+!s100 h:KgN4SF6zZc[dG3BBQI;2
+I[U]7W`[ZAc]F9I`c^`@^;2
+R2
+!s105 vending_machine_if_sv_unit
+S1
+R3
+w1776170277
+8../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_if.sv
+F../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_if.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+R0
+vvending_machine_monitor
+R1
+R10
+!i10b 1
+!s100 oz@I_aL1@RM;k;Xg9Jdn;1
+IdQ89WA9GFXzzkbf:Y@00:2
+R2
+!s105 vending_machine_mon_sv_unit
+S1
+R3
+w1776170412
+8../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_mon.sv
+F../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_mon.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+R0
+vvending_machine_sva
+R1
+R10
+!i10b 1
+!s100 m<V<KDiD13m9>TCUVPaiZ1
+ISB=TX3d4zBk2m`g3h?adT0
+R2
+!s105 vending_machine_sva_sv_unit
+S1
+R3
+w1776169587
+8../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_sva.sv
+F../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_sva.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+R0
+vvending_machine_tb
+R1
+R10
+!i10b 1
+!s100 94?Ncam04Io2VzGe]d>N<3
+I1i>?L_mIoz:c8_3IB2T`i1
+R2
+!s105 vending_machine_tb_sv_unit
+S1
+R3
+w1776175731
+8../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_tb.sv
+F../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_tb.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+R0
+vvending_machine_top
+R1
+R10
+!i10b 1
+!s100 WO?V49N:f<UHkLz0UWAm^1
+IFN=`GB;jaY2UA1I24R4[Z3
+R2
+!s105 vending_machine_top_sv_unit
+S1
+R3
+w1776170097
+8../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_top.sv
+F../../../VS_code/Session4/Lab4/Vending_Machine/vending_machine_top.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R9
+R0
