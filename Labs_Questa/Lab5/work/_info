@@ -1,0 +1,97 @@
+m255
+K4
+z2
+!s11f vlog 2024.1 2024.02, Feb  1 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2024.1/examples
+vshift_reg
+2D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg.v
+!s110 1776438347
+!i10b 1
+!s100 T]bO2hh>T@VSG6TnEHOOi0
+IIaQgg3DEDe=_fE2O]iaD32
+Z0 dD:/Verification_Diploma/Labs_Questa/Lab5
+w1776433518
+8D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg.v
+FD:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg.v
+!i122 21
+L0 8 21
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 OL;L;2024.1;79
+r1
+!s85 0
+31
+!s108 1776438347.000000
+!s107 D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z3 tCvgOpt 0
+Xshift_reg_env_pkg
+2D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+DXx6 mtiUvm 7 uvm_pkg 0 22 MiVhEBb9cnBN5^J=<XBKI2
+!s110 1776438058
+!i10b 1
+!s100 n@JKB=4=KzAT?6DNQQDk90
+I3blVz`QUXj6B6Fc1?;IkH0
+S1
+R0
+w1776437003
+8D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv
+FD:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+FC:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+!i122 19
+Z5 L0 8 0
+V3blVz`QUXj6B6Fc1?;IkH0
+R2
+r1
+!s85 0
+31
+!s108 1776438057.000000
+!s107 C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv|
+!i113 0
+Z6 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+Yshift_reg_if
+2D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_if.sv
+R4
+!s110 1776438348
+!i10b 1
+!s100 PV=7eYBEUk`<?S:[G41Cc1
+I[`OaoY?oF84diKb>d_amj3
+S1
+R0
+w1776433561
+8D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_if.sv
+FD:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_if.sv
+!i122 22
+R5
+R1
+R2
+r1
+!s85 0
+31
+!s108 1776438348.000000
+!s107 D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_if.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_if.sv|
+!i113 0
+R6
+R3
