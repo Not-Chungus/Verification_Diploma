@@ -44,7 +44,7 @@ end
 initial begin
     
     correct_count = 0; error_count = 0;
-    expected_out = 0; expected_leds = 0;
+    //expected_out = 0; expected_leds = 0;
     $display("===================================================TestBench Start===================================================");
 
 

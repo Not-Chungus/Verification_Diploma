@@ -72,14 +72,14 @@ package class_pkg;
 
     //========================================COVER GROUPS========================================
     covergroup CovPort; //@(posedge clk)
-        cin_cp: coverpoint cin iff(0)
-        direction_cp: coverpoint direction iff(0)
-        serial_in_cp: coverpoint serial_in iff(0)
-        red_op_A_cp: coverpoint red_op_A iff(0)
-        red_op_B_cp: coverpoint red_op_B iff(0)
+        cin_cp: coverpoint cin iff(0){}
+        direction_cp: coverpoint direction iff(0){}
+        serial_in_cp: coverpoint serial_in iff(0){}
+        red_op_A_cp: coverpoint red_op_A iff(0){}
+        red_op_B_cp: coverpoint red_op_B iff(0){}
         
-
-
+        
+        
         A_cp: coverpoint A iff(1)
         {
             bins A_data_0 = {ZERO};
@@ -114,21 +114,21 @@ package class_pkg;
         cross ALU_cp,A_cp{
             
             bins Arith_corners_A_1 = binsof(ALU_cp.Bins_arith) && 
-                                    binsof(A_cp.ZERO);
+                                    binsof(A_cp.A_data_0);
             bins Arith_corners_A_2 = binsof(ALU_cp.Bins_arith) && 
-                                    binsof(A_cp.MAXPOS);
+                                    binsof(A_cp.A_data_max);
             bins Arith_corners_A_3 = binsof(ALU_cp.Bins_arith) && 
-                                    binsof(A_cp.MAXNEG);
+                                    binsof(A_cp.A_data_min);
             option.cross_auto_bin_max = 0;
         }
 
         cross ALU_cp,B_cp{   
             bins Arith_corners_B_1 = binsof(ALU_cp.Bins_arith) && 
-                                    binsof(B_cp.ZERO);
+                                    binsof(B_cp.B_data_0);
             bins Arith_corners_B_2 = binsof(ALU_cp.Bins_arith) && 
-                                    binsof(B_cp.MAXPOS);
+                                    binsof(B_cp.B_data_max);
             bins Arith_corners_B_3 = binsof(ALU_cp.Bins_arith) && 
-                                    binsof(B_cp.MAXNEG);
+                                    binsof(B_cp.B_data_min);
             option.cross_auto_bin_max = 0;
         }
 
@@ -152,14 +152,14 @@ package class_pkg;
             option.cross_auto_bin_max = 0;
         }
         //5.
-        cross ALU_cp,A_cp,red_op_A_cp
+        cross ALU_cp,A_cp,red_op_A_cp,serial_in_cp
         {
             bins bitwise_red_A = binsof(ALU_cp.Bins_bitwise) && 
                                     binsof(serial_in_cp) && binsof(red_op_A_cp) intersect{1};
             option.cross_auto_bin_max = 0;
         }
         //6.
-        cross ALU_cp,B_cp,red_op_B_cp
+        cross ALU_cp,B_cp,red_op_B_cp,serial_in_cp
         {
             bins bitwise_red_B = binsof(ALU_cp.Bins_bitwise) && 
                                     binsof(serial_in_cp) && binsof(red_op_B_cp) intersect{1};
@@ -168,9 +168,9 @@ package class_pkg;
         //7.
         cross ALU_cp,red_op_A_cp,red_op_B_cp
         {
-            ignore bins red_at_no_bitwise = binsof(ALU_cp.Bins_bitwise) && 
+            ignore_bins red_at_no_bitwise = binsof(ALU_cp.Bins_bitwise) && 
                                             binsof(red_op_A_cp) intersect{0} && 
-                                            binsof(red_op_B_cp) intersect{0};;
+                                            binsof(red_op_B_cp) intersect{0};
             //option.cross_auto_bin_max = 0;
         }
 

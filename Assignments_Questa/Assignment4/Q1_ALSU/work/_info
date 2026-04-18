@@ -1,0 +1,220 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+!s11f vlog 2024.1 2024.02, Feb  1 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2024.1/examples
+T_opt
+!s110 1776543437
+VgIV;JkCCP2Y[i_eX^0mHZ0
+04 7 4 work ALSU_tb fast 0
+=2-ec8eb5a2f25c-69e3e6cc-356-c60
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2024.1;79
+vALSU
+Z3 2../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU.v|../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_Golden.v|../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_tb.sv|../../../VS_code/Session4/Assignment4/Q1_ALSU/package.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1776543435
+!i10b 1
+!s100 Y;Z;ZMoZS^m[gJ@MXZ9:o1
+IGDPiOjW1J=hWFB5o@X=oG0
+S1
+Z6 dD:/Verification_Diploma/Assignments_Questa/Assignment4/Q1_ALSU
+Z7 w1776537741
+8../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU.v
+F../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU.v
+!i122 70
+L0 1 127
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2024.1;79
+r1
+!s85 0
+31
+Z10 !s108 1776543435.000000
+Z11 !s107 ../../../VS_code/Session4/Assignment4/Q1_ALSU/package.sv|../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_tb.sv|../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_Golden.v|../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU.v|
+Z12 !s90 -reportprogress|300|-sv|../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU.v|../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_Golden.v|../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_tb.sv|../../../VS_code/Session4/Assignment4/Q1_ALSU/package.sv|+cover|-covercells|
+!i113 0
+Z13 !s102 +cover -covercells
+Z14 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@a@l@s@u
+vALSU_golden
+R3
+R4
+R5
+!i10b 1
+!s100 `c=SF2YGez;XS<@moAzbD1
+IDiI[d@[5]i?3JKkF_<UO:0
+S1
+R6
+R7
+8../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_Golden.v
+F../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_Golden.v
+!i122 70
+L0 1 138
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R2
+n@a@l@s@u_golden
+vALSU_tb
+R3
+R4
+Z15 DXx4 work 9 class_pkg 0 22 oKNAGJk]zc9=nU553Z98V3
+DXx4 work 15 ALSU_tb_sv_unit 0 22 bX=oZP<DcTI@HiQ1<4Yo:2
+R5
+R8
+r1
+!s85 0
+!i10b 1
+!s100 ?@Al^7Y^=zQO9z`mPnd5S0
+Iann`gbW1z]0akXU@VZKmb2
+!s105 ALSU_tb_sv_unit
+S1
+R6
+Z16 w1776543428
+Z17 8../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_tb.sv
+Z18 F../../../VS_code/Session4/Assignment4/Q1_ALSU/ALSU_tb.sv
+!i122 70
+L0 2 206
+R9
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R2
+n@a@l@s@u_tb
+XALSU_tb_sv_unit
+R3
+R4
+R15
+R5
+VbX=oZP<DcTI@HiQ1<4Yo:2
+r1
+!s85 0
+!i10b 1
+!s100 FdERZ7hZ0Nn[knDmjVgF[0
+IbX=oZP<DcTI@HiQ1<4Yo:2
+!i103 1
+S1
+R6
+R16
+R17
+R18
+!i122 70
+Z19 L0 1 0
+R9
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R2
+n@a@l@s@u_tb_sv_unit
+Xclass_pkg
+R3
+R4
+R5
+!i10b 1
+!s100 cKO@@_PTm4?]EPOJN2jmj1
+IoKNAGJk]zc9=nU553Z98V3
+S1
+R6
+w1776543152
+8../../../VS_code/Session4/Assignment4/Q1_ALSU/package.sv
+F../../../VS_code/Session4/Assignment4/Q1_ALSU/package.sv
+!i122 70
+R19
+VoKNAGJk]zc9=nU553Z98V3
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R2
+vmy_mem
+R4
+Z20 !s110 1776543248
+!i10b 1
+!s100 HM`aGmdi1]k<jzbJzmf2A3
+IUE]f=egg0C[7UAP]bV:HV2
+S1
+R6
+Z21 w1776455237
+8../../../VS_code/Session3/Assignment3/Q4_RAM/RAM.sv
+F../../../VS_code/Session3/Assignment3/Q4_RAM/RAM.sv
+!i122 64
+L0 1 19
+R8
+R9
+r1
+!s85 0
+31
+Z22 !s108 1776543248.000000
+Z23 !s107 ../../../VS_code/Session3/Assignment3/Q4_RAM/package.sv|../../../VS_code/Session3/Assignment3/Q4_RAM/RAM_tb.sv|../../../VS_code/Session3/Assignment3/Q4_RAM/RAM.sv|
+Z24 !s90 -reportprogress|300|-sv|../../../VS_code/Session3/Assignment3/Q4_RAM/RAM.sv|../../../VS_code/Session3/Assignment3/Q4_RAM/RAM_tb.sv|../../../VS_code/Session3/Assignment3/Q4_RAM/package.sv|+cover|-covercells|
+!i113 0
+R13
+R14
+R2
+XRAM_tb_sv_unit
+R4
+DXx4 work 9 class_pkg 0 22 mkmXhSPHBk8XSj]2l<PCl0
+R20
+VhzKP3R:zznhFa2e@k8<;d2
+r1
+!s85 0
+!i10b 1
+!s100 gn1BO>[FY0hH1NlW:G21R3
+IhzKP3R:zznhFa2e@k8<;d2
+!i103 1
+S1
+R6
+R21
+8../../../VS_code/Session3/Assignment3/Q4_RAM/RAM_tb.sv
+F../../../VS_code/Session3/Assignment3/Q4_RAM/RAM_tb.sv
+!i122 64
+R19
+R9
+31
+R22
+R23
+R24
+!i113 0
+R13
+R14
+R2
+n@r@a@m_tb_sv_unit
