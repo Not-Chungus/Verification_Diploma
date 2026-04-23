@@ -1,50 +1,19 @@
-D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg.v {1 {vlog -work work -vopt -stats=none D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg.v
-QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+F:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv {1 {vlog -work work -vopt -sv -stats=none F:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package shift_reg_env_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package shift_reg_drv_pkg
+-- Importing package shift_reg_cfg_pkg
+** Note: (vlog-2286) F:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv(11): Using implicit +incdir+F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} F:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg.v {1 {vlog -work work -vopt -stats=none F:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
 -- Compiling module shift_reg
 
 Top level modules:
 	shift_reg
 
-} {} {}} D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_if.sv {1 {vlog -work work -vopt -sv -stats=none D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_if.sv
-QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
--- Compiling interface shift_reg_if
-
-Top level modules:
-	--none--
-
-} {} {}} D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv {0 {vlog -work work -vopt -sv -stats=none D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv
-QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
--- Compiling package shift_reg_test_pkg
--- Importing package shift_reg_env_pkg
--- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(10): (vlog-13006) Could not find the package (shift_reg_cfg_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-** Note: (vlog-2286) D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(12): Using implicit +incdir+C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(21): Invalid type 'shift_config'. Please check the type of the variable 'shift_cfg'.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(30): (vlog-2164) Class or package 'shift_env' not found.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(30): (vlog-2730) Undefined variable: 'shift_env'.
-** Error: (vlog-13069) D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(30): near "::": syntax error, unexpected ::, expecting ';'.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(30): (vlog-2164) Class or package 'type_id' not found.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(31): (vlog-2730) Undefined variable: 'shift_cfg'.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(31): (vlog-2164) Class or package 'shift_config' not found.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(31): (vlog-2730) Undefined variable: 'shift_config'.
-** Error: (vlog-13069) D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(31): near "::": syntax error, unexpected ::, expecting ';'.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_test.sv(31): (vlog-2164) Class or package 'type_id' not found.
-
-} {6.0 7.0 8.0 18.0} {}} D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv {0 {vlog -work work -vopt -sv -stats=none D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv
-QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
--- Compiling package shift_reg_env_pkg
--- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv(10): (vlog-13006) Could not find the package (shift_reg_drv_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-** Note: (vlog-2286) D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv(11): Using implicit +incdir+C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv(18): Invalid type 'shift_driver'. Please check the type of the variable 'driver'.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv(29): (vlog-2730) Undefined variable: 'driver'.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv(29): (vlog-2164) Class or package 'shift_driver' not found.
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv(29): (vlog-2730) Undefined variable: 'shift_driver'.
-** Error: (vlog-13069) D:/Verification_Diploma/VS_code/Session5/Lab5/shift_reg_env.sv(29): near "::": syntax error, unexpected ::, expecting ';'.
-
-} {5.0 6.0 7.0 12.0} {}} D:/Verification_Diploma/VS_code/Session5/Lab5/top.sv {0 {vlog -work work -vopt -sv -stats=none D:/Verification_Diploma/VS_code/Session5/Lab5/top.sv
-QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
-** Note: (vlog-2286) D:/Verification_Diploma/VS_code/Session5/Lab5/top.sv(9): Using implicit +incdir+C:/questasim64_2024.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
-** Error: D:/Verification_Diploma/VS_code/Session5/Lab5/top.sv(10): (vlog-13006) Could not find the package (shift_reg_test_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-
-} {4.0 5.0} {}}
+} {} {}}

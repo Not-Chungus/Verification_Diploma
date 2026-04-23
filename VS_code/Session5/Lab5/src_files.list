@@ -1,5 +1,8 @@
-shift_reg.v
-shift_reg_if.sv
-shift_reg_env.sv
-shift_reg_test.sv
-top.sv
+../../VS_code/Session5/Lab5/shift_reg.v
+../../VS_code/Session5/Lab5/shift_reg_wrapper.sv
+../../VS_code/Session5/Lab5/shift_reg_if.sv
+../../VS_code/Session5/Lab5/shift_reg_cfg.sv
+../../VS_code/Session5/Lab5/shift_reg_drv.sv
+../../VS_code/Session5/Lab5/shift_reg_env.sv
+../../VS_code/Session5/Lab5/shift_reg_test.sv
+../../VS_code/Session5/Lab5/top.sv

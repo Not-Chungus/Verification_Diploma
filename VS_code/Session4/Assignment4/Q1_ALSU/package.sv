@@ -72,11 +72,11 @@ package class_pkg;
 
     //========================================COVER GROUPS========================================
     covergroup CovPort; //@(posedge clk)
-        cin_cp: coverpoint cin iff(0){}
-        direction_cp: coverpoint direction iff(0){}
-        serial_in_cp: coverpoint serial_in iff(0){}
-        red_op_A_cp: coverpoint red_op_A iff(0){}
-        red_op_B_cp: coverpoint red_op_B iff(0){}
+        cin_cp: coverpoint cin iff(1){}
+        direction_cp: coverpoint direction iff(1){}
+        serial_in_cp: coverpoint serial_in iff(1){}
+        red_op_A_cp: coverpoint red_op_A iff(1){}
+        red_op_B_cp: coverpoint red_op_B iff(1){}
         
         
         
@@ -166,11 +166,12 @@ package class_pkg;
             option.cross_auto_bin_max = 0;
         }
         //7.
-        cross ALU_cp,red_op_A_cp,red_op_B_cp
+        cross ALU_cp,red_op_A_cp,red_op_B_cp  //no OR,XOR bins and no transition bin 
         {
             ignore_bins red_at_no_bitwise = binsof(ALU_cp.Bins_bitwise) && 
                                             binsof(red_op_A_cp) intersect{0} && 
                                             binsof(red_op_B_cp) intersect{0};
+            ignore_bins red_at_no_bitwise_2 = binsof(ALU_cp.Bins_trans);
             //option.cross_auto_bin_max = 0;
         }
 

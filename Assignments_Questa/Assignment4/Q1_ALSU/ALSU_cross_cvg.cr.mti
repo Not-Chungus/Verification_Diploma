@@ -1,26 +1,5 @@
-D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/package.sv {2 {vlog -work work -vopt -sv -stats=none D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/package.sv
-QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
--- Compiling package class_pkg
-** Warning: D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/package.sv(122): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
-** Warning: D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/package.sv(132): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
-** Warning: D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/package.sv(139): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
-** Warning: D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/package.sv(146): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
-** Warning: D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/package.sv(152): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
-** Warning: D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/package.sv(159): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
-** Warning: D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/package.sv(166): (vlog-13203) option.cross_auto_bin_max = 0 setting is non-LRM compliant. No auto cross bins will be generated.
-
-Top level modules:
-	--none--
-
-} {} {}} D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/ALSU.v {1 {vlog -work work -vopt -stats=none D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/ALSU.v
-QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
--- Compiling module ALSU
-
-Top level modules:
-	ALSU
-
-} {} {}} D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/ALSU_Golden.v {1 {vlog -work work -vopt -stats=none D:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/ALSU_Golden.v
-QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
+F:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/ALSU_Golden.v {1 {vlog -work work -vopt -stats=none F:/Verification_Diploma/VS_code/Session4/Assignment4/Q1_ALSU/ALSU_Golden.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
 -- Compiling module ALSU_golden
 
 Top level modules:

@@ -6,8 +6,8 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 import uvm_pkg::*;
-`include "uvm_macros.svh"
 import shift_reg_test_pkg::*;
+`include "uvm_macros.svh"
 
 module top();
   // Example 1
@@ -22,7 +22,7 @@ module top();
   end
 
   shift_reg_if shift_if (clk);
-  shift_reg dut (shift_if);
+  shift_reg_wrapper dut (shift_if);
   
   // Example 2
   // Set the virtual interface for the uvm test

@@ -1,0 +1,266 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/IEEE_Digital/Installation/questasim64_10.6c/examples
+T_opt
+!s110 1776896111
+VcV[=j8PSG_F3a`gL3KzMl3
+04 10 4 work Counter_tb fast 0
+=5-d85ed3a67a6e-69e9486d-1b4-7bbc
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.6c;65
+R0
+T_opt1
+!s110 1776896534
+ViX7iSMb:NZfAkaY6Eg@9B1
+Z4 04 11 4 work counter_top fast 0
+=9-d85ed3a67a6e-69e94a16-14e-7bbc
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1776946488
+VWzV2Y1>=H3<5XhDFI3@UK3
+R4
+=1-d85ed3a67a6e-69ea0d37-34c-4d4c
+R1
+R2
+n@_opt2
+R3
+Xclass_pkg
+Z5 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z6 !s110 1776946487
+!i10b 1
+!s100 66C4`jWJUZ4g?e4fXJmZe2
+ImFN8]DWe8n71zcIL>9bzC2
+VmFN8]DWe8n71zcIL>9bzC2
+S1
+Z7 dF:/Verification_Diploma/Assignments_Questa/Assignment4/Q3_Counter
+w1776945617
+8../../../VS_code/Session4/Assignment4/Q3_Counter/package.sv
+F../../../VS_code/Session4/Assignment4/Q3_Counter/package.sv
+L0 1
+Z8 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z9 !s108 1776946487.000000
+Z10 !s107 ../../../VS_code/Session4/Assignment4/Q3_Counter/package.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/counter.v|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_wrapper.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_top.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_tb.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_sva.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_if.sv|
+Z11 !s90 -reportprogress|300|-sv|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_if.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_sva.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_tb.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_top.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_wrapper.sv|../../../VS_code/Session4/Assignment4/Q3_Counter/counter.v|../../../VS_code/Session4/Assignment4/Q3_Counter/package.sv|+cover|-covercells|
+!i113 0
+Z12 !s102 +cover -covercells
+Z13 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vcounter
+R5
+R6
+!i10b 1
+!s100 IG3NDeMED`E80?;Zl^YmO3
+Ila4F]@JFYndhjKZJng@PU1
+Z14 VDg1SIo80bB@j0V0VzS_@n1
+!s105 counter_v_unit
+S1
+R7
+w1776945404
+8../../../VS_code/Session4/Assignment4/Q3_Counter/counter.v
+F../../../VS_code/Session4/Assignment4/Q3_Counter/counter.v
+L0 8
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+Ycounter_if
+R5
+R6
+!i10b 1
+!s100 >L@L]`[L:cIjjzTNdglSB3
+I6gj4FdAz:dhX]2=kVeiEh0
+R14
+!s105 Counter_if_sv_unit
+S1
+R7
+w1776897922
+8../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_if.sv
+F../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_if.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vcounter_sva
+R5
+R6
+!i10b 1
+!s100 XLHPgn276Hzd9g9cD:z;o3
+I7L_<XUigAFTHV8Ye@N3`X1
+R14
+!s105 Counter_sva_sv_unit
+S1
+R7
+w1776945803
+8../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_sva.sv
+F../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_sva.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vCounter_tb
+R5
+Z15 DXx4 work 9 class_pkg 0 22 kdMO:fD`23TYfE?<jNUDR3
+DXx4 work 18 Counter_tb_sv_unit 0 22 5I>[ML3G]2jAeLFH1=LAD2
+R14
+r1
+!s85 0
+31
+!i10b 1
+!s100 o>J1kfHPGX_@k0IJ42fnC2
+IkUKlagz3^aaWm_U[[94H[3
+!s105 Counter_tb_sv_unit
+S1
+R7
+Z16 w1776945728
+Z17 8../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_tb.sv
+Z18 F../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_tb.sv
+L0 2
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+n@counter_tb
+XCounter_tb_sv_unit
+R5
+R15
+V5I>[ML3G]2jAeLFH1=LAD2
+r1
+!s85 0
+31
+!i10b 1
+!s100 0bKW_=:oX^mCk]`Gd4dYm1
+I5I>[ML3G]2jAeLFH1=LAD2
+!i103 1
+S1
+R7
+R16
+R17
+R18
+L0 1
+R8
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+n@counter_tb_sv_unit
+vcounter_top
+R5
+R6
+!i10b 1
+!s100 eTZ7fenQmiBIZQ8C2Ch9g0
+IJ<<]4K63lBz<KnmNmPKbd2
+R14
+Z19 !s105 Counter_top_sv_unit
+S1
+R7
+w1776945999
+Z20 8../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_top.sv
+Z21 F../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_top.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vcounter_wrapper
+R5
+R6
+!i10b 1
+!s100 7K99G1ca9LGY?]daObGod3
+Ig:FBi^H5Qffo^GIBZzF663
+R14
+!s105 Counter_wrapper_sv_unit
+S1
+R7
+w1776946001
+8../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_wrapper.sv
+F../../../VS_code/Session4/Assignment4/Q3_Counter/Counter_wrapper.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vvending_machine_top
+R5
+!s110 1776896406
+!i10b 1
+!s100 `>h1?P4I^;0aOkPn@8E<P0
+I6ei5=o5UZZ^zJLR4jcO032
+R14
+R19
+S1
+R7
+w1776896398
+R20
+R21
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1776896406.000000
+R10
+R11
+!i113 0
+R12
+R13
+R2
