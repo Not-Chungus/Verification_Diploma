@@ -17,6 +17,7 @@ class shift_driver extends uvm_driver;
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
+    shift_cfg = shift_config::type_id::create("shift_cfg"); //we handle the object implicitly below to achieve that both objects (this one here and one in test)are pointing to the object: sharing the memory and no copies needed made
     if (!uvm_config_db #(shift_config)::get(this, "", "CFG", shift_cfg)) begin
       `uvm_fatal("build_phase", "Unable to get configuration object")
     end

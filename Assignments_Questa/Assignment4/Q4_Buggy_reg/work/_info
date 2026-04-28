@@ -1,0 +1,71 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/IEEE_Digital/Installation/questasim64_10.6c/examples
+T_opt
+!s110 1777117237
+V8kn4Z<]a_==kJ`oHmDUoK3
+04 13 4 work config_reg_tb fast 0
+=1-d85ed3a67a6e-69eca835-316-243c
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+R0
+vconfig_reg
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 !s110 1777117343
+!i10b 1
+!s100 5Y5Gb=Ha18m7^IKaVV54`2
+IB5R_m3l<?PHBV>@f_HDRC3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!i119 1
+!s105 config_reg_buggy_questa_svp_unit
+S1
+Z5 dF:/Verification_Diploma/Assignments_Questa/Assignment4/Q4_Buggy_reg
+w1777106260
+8../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_buggy_questa.svp
+F../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_buggy_questa.svp
+L0 1
+Z6 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z7 !s108 1777117343.000000
+!s107 ../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_tb.sv|../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_buggy_questa.svp|
+Z8 !s90 -reportprogress|300|-sv|../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_buggy_questa.svp|../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_tb.sv|+cover|-covercells|
+!i113 0
+Z9 !s102 +cover -covercells
+Z10 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vconfig_reg_tb
+R2
+R3
+!i10b 1
+!s100 2Z3OI168<6z5NlbYS;Nlc0
+IbWEUkS:K5Ll=b0zVQL0kb0
+R4
+!s105 config_reg_tb_sv_unit
+S1
+R5
+w1777117225
+8../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_tb.sv
+F../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_tb.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 ../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_tb.sv|../../../VS_code/Session4/Assignment4/Q4_Config_Reg/config_reg_buggy_questa.svp|
+R8
+!i113 0
+R9
+R10
+R1

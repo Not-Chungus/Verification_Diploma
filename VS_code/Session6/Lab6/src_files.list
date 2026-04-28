@@ -1,0 +1,16 @@
+../../VS_code/Session6/Lab6/enums_package.sv
+../../VS_code/Session6/Lab6/shift_reg.v
+../../VS_code/Session6/Lab6/shift_reg_wrapper.sv
+../../VS_code/Session6/Lab6/shift_reg_if.sv
+../../VS_code/Session6/Lab6/shift_reg_seq_item.sv
+../../VS_code/Session6/Lab6/shift_reg_sequencer.sv
+../../VS_code/Session6/Lab6/shift_reg_sequences.sv
+../../VS_code/Session6/Lab6/shift_reg_cfg.sv
+../../VS_code/Session6/Lab6/shift_reg_monitor.sv
+../../VS_code/Session6/Lab6/shift_reg_drv.sv
+../../VS_code/Session6/Lab6/shift_reg_agent.sv
+../../VS_code/Session6/Lab6/shift_reg_coverage_collector.sv
+../../VS_code/Session6/Lab6/shift_reg_scoreboard.sv
+../../VS_code/Session6/Lab6/shift_reg_env.sv
+../../VS_code/Session6/Lab6/shift_reg_test.sv
+../../VS_code/Session6/Lab6/top.sv
