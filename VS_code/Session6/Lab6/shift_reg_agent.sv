@@ -5,7 +5,7 @@
 // Description: UVM Example
 // 
 ////////////////////////////////////////////////////////////////////////////////
-package shift_reg_agent_pkg;
+package shift_agent_pkg;
 import uvm_pkg::*;
 import shift_reg_cfg_pkg::*;
 import shift_reg_seq_item_pkg::*;
@@ -18,7 +18,7 @@ import shift_reg_monitor_pkg::*;
 class shift_reg_agent extends uvm_agent;
   // Example 1 (Done for you)
   // Do the essentials (factory register & Constructor)
-  `uvm_component_utils(shift_reg_agent) //2.
+  `uvm_component_utils(shift_agent) //2.
 
   shift_config shift_cfg;
 
@@ -26,10 +26,10 @@ class shift_reg_agent extends uvm_agent;
   shift_reg_sqr sqr;
   shift_monitor monitor;
 
-  uvm_analysis_port #(shift_reg_seq_item) agt_ap;
+  uvm_analysis_port #(shift_seq_item) agt_ap;
 
   //3.
-  function new(string name = "shift_reg_agent", uvm_component parent = null);
+  function new(string name = "shift_agent", uvm_component parent = null);
     super.new(name,parent);
   endfunction
 
@@ -44,7 +44,7 @@ class shift_reg_agent extends uvm_agent;
       `uvm_fatal("build_phase", "Can't get Interface from database!!!");
     
     driver = shift_driver::type_id::create("driver", this);
-    sqr = shift_reg_sqr::type_id::create("sqr", this);
+    sqr = shift_sqr::type_id::create("sqr", this);
     monitor = shift_monitor::type_id::create("monitor", this);
     agt_ap = new("agt_ap", this);
   endfunction

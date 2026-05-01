@@ -1,0 +1,791 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/IEEE_Digital/Installation/questasim64_10.6c/examples
+T_opt
+!s110 1777572160
+V>Z5WQN4=?hofzGD2RV9CH3
+04 3 4 work top fast 0
+=1-d85ed3a67a6e-69f3993e-351-bbf4
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6c;65
+R0
+vALSU
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 !s110 1777572421
+!i10b 1
+!s100 N0fMQ@YShlmH2=FX7L8DN3
+IBTYGhY9D4bU=T2oR4e3;:2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ALSU_v_unit
+S1
+Z5 dF:/Verification_Diploma/Assignments_Questa/Assignment6
+w1777492171
+8../../VS_code/Session6/Assignment6/ALSU.v
+F../../VS_code/Session6/Assignment6/ALSU.v
+L0 2
+Z6 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z7 !s108 1777572421.000000
+!s107 F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../../VS_code/Session6/Assignment6/top.sv|../../VS_code/Session6/Assignment6/ALSU_test.sv|../../VS_code/Session6/Assignment6/ALSU_env.sv|../../VS_code/Session6/Assignment6/ALSU_scoreboard.sv|../../VS_code/Session6/Assignment6/ALSU_coverage_collector.sv|../../VS_code/Session6/Assignment6/ALSU_agent.sv|../../VS_code/Session6/Assignment6/ALSU_drv.sv|../../VS_code/Session6/Assignment6/ALSU_monitor.sv|../../VS_code/Session6/Assignment6/ALSU_cfg.sv|../../VS_code/Session6/Assignment6/ALSU_sequences.sv|../../VS_code/Session6/Assignment6/ALSU_sequencer.sv|../../VS_code/Session6/Assignment6/ALSU_seq_item.sv|../../VS_code/Session6/Assignment6/ALSU_sva.sv|../../VS_code/Session6/Assignment6/ALSU_if.sv|../../VS_code/Session6/Assignment6/ALSU_Golden_wrapper.sv|../../VS_code/Session6/Assignment6/ALSU_Golden.v|../../VS_code/Session6/Assignment6/ALSU_wrapper.sv|../../VS_code/Session6/Assignment6/ALSU.v|../../VS_code/Session6/Assignment6/enums_package.sv|
+Z8 !s90 -reportprogress|300|-sv|-f|../../VS_code/Session6/Assignment6/src_files.list|+cover|-covercells|
+!i113 0
+Z9 !s102 +cover -covercells
+Z10 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@a@l@s@u
+XALSU_agent_pkg
+R2
+Z11 DXx6 mtiUvm 7 uvm_pkg 0 22 oMKUklN?>LE6@MJe7=2><1
+Z12 DXx4 work 12 ALSU_cfg_pkg 0 22 ;ZJSa=]1z`zLlFImL0f>T0
+Z13 DXx4 work 8 enum_pkg 0 22 6Ho8DoBEA<3eecIAB<ziU3
+Z14 DXx4 work 17 ALSU_seq_item_pkg 0 22 mO2?c^5:R=cgNJ[95nPC20
+Z15 DXx4 work 12 ALSU_drv_pkg 0 22 fnafXWkadR:c0iBECON]30
+Z16 DXx4 work 12 ALSU_sqr_pkg 0 22 iC`J]JgzQc_Z=FikV<m_U3
+Z17 DXx4 work 16 ALSU_monitor_pkg 0 22 >P:@I=bLSkm74<D]KYmmS1
+Z18 !s110 1777572422
+!i10b 1
+!s100 o0lAAmIPV?Vld0Ob3eS>f2
+I4Jc^:HmVzCSL9hl@8c;Wh1
+V4Jc^:HmVzCSL9hl@8c;Wh1
+S1
+R5
+w1777502734
+8../../VS_code/Session6/Assignment6/ALSU_agent.sv
+F../../VS_code/Session6/Assignment6/ALSU_agent.sv
+Z19 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+Z20 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+Z21 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+Z22 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+Z23 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+Z24 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+Z25 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+Z26 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+Z27 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+Z28 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+Z29 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+Z30 FF:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+L0 8
+R6
+r1
+!s85 0
+31
+R7
+Z31 !s107 F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../../VS_code/Session6/Assignment6/top.sv|../../VS_code/Session6/Assignment6/ALSU_test.sv|../../VS_code/Session6/Assignment6/ALSU_env.sv|../../VS_code/Session6/Assignment6/ALSU_scoreboard.sv|../../VS_code/Session6/Assignment6/ALSU_coverage_collector.sv|../../VS_code/Session6/Assignment6/ALSU_agent.sv|../../VS_code/Session6/Assignment6/ALSU_drv.sv|../../VS_code/Session6/Assignment6/ALSU_monitor.sv|../../VS_code/Session6/Assignment6/ALSU_cfg.sv|../../VS_code/Session6/Assignment6/ALSU_sequences.sv|../../VS_code/Session6/Assignment6/ALSU_sequencer.sv|../../VS_code/Session6/Assignment6/ALSU_seq_item.sv|../../VS_code/Session6/Assignment6/ALSU_sva.sv|../../VS_code/Session6/Assignment6/ALSU_if.sv|../../VS_code/Session6/Assignment6/ALSU_Golden_wrapper.sv|../../VS_code/Session6/Assignment6/ALSU_Golden.v|../../VS_code/Session6/Assignment6/ALSU_wrapper.sv|../../VS_code/Session6/Assignment6/ALSU.v|../../VS_code/Session6/Assignment6/enums_package.sv|
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_agent_pkg
+XALSU_cfg_pkg
+Z32 !s115 ALSU_if
+R2
+R11
+R18
+!i10b 1
+!s100 HmEkGGIlOVFJ]Yb_IeD173
+I;ZJSa=]1z`zLlFImL0f>T0
+V;ZJSa=]1z`zLlFImL0f>T0
+S1
+R5
+w1777499440
+8../../VS_code/Session6/Assignment6/ALSU_cfg.sv
+F../../VS_code/Session6/Assignment6/ALSU_cfg.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_cfg_pkg
+XALSU_coverage_pkg
+R2
+R11
+R13
+R14
+R18
+!i10b 1
+!s100 V?LA?n@`fzkfzb>?mb<8C1
+IPb7zL;h1P<WUPQ?UBNhKE3
+VPb7zL;h1P<WUPQ?UBNhKE3
+S1
+R5
+w1777553940
+8../../VS_code/Session6/Assignment6/ALSU_coverage_collector.sv
+F../../VS_code/Session6/Assignment6/ALSU_coverage_collector.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_coverage_pkg
+XALSU_drv_pkg
+R32
+R2
+R11
+R13
+R12
+R14
+R18
+!i10b 1
+!s100 >zRA`W`e1H0WYALN_k?Z32
+IfnafXWkadR:c0iBECON]30
+VfnafXWkadR:c0iBECON]30
+S1
+R5
+w1777501502
+8../../VS_code/Session6/Assignment6/ALSU_drv.sv
+F../../VS_code/Session6/Assignment6/ALSU_drv.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_drv_pkg
+XALSU_env_pkg
+R2
+R11
+R12
+R13
+R14
+R15
+R16
+R17
+Z33 DXx4 work 14 ALSU_agent_pkg 0 22 4Jc^:HmVzCSL9hl@8c;Wh1
+Z34 DXx4 work 19 ALSU_scoreboard_pkg 0 22 g5BVAJSeEfHgA6IA_TXK63
+Z35 DXx4 work 17 ALSU_coverage_pkg 0 22 Pb7zL;h1P<WUPQ?UBNhKE3
+R18
+!i10b 1
+!s100 GKZaEaSV>Qj4ToIjPj4F73
+IQaYF_O5I]EVOXZ_d=Pz^b2
+VQaYF_O5I]EVOXZ_d=Pz^b2
+S1
+R5
+w1777501930
+8../../VS_code/Session6/Assignment6/ALSU_env.sv
+F../../VS_code/Session6/Assignment6/ALSU_env.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 8
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_env_pkg
+vALSU_golden
+R2
+R3
+!i10b 1
+!s100 N0?]adCaNDX?=>Z5`:`DO0
+I_oOG_?QMFF`m5Gl^jQNY12
+R4
+!s105 ALSU_Golden_v_unit
+S1
+R5
+w1774182318
+8../../VS_code/Session6/Assignment6/ALSU_Golden.v
+F../../VS_code/Session6/Assignment6/ALSU_Golden.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_golden
+vALSU_golden_wrapper
+R2
+R3
+!i10b 1
+!s100 ?@h[_QSX6z<e1[7JA:>T]3
+I[VO:D6k<G8j]eHi:iiO>;2
+R4
+!s105 ALSU_Golden_wrapper_sv_unit
+S1
+R5
+w1777501383
+8../../VS_code/Session6/Assignment6/ALSU_Golden_wrapper.sv
+F../../VS_code/Session6/Assignment6/ALSU_Golden_wrapper.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_golden_wrapper
+YALSU_if
+R2
+R11
+R13
+DXx4 work 15 ALSU_if_sv_unit 0 22 oib56H]HOOMz0H[A=Wk@:1
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 HDVgC@aE2VO75Wd8FH0Eg2
+IlZLLG91lh3A4b7GlAhX8d2
+!s105 ALSU_if_sv_unit
+S1
+R5
+Z36 w1777501400
+Z37 8../../VS_code/Session6/Assignment6/ALSU_if.sv
+Z38 F../../VS_code/Session6/Assignment6/ALSU_if.sv
+L0 9
+R6
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_if
+XALSU_if_sv_unit
+R2
+R11
+R13
+Voib56H]HOOMz0H[A=Wk@:1
+r1
+!s85 0
+31
+!i10b 1
+!s100 fUQ16no[jfJf0n_Jce=TE1
+Ioib56H]HOOMz0H[A=Wk@:1
+!i103 1
+S1
+R5
+R36
+R37
+R38
+L0 8
+R6
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_if_sv_unit
+XALSU_monitor_pkg
+R32
+R2
+R11
+R13
+R14
+R18
+!i10b 1
+!s100 91WLII^kf42n;7>D0Dfgg1
+I>P:@I=bLSkm74<D]KYmmS1
+V>P:@I=bLSkm74<D]KYmmS1
+S1
+R5
+w1777502686
+8../../VS_code/Session6/Assignment6/ALSU_monitor.sv
+F../../VS_code/Session6/Assignment6/ALSU_monitor.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_monitor_pkg
+XALSU_scoreboard_pkg
+R2
+R11
+R13
+R14
+R18
+!i10b 1
+!s100 VD6eLNoFLR58;a4g[_zNT2
+Ig5BVAJSeEfHgA6IA_TXK63
+Vg5BVAJSeEfHgA6IA_TXK63
+S1
+R5
+w1777564791
+8../../VS_code/Session6/Assignment6/ALSU_scoreboard.sv
+F../../VS_code/Session6/Assignment6/ALSU_scoreboard.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_scoreboard_pkg
+XALSU_seq_item_pkg
+R2
+R11
+R13
+R3
+!i10b 1
+!s100 E7MS<iW19196JaB@TzU^42
+ImO2?c^5:R=cgNJ[95nPC20
+VmO2?c^5:R=cgNJ[95nPC20
+S1
+R5
+w1777564007
+8../../VS_code/Session6/Assignment6/ALSU_seq_item.sv
+F../../VS_code/Session6/Assignment6/ALSU_seq_item.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_seq_item_pkg
+XALSU_seq_pkg
+R2
+R11
+R13
+R14
+R18
+!i10b 1
+!s100 oM2ncNKQ[SzFdckC:_d__3
+IIa?Zh7:TQc7d5^An;BEYa2
+VIa?Zh7:TQc7d5^An;BEYa2
+S1
+R5
+w1777553770
+8../../VS_code/Session6/Assignment6/ALSU_sequences.sv
+F../../VS_code/Session6/Assignment6/ALSU_sequences.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_seq_pkg
+XALSU_sqr_pkg
+R2
+R11
+R13
+R14
+R18
+!i10b 1
+!s100 RKh2]HW:Z2ALQ[eGIFUEo3
+IiC`J]JgzQc_Z=FikV<m_U3
+ViC`J]JgzQc_Z=FikV<m_U3
+S1
+R5
+w1777498942
+8../../VS_code/Session6/Assignment6/ALSU_sequencer.sv
+F../../VS_code/Session6/Assignment6/ALSU_sequencer.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_sqr_pkg
+vALSU_sva
+R2
+R3
+!i10b 1
+!s100 nEV:E@>1@l^ZchFNBZ1QL2
+IdNCX3G2CUQRliEX`6VEH[2
+R4
+!s105 ALSU_sva_sv_unit
+S1
+R5
+w1777558878
+8../../VS_code/Session6/Assignment6/ALSU_sva.sv
+F../../VS_code/Session6/Assignment6/ALSU_sva.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_sva
+XALSU_test_pkg
+R32
+R2
+R11
+R12
+R13
+R14
+R15
+R16
+R17
+R33
+R34
+R35
+Z39 DXx4 work 12 ALSU_env_pkg 0 22 QaYF_O5I]EVOXZ_d=Pz^b2
+Z40 DXx4 work 12 ALSU_seq_pkg 0 22 Ia?Zh7:TQc7d5^An;BEYa2
+R18
+!i10b 1
+!s100 Mz7iGL0_TzaOH1HaabFG71
+IcZLR7Yo`U:_am=N3YXN`j2
+VcZLR7Yo`U:_am=N3YXN`j2
+S1
+R5
+w1777566605
+8../../VS_code/Session6/Assignment6/ALSU_test.sv
+F../../VS_code/Session6/Assignment6/ALSU_test.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 8
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_test_pkg
+vALSU_wrapper
+R2
+R3
+!i10b 1
+!s100 ESJGj>W@c`SfRfkf8^mLg3
+Ic_3PRaUT=im2RgQUH@ID>3
+R4
+!s105 ALSU_wrapper_sv_unit
+S1
+R5
+w1777557589
+8../../VS_code/Session6/Assignment6/ALSU_wrapper.sv
+F../../VS_code/Session6/Assignment6/ALSU_wrapper.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+n@a@l@s@u_wrapper
+Xenum_pkg
+R2
+R11
+R3
+!i10b 1
+!s100 bC?F2GQ8=_7F7NakXQ@T?1
+I6Ho8DoBEA<3eecIAB<ziU3
+V6Ho8DoBEA<3eecIAB<ziU3
+S1
+R5
+w1777571887
+8../../VS_code/Session6/Assignment6/enums_package.sv
+F../../VS_code/Session6/Assignment6/enums_package.sv
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+vtop
+R2
+R11
+R12
+R13
+R14
+R15
+R16
+R17
+R33
+R34
+R35
+R39
+R40
+Z41 DXx4 work 13 ALSU_test_pkg 0 22 cZLR7Yo`U:_am=N3YXN`j2
+DXx4 work 11 top_sv_unit 0 22 k84_IF:1hN7DzTS]i_:B41
+R4
+r1
+!s85 0
+31
+!i10b 1
+!s100 dL7V8WMD21_X??hhBbZBn0
+IQIY=WPQ6jZ[9?EV`TS_fl1
+!s105 top_sv_unit
+S1
+R5
+Z42 w1777557561
+Z43 8../../VS_code/Session6/Assignment6/top.sv
+Z44 F../../VS_code/Session6/Assignment6/top.sv
+L0 12
+R6
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1
+Xtop_sv_unit
+R2
+R11
+R12
+R13
+R14
+R15
+R16
+R17
+R33
+R34
+R35
+R39
+R40
+R41
+Vk84_IF:1hN7DzTS]i_:B41
+r1
+!s85 0
+31
+!i10b 1
+!s100 UihPIG:W0:[FjLdYL7bKC1
+Ik84_IF:1hN7DzTS]i_:B41
+!i103 1
+S1
+R5
+R42
+R43
+R44
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+R26
+R27
+R28
+R29
+R30
+L0 8
+R6
+R7
+R31
+R8
+!i113 0
+R9
+R10
+R1

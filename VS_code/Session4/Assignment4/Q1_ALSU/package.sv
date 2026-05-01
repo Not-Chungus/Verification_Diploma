@@ -41,7 +41,7 @@ package class_pkg;
         constraint Valdity { //Invalid for 10% of the time
             opcode dist {INVALID_6:/10,INVALID_7:/10,
                         [OR:ROTATE]:/80};
-            if(opcode ==  (OR | XOR)){
+            if(opcode inside {OR, XOR}){
                 red_op_A dist{0:/50 , 1:/50};  //both red high is unlikely?
                 if(red_op_A){
                     red_op_B dist{0:/80 , 1:/20};
@@ -179,15 +179,9 @@ package class_pkg;
 
     endgroup
 
-
-
-
-
-
     function new();
         CovPort = new;
     endfunction
-
 
     endclass
 

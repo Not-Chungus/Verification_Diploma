@@ -31,8 +31,8 @@ class shift_coverage extends uvm_component;
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    cov_export = new("sb_export", this);
-    cov_fifo = new("sb_fifo",this);
+    cov_export = new("cov_export", this);
+    cov_fifo = new("cov_fifo",this);
   endfunction
 
   function void connect_phase(uvm_phase phase);
