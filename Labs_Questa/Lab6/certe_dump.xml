@@ -10,7 +10,7 @@
   
            <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
               agt_ap 
-              <connection>  uvm_test_top.env.cov.sb_export  </connection> 
+              <connection>  uvm_test_top.env.cov.cov_export  </connection> 
               <connection>  uvm_test_top.env.sb.sb_export  </connection> 
            </port> 
   
@@ -58,12 +58,12 @@
            cov 
   
            <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
-              sb_export 
-              <connection>  uvm_test_top.env.cov.sb_fifo.analysis_export  </connection> 
+              cov_export 
+              <connection>  uvm_test_top.env.cov.cov_fifo.analysis_export  </connection> 
            </port> 
   
            <instance type=" uvm_tlm_analysis_fifo #(T) "> 
-              sb_fifo 
+              cov_fifo 
   
               <imp if_type = "uvm_analysis_imp" txn_type = "anonymous"> 
                  analysis_export 

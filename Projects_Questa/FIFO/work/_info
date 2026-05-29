@@ -1,0 +1,269 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/IEEE_Digital/Installation/questasim64_10.6c/examples
+T_opt
+!s110 1777933631
+VQ<mbF>7KHmalf3Q>[?N>e2
+Z1 04 8 4 work FIFO_top fast 0
+=1-d85ed3a67a6e-69f91d3f-18c-3bc8
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;10.6c;65
+R0
+T_opt1
+!s110 1778002665
+V0:X>k9o`i<43]IEec8>5d3
+R1
+=1-d85ed3a67a6e-69fa2ae9-96-d5c
+R2
+R3
+n@_opt1
+R4
+XCoverage_pkg
+Z5 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z6 DXx4 work 15 Transaction_pkg 0 22 ni@[QKH5=RahZXU2JciYJ1
+Z7 !s110 1778002661
+!i10b 1
+!s100 UAX:jbzk48TDAaW77LS2a3
+IG`00Yo6IMcTzz56_^@a`L0
+VG`00Yo6IMcTzz56_^@a`L0
+S1
+Z8 dF:/Verification_Diploma/Projects_Questa/FIFO
+w1778000850
+8../../VS_code/Project_FIFO/Enviroment/package_Coverage.sv
+F../../VS_code/Project_FIFO/Enviroment/package_Coverage.sv
+L0 1
+Z9 OL;L;10.6c;65
+r1
+!s85 0
+31
+Z10 !s108 1778002661.000000
+Z11 !s107 ../../VS_code/Project_FIFO/Enviroment/top.sv|../../VS_code/Project_FIFO/Enviroment/FIFO_tb.sv|../../VS_code/Project_FIFO/Enviroment/FIFO_monitor.sv|../../VS_code/Project_FIFO/Enviroment/package_Scoreboard.sv|../../VS_code/Project_FIFO/Enviroment/package_Coverage.sv|../../VS_code/Project_FIFO/Enviroment/package_Transaction.sv|../../VS_code/Project_FIFO/Enviroment/shared_package.sv|../../VS_code/Project_FIFO/Enviroment/FIFO.sv|../../VS_code/Project_FIFO/Enviroment/FIFO_if.sv|
+Z12 !s90 -reportprogress|300|-sv|-f|../../VS_code/Project_FIFO/Enviroment/src_files.list|+cover|-covercells|
+!i113 0
+Z13 !s102 +cover -covercells
+Z14 o-sv +cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@coverage_pkg
+vFIFO
+R5
+R7
+!i10b 1
+!s100 [ZiiBLZGi=3YOIo=OP?Zm0
+IVlECOSb0^0I3BcX0WCBmn3
+Z15 VDg1SIo80bB@j0V0VzS_@n1
+!s105 FIFO_sv_unit
+S1
+R8
+w1778002544
+8../../VS_code/Project_FIFO/Enviroment/FIFO.sv
+F../../VS_code/Project_FIFO/Enviroment/FIFO.sv
+L0 9
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@f@i@f@o
+YFIFO_if
+R5
+R7
+!i10b 1
+!s100 Lk[Z9?2bIf0oaE=5c0cDn2
+IZQSJ@OZ`@3>gB@iR]2=i@1
+R15
+!s105 FIFO_if_sv_unit
+S1
+R8
+w1777833549
+8../../VS_code/Project_FIFO/Enviroment/FIFO_if.sv
+F../../VS_code/Project_FIFO/Enviroment/FIFO_if.sv
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@f@i@f@o_if
+vFIFO_monitor
+R5
+Z16 DXx4 work 10 shared_pkg 0 22 G5e1cMQRWmW@GnQ_bajUI2
+R6
+Z17 DXx4 work 12 Coverage_pkg 0 22 G`00Yo6IMcTzz56_^@a`L0
+Z18 DXx4 work 14 Scoreboard_pkg 0 22 m^j7`79C8BMJdc[[P`UZ[1
+R7
+!i10b 1
+!s100 A6mT7RC>I[<<SdFb0Ma:B2
+IFR`m]RQ1=Ai72T>>k`2_C0
+R15
+!s105 FIFO_monitor_sv_unit
+S1
+R8
+w1777987710
+8../../VS_code/Project_FIFO/Enviroment/FIFO_monitor.sv
+F../../VS_code/Project_FIFO/Enviroment/FIFO_monitor.sv
+L0 3
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@f@i@f@o_monitor
+vFIFO_tb
+R5
+R16
+R6
+R17
+R18
+R7
+!i10b 1
+!s100 01TAcS><2KagW?Re2QegQ3
+IkPFiioTBzod4_iDAfXgQ:0
+R15
+!s105 FIFO_tb_sv_unit
+S1
+R8
+w1777996602
+8../../VS_code/Project_FIFO/Enviroment/FIFO_tb.sv
+F../../VS_code/Project_FIFO/Enviroment/FIFO_tb.sv
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@f@i@f@o_tb
+vFIFO_top
+R5
+R7
+!i10b 1
+!s100 ;K;2196`Tfd]T]3:5k]L?2
+I1Cl495SLIcb@N`]O]z6nP3
+R15
+!s105 top_sv_unit
+S1
+R8
+w1777931257
+8../../VS_code/Project_FIFO/Enviroment/top.sv
+F../../VS_code/Project_FIFO/Enviroment/top.sv
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@f@i@f@o_top
+XScoreboard_pkg
+R5
+R6
+R16
+R7
+!i10b 1
+!s100 DXWmd6kiOfFfDlM73cbW;0
+Im^j7`79C8BMJdc[[P`UZ[1
+Vm^j7`79C8BMJdc[[P`UZ[1
+S1
+R8
+w1778000106
+8../../VS_code/Project_FIFO/Enviroment/package_Scoreboard.sv
+F../../VS_code/Project_FIFO/Enviroment/package_Scoreboard.sv
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@scoreboard_pkg
+Xshared_pkg
+R5
+R7
+!i10b 1
+!s100 S6HUjYPVEhToY2[8bzZ2j3
+IG5e1cMQRWmW@GnQ_bajUI2
+VG5e1cMQRWmW@GnQ_bajUI2
+S1
+R8
+w1778000110
+8../../VS_code/Project_FIFO/Enviroment/shared_package.sv
+F../../VS_code/Project_FIFO/Enviroment/shared_package.sv
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+XTransaction_pkg
+R5
+R7
+!i10b 1
+!s100 ;4;:Y82gS0XRlXGP>Zed62
+Ini@[QKH5=RahZXU2JciYJ1
+Vni@[QKH5=RahZXU2JciYJ1
+S1
+R8
+w1777923979
+8../../VS_code/Project_FIFO/Enviroment/package_Transaction.sv
+F../../VS_code/Project_FIFO/Enviroment/package_Transaction.sv
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R14
+R3
+n@transaction_pkg

@@ -9,10 +9,10 @@ z2
 cModel Technology
 dF:/Verification_Diploma/Labs_Questa/Lab5
 T_opt
-!s110 1777321123
-VGU[hlRz[T^FQ8SgIYZD@n2
+!s110 1778014189
+VYWYd1Fm_?Ucz8XC]zPH<M2
 04 3 4 work top fast 0
-=1-d85ed3a67a6e-69efc4a2-2ed-7acc
+=1-d85ed3a67a6e-69fa57eb-366-93c0
 o-quiet -auto_acc_if_foreign -work work +acc
 Z0 tCvgOpt 0
 n@_opt
@@ -20,7 +20,7 @@ OL;O;10.6c;65
 Xenum_pkg
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
 Z2 DXx6 mtiUvm 7 uvm_pkg 0 22 oMKUklN?>LE6@MJe7=2><1
-Z3 !s110 1777321119
+Z3 !s110 1778014182
 !i10b 1
 !s100 Jh7j`PFdkn2<RU5eiC;Vi0
 I9NUYYN?0FP<bEJK=8BGJ13
@@ -47,55 +47,31 @@ Z17 OL;L;10.6c;65
 r1
 !s85 0
 31
-Z18 !s108 1777321119.000000
+Z18 !s108 1778014182.000000
 Z19 !s107 F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../../VS_code/Session6/Lab6/top.sv|../../VS_code/Session6/Lab6/shift_reg_test.sv|../../VS_code/Session6/Lab6/shift_reg_env.sv|../../VS_code/Session6/Lab6/shift_reg_scoreboard.sv|../../VS_code/Session6/Lab6/shift_reg_coverage_collector.sv|../../VS_code/Session6/Lab6/shift_reg_agent.sv|../../VS_code/Session6/Lab6/shift_reg_drv.sv|../../VS_code/Session6/Lab6/shift_reg_monitor.sv|../../VS_code/Session6/Lab6/shift_reg_cfg.sv|../../VS_code/Session6/Lab6/shift_reg_sequences.sv|../../VS_code/Session6/Lab6/shift_reg_sequencer.sv|../../VS_code/Session6/Lab6/shift_reg_seq_item.sv|../../VS_code/Session6/Lab6/shift_reg_if.sv|../../VS_code/Session6/Lab6/shift_reg_wrapper.sv|../../VS_code/Session6/Lab6/shift_reg.v|../../VS_code/Session6/Lab6/enums_package.sv|
 Z20 !s90 -reportprogress|300|-sv|-f|../../VS_code/Session6/Lab6/src_files.list|
 !i113 0
 Z21 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R0
-vshift_reg
-R1
-R3
-!i10b 1
-!s100 _OB9<8n806@933n6cCnj53
-IW@QeXE90m_bGJPbm`8d<K2
-Z22 VDg1SIo80bB@j0V0VzS_@n1
-!s105 shift_reg_v_unit
-S1
-R4
-w1777315008
-8../../VS_code/Session6/Lab6/shift_reg.v
-F../../VS_code/Session6/Lab6/shift_reg.v
-L0 8
-R17
-r1
-!s85 0
-31
-R18
-R19
-R20
-!i113 0
-R21
-R0
-Xshift_reg_agent_pkg
+Xshift_agent_pkg
 R1
 R2
-Z23 DXx4 work 17 shift_reg_cfg_pkg 0 22 meioaX4cQzRBOK]@TM4c11
-Z24 DXx4 work 8 enum_pkg 0 22 9NUYYN?0FP<bEJK=8BGJ13
-Z25 DXx4 work 22 shift_reg_seq_item_pkg 0 22 n2K[HGazdh_1[o3iH`RWo1
-Z26 DXx4 work 17 shift_reg_drv_pkg 0 22 >^Ob^_D<B6E4G96Vje?n?2
-Z27 DXx4 work 17 shift_reg_sqr_pkg 0 22 =ik?2WOi3A1:0ME_d3a<81
-Z28 DXx4 work 21 shift_reg_monitor_pkg 0 22 0<21SnjfA;KbEZ@P`MPd]2
-R3
+Z22 DXx4 work 17 shift_reg_cfg_pkg 0 22 meioaX4cQzRBOK]@TM4c11
+Z23 DXx4 work 8 enum_pkg 0 22 9NUYYN?0FP<bEJK=8BGJ13
+Z24 DXx4 work 22 shift_reg_seq_item_pkg 0 22 n2K[HGazdh_1[o3iH`RWo1
+Z25 DXx4 work 17 shift_reg_drv_pkg 0 22 >^Ob^_D<B6E4G96Vje?n?2
+Z26 DXx4 work 17 shift_reg_sqr_pkg 0 22 =ik?2WOi3A1:0ME_d3a<81
+Z27 DXx4 work 21 shift_reg_monitor_pkg 0 22 0<21SnjfA;KbEZ@P`MPd]2
+Z28 !s110 1778014183
 !i10b 1
-!s100 mJe6ice9ei9bKj=TgBG1W3
-IoIE_A7f9[JWom=[BKd;BV3
-VoIE_A7f9[JWom=[BKd;BV3
+!s100 SYCc^^lJWI]0@410Ud0;K0
+IbkB3e8mI]>1gN8m[2J9Va0
+VbkB3e8mI]>1gN8m[2J9Va0
 S1
 R4
-w1777320675
-8../../VS_code/Session6/Lab6/shift_reg_agent.sv
-F../../VS_code/Session6/Lab6/shift_reg_agent.sv
+w1778014164
+Z29 8../../VS_code/Session6/Lab6/shift_reg_agent.sv
+Z30 F../../VS_code/Session6/Lab6/shift_reg_agent.sv
 R5
 R6
 R7
@@ -119,18 +95,84 @@ R20
 !i113 0
 R21
 R0
-Xshift_reg_cfg_pkg
-Z29 !s115 shift_reg_if
+vshift_reg
+R1
+R3
+!i10b 1
+!s100 _OB9<8n806@933n6cCnj53
+IW@QeXE90m_bGJPbm`8d<K2
+Z31 VDg1SIo80bB@j0V0VzS_@n1
+!s105 shift_reg_v_unit
+S1
+R4
+w1777315008
+8../../VS_code/Session6/Lab6/shift_reg.v
+F../../VS_code/Session6/Lab6/shift_reg.v
+L0 8
+R17
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R21
+R0
+Xshift_reg_agent_pkg
 R1
 R2
-R3
+R22
+R23
+R24
+R25
+R26
+R27
+!s110 1777321119
+!i10b 1
+!s100 mJe6ice9ei9bKj=TgBG1W3
+IoIE_A7f9[JWom=[BKd;BV3
+VoIE_A7f9[JWom=[BKd;BV3
+S1
+R4
+w1777320675
+R29
+R30
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R15
+R16
+L0 8
+R17
+r1
+!s85 0
+31
+!s108 1777321119.000000
+R19
+R20
+!i113 0
+R21
+R0
+Xshift_reg_cfg_pkg
+Z32 !s115 shift_reg_if
+R1
+R2
+R28
 !i10b 1
 !s100 ePW;VFDfXJdXf:_`XQgOJ0
 ImeioaX4cQzRBOK]@TM4c11
 VmeioaX4cQzRBOK]@TM4c11
 S1
 R4
-w1776975073
+w1777489572
 8../../VS_code/Session6/Lab6/shift_reg_cfg.sv
 F../../VS_code/Session6/Lab6/shift_reg_cfg.sv
 R5
@@ -159,16 +201,16 @@ R0
 Xshift_reg_coverage_pkg
 R1
 R2
+R23
 R24
-R25
-R3
+R28
 !i10b 1
-!s100 TBikS6mi4DLXc`j4I;QkJ3
-INM8ZKkX?T6EoaGDT2h[670
-VNM8ZKkX?T6EoaGDT2h[670
+!s100 0Bj9Gf:gT:?^@I<CAIjTH1
+IR4z<>M^OGJohNEUZM:`iF0
+VR4z<>M^OGJohNEUZM:`iF0
 S1
 R4
-w1777319660
+w1777498614
 8../../VS_code/Session6/Lab6/shift_reg_coverage_collector.sv
 F../../VS_code/Session6/Lab6/shift_reg_coverage_collector.sv
 R5
@@ -195,13 +237,13 @@ R20
 R21
 R0
 Xshift_reg_drv_pkg
-R29
+R32
 R1
 R2
-R24
 R23
-R25
-R3
+R22
+R24
+R28
 !i10b 1
 !s100 9VQbG;fc^Pl:WN@VJlj[;2
 I>^Ob^_D<B6E4G96Vje?n?2
@@ -237,20 +279,20 @@ R0
 Xshift_reg_env_pkg
 R1
 R2
+R22
 R23
 R24
 R25
 R26
 R27
+Z33 DXx4 work 19 shift_reg_agent_pkg 0 22 oIE_A7f9[JWom=[BKd;BV3
+Z34 DXx4 work 24 shift_reg_scoreboard_pkg 0 22 n2YP=7efF4_0?586h4Ri11
+Z35 DXx4 work 22 shift_reg_coverage_pkg 0 22 R4z<>M^OGJohNEUZM:`iF0
 R28
-Z30 DXx4 work 19 shift_reg_agent_pkg 0 22 oIE_A7f9[JWom=[BKd;BV3
-Z31 DXx4 work 24 shift_reg_scoreboard_pkg 0 22 n2YP=7efF4_0?586h4Ri11
-Z32 DXx4 work 22 shift_reg_coverage_pkg 0 22 NM8ZKkX?T6EoaGDT2h[670
-R3
 !i10b 1
 !s100 OMdeSiUnVoMU;Y<JV>eGU3
-I?;MA63cZAT>[okMPWT6KQ1
-V?;MA63cZAT>[okMPWT6KQ1
+IF`Hh30R9`DcE8@BbYJIKc3
+VF`Hh30R9`DcE8@BbYJIKc3
 S1
 R4
 w1777320077
@@ -282,9 +324,9 @@ R0
 Yshift_reg_if
 R1
 R2
-R24
+R23
 DXx4 work 20 shift_reg_if_sv_unit 0 22 36FzM>`98CkgR>U;KKJ2L1
-R22
+R31
 r1
 !s85 0
 31
@@ -294,9 +336,9 @@ I0Rk;z@NX_2YBP8J5L89BN3
 !s105 shift_reg_if_sv_unit
 S1
 R4
-Z33 w1777307219
-Z34 8../../VS_code/Session6/Lab6/shift_reg_if.sv
-Z35 F../../VS_code/Session6/Lab6/shift_reg_if.sv
+Z36 w1777307219
+Z37 8../../VS_code/Session6/Lab6/shift_reg_if.sv
+Z38 F../../VS_code/Session6/Lab6/shift_reg_if.sv
 L0 9
 R17
 R18
@@ -308,7 +350,7 @@ R0
 Xshift_reg_if_sv_unit
 R1
 R2
-R24
+R23
 V36FzM>`98CkgR>U;KKJ2L1
 r1
 !s85 0
@@ -319,9 +361,9 @@ I36FzM>`98CkgR>U;KKJ2L1
 !i103 1
 S1
 R4
-R33
-R34
-R35
+R36
+R37
+R38
 L0 8
 R17
 R18
@@ -331,12 +373,12 @@ R20
 R21
 R0
 Xshift_reg_monitor_pkg
-R29
+R32
 R1
 R2
+R23
 R24
-R25
-R3
+R28
 !i10b 1
 !s100 d68VL^bELH;M9_^:<RZJC3
 I0<21SnjfA;KbEZ@P`MPd]2
@@ -372,9 +414,9 @@ R0
 Xshift_reg_scoreboard_pkg
 R1
 R2
+R23
 R24
-R25
-R3
+R28
 !i10b 1
 !s100 Cm??JfQ^BWVWf?CV4Jzn82
 In2YP=7efF4_0?586h4Ri11
@@ -410,15 +452,15 @@ R0
 Xshift_reg_seq_item_pkg
 R1
 R2
-R24
-R3
+R23
+R28
 !i10b 1
 !s100 ]:[2kC`GTJFbY<ejEzdXA0
 In2K[HGazdh_1[o3iH`RWo1
 Vn2K[HGazdh_1[o3iH`RWo1
 S1
 R4
-w1777321113
+w1777366736
 8../../VS_code/Session6/Lab6/shift_reg_seq_item.sv
 F../../VS_code/Session6/Lab6/shift_reg_seq_item.sv
 R5
@@ -447,9 +489,9 @@ R0
 Xshift_reg_seq_pkg
 R1
 R2
+R23
 R24
-R25
-R3
+R28
 !i10b 1
 !s100 MAIz:c[XmKhnXC=jbk91S2
 I1k>M0=7^H>L1VQTg]7R]n3
@@ -485,9 +527,9 @@ R0
 Xshift_reg_sqr_pkg
 R1
 R2
+R23
 R24
-R25
-R3
+R28
 !i10b 1
 !s100 k1^XhRk>Oe]da3EEET[:A3
 I=ik?2WOi3A1:0ME_d3a<81
@@ -521,25 +563,25 @@ R20
 R21
 R0
 Xshift_reg_test_pkg
-R29
+R32
 R1
 R2
+R22
 R23
 R24
 R25
 R26
 R27
+R33
+R34
+R35
+Z39 DXx4 work 17 shift_reg_env_pkg 0 22 F`Hh30R9`DcE8@BbYJIKc3
+Z40 DXx4 work 17 shift_reg_seq_pkg 0 22 1k>M0=7^H>L1VQTg]7R]n3
 R28
-R30
-R31
-R32
-Z36 DXx4 work 17 shift_reg_env_pkg 0 22 ?;MA63cZAT>[okMPWT6KQ1
-Z37 DXx4 work 17 shift_reg_seq_pkg 0 22 1k>M0=7^H>L1VQTg]7R]n3
-R3
 !i10b 1
 !s100 @3T6<VdRHKA?]o9:nC=Mf3
-I8czMS1JH84bI;ziKPFlcL1
-V8czMS1JH84bI;ziKPFlcL1
+I0;4^IJg=DgTS1_NXfo7i^2
+V0;4^IJg=DgTS1_NXfo7i^2
 S1
 R4
 w1777320214
@@ -574,13 +616,13 @@ R3
 !i10b 1
 !s100 Jd[ZQiHE=EPnR>6HSIW_T2
 IbOZH=Q5UM:In8Tg@el0Nk0
-R22
+R31
 !s105 shift_reg_wrapper_sv_unit
 S1
 R4
 w1777307477
-Z38 8../../VS_code/Session6/Lab6/shift_reg_wrapper.sv
-Z39 F../../VS_code/Session6/Lab6/shift_reg_wrapper.sv
+Z41 8../../VS_code/Session6/Lab6/shift_reg_wrapper.sv
+Z42 F../../VS_code/Session6/Lab6/shift_reg_wrapper.sv
 L0 1
 R17
 r1
@@ -595,7 +637,7 @@ R0
 Xshift_reg_wrapper_sv_unit
 R1
 R2
-R24
+R23
 VVoZ:7FGB7EcCkLHR6NW@@3
 r1
 !s85 0
@@ -607,8 +649,8 @@ IVoZ:7FGB7EcCkLHR6NW@@3
 S1
 R4
 w1777307395
-R38
-R39
+R41
+R42
 L0 1
 R17
 !s108 1777307398.000000
@@ -620,20 +662,20 @@ R0
 vtop
 R1
 R2
+R22
 R23
 R24
 R25
 R26
 R27
-R28
-R30
+R33
+R34
+R35
+R39
+R40
+Z43 DXx4 work 18 shift_reg_test_pkg 0 22 0;4^IJg=DgTS1_NXfo7i^2
+DXx4 work 11 top_sv_unit 0 22 oBH;[6>aRI3:=FJ<Y>X?`0
 R31
-R32
-R36
-R37
-Z40 DXx4 work 18 shift_reg_test_pkg 0 22 8czMS1JH84bI;ziKPFlcL1
-DXx4 work 11 top_sv_unit 0 22 UXXLP@GNA>I<b=jJ5ad262
-R22
 r1
 !s85 0
 31
@@ -643,9 +685,9 @@ IPIQ>OMY6RTJ^WUgaz2>oc1
 !s105 top_sv_unit
 S1
 R4
-Z41 w1777293151
-Z42 8../../VS_code/Session6/Lab6/top.sv
-Z43 F../../VS_code/Session6/Lab6/top.sv
+Z44 w1777293151
+Z45 8../../VS_code/Session6/Lab6/top.sv
+Z46 F../../VS_code/Session6/Lab6/top.sv
 L0 12
 R17
 R18
@@ -657,31 +699,31 @@ R0
 Xtop_sv_unit
 R1
 R2
+R22
 R23
 R24
 R25
 R26
 R27
-R28
-R30
-R31
-R32
-R36
-R37
+R33
+R34
+R35
+R39
 R40
-VUXXLP@GNA>I<b=jJ5ad262
+R43
+VoBH;[6>aRI3:=FJ<Y>X?`0
 r1
 !s85 0
 31
 !i10b 1
 !s100 JOC^AT`AP=lU_OnIS0lHh0
-IUXXLP@GNA>I<b=jJ5ad262
+IoBH;[6>aRI3:=FJ<Y>X?`0
 !i103 1
 S1
 R4
-R41
-R42
-R43
+R44
+R45
+R46
 R5
 R6
 R7

@@ -1,0 +1,9 @@
+../../VS_code/Project_FIFO/Enviroment/FIFO_if.sv
+../../VS_code/Project_FIFO/Enviroment/FIFO.sv
+../../VS_code/Project_FIFO/Enviroment/shared_package.sv
+../../VS_code/Project_FIFO/Enviroment/package_Transaction.sv
+../../VS_code/Project_FIFO/Enviroment/package_Coverage.sv
+../../VS_code/Project_FIFO/Enviroment/package_Scoreboard.sv
+../../VS_code/Project_FIFO/Enviroment/FIFO_monitor.sv
+../../VS_code/Project_FIFO/Enviroment/FIFO_tb.sv
+../../VS_code/Project_FIFO/Enviroment/top.sv
