@@ -8,7 +8,7 @@ import shift_reg_seq_item_pkg::*;
 class shift_scoreboard extends uvm_component;
   `uvm_component_utils(shift_scoreboard)
 
-  uvm_analysis_port #(shift_reg_seq_item) sb_export;
+  uvm_analysis_port #(shift_reg_seq_item) sb_export; // should be actually uvm_analysis_export????
   uvm_tlm_analysis_fifo #(shift_reg_seq_item) sb_fifo;
   shift_reg_seq_item seq_item_sb;
 

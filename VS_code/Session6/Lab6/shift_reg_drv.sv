@@ -17,6 +17,7 @@ class shift_driver extends uvm_driver #(shift_reg_seq_item);
     super.new(name, parent);
   endfunction
 
+//this part should be redundant, we connected the vif in agent?????////////////
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     //shift_cfg = shift_config::type_id::create("shift_cfg"); we handle the object implicitly below to achieve that both objects (this one here and one in test)are pointing to the object: sharing the memory and no copies needed made
@@ -29,6 +30,7 @@ class shift_driver extends uvm_driver #(shift_reg_seq_item);
     super.connect_phase(phase);
     shift_vif = shift_cfg.shift_vif;
   endfunction
+/////////////////////////////////////////////////////////////////////////////////
 
   task run_phase(uvm_phase phase);
     super.run_phase(phase);

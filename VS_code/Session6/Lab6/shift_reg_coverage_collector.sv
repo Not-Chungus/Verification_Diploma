@@ -8,7 +8,7 @@ import shift_reg_seq_item_pkg::*;
 class shift_coverage extends uvm_component;
   `uvm_component_utils(shift_coverage)
 
-  uvm_analysis_port #(shift_reg_seq_item) cov_export;
+  uvm_analysis_port #(shift_reg_seq_item) cov_export;  // should be actually uvm_analysis_export????
   uvm_tlm_analysis_fifo #(shift_reg_seq_item) cov_fifo;
   shift_reg_seq_item seq_item_cov;
 
