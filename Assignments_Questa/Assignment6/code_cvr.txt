@@ -1343,6 +1343,7 @@ Statement Coverage:
 ================================Statement Details================================
 
 Statement Coverage for file ../../VS_code/Session6/Assignment6/ALSU_drv.sv --
+NOTE: The modification timestamp for source file '../../VS_code/Session6/Assignment6/ALSU_drv.sv' has been altered since compilation.
 
     1                                                package ALSU_drv_pkg;
     2                                                import uvm_pkg::*;
@@ -1366,69 +1367,56 @@ Statement Coverage for file ../../VS_code/Session6/Assignment6/ALSU_drv.sv --
     18              1                          1         super.new(name, parent);
     19                                                 endfunction
     20                                               
-    21                                                 function void build_phase(uvm_phase phase);
-    22              1                          1         super.build_phase(phase);
-    23                                                   //ALSU_cfg = ALSU_config::type_id::create("ALSU_cfg"); we handle the object implicitly below to achieve that both objects (this one here and one in test)are pointing to the object: sharing the memory and no copies needed made
-    24                                                   if (!uvm_config_db #(ALSU_config)::get(this, "", "CFG", ALSU_cfg)) begin
-    25              1                    ***0***           `uvm_fatal("build_phase", "Unable to get configuration object")
-    26                                                   end
-    27                                                 endfunction
+    21                                               
+    22              1                          1       task run_phase(uvm_phase phase);
+    23                                                   super.run_phase(phase);
+    24                                                   seq_item_stimulus = ALSU_seq_item::type_id::create("seq_item");
+    25              1                    ***0***     
+    26                                                   forever begin
+    27                                                     seq_item_port.get_next_item(seq_item_stimulus); // I want, waiting for finish | seq_item_port is a predefined data member of the uvm_driver parent class
     28                                               
-    29                                                 function void connect_phase(uvm_phase phase);
-    30              1                          1         super.connect_phase(phase);
-    31              1                          1         ALSU_vif = ALSU_cfg.ALSU_vif;
-    32              1                          1         ALSU_if_golden = ALSU_cfg.ALSU_if_golden;
-    33                                                 endfunction
-    34                                               
-    35                                                 task run_phase(uvm_phase phase);
-    36              1                          1         super.run_phase(phase);
-    37              1                          1         seq_item_stimulus = ALSU_seq_item::type_id::create("seq_item");
-    38                                               
-    39              1                          1         forever begin
-    40              1                      14002           seq_item_port.get_next_item(seq_item_stimulus); // I want, waiting for finish | seq_item_port is a predefined data member of the uvm_driver parent class
-    41                                               
-    42              1                      14001           ALSU_vif.rst = seq_item_stimulus.rst;
-    43              1                      14001           ALSU_vif.cin = seq_item_stimulus.cin; 
-    44              1                      14001           ALSU_vif.red_op_A = seq_item_stimulus.red_op_A; 
-    45              1                      14001           ALSU_vif.red_op_B = seq_item_stimulus.red_op_B;
-    46              1                      14001           ALSU_vif.bypass_A = seq_item_stimulus.bypass_A; 
-    47              1                      14001           ALSU_vif.bypass_B = seq_item_stimulus.bypass_B; 
-    48              1                      14001           ALSU_vif.direction = seq_item_stimulus.direction; 
-    49              1                      14001           ALSU_vif.serial_in = seq_item_stimulus.serial_in; 
-    50              1                      14001           ALSU_vif.opcode = seq_item_stimulus.opcode;
-    51              1                      14001           ALSU_vif.A = seq_item_stimulus.A;
-    52              1                      14001           ALSU_vif.B = seq_item_stimulus.B;
+    29                                                     ALSU_vif.rst = seq_item_stimulus.rst;
+    30              1                          1           ALSU_vif.cin = seq_item_stimulus.cin; 
+    31              1                          1           ALSU_vif.red_op_A = seq_item_stimulus.red_op_A; 
+    32              1                          1           ALSU_vif.red_op_B = seq_item_stimulus.red_op_B;
+    33                                                     ALSU_vif.bypass_A = seq_item_stimulus.bypass_A; 
+    34                                                     ALSU_vif.bypass_B = seq_item_stimulus.bypass_B; 
+    35                                                     ALSU_vif.direction = seq_item_stimulus.direction; 
+    36              1                          1           ALSU_vif.serial_in = seq_item_stimulus.serial_in; 
+    37              1                          1           ALSU_vif.opcode = seq_item_stimulus.opcode;
+    38                                                     ALSU_vif.A = seq_item_stimulus.A;
+    39              1                          1           ALSU_vif.B = seq_item_stimulus.B;
+    40              1                      14002     
+    41                                                     ALSU_if_golden.rst = seq_item_stimulus.rst;
+    42              1                      14001           ALSU_if_golden.cin = seq_item_stimulus.cin; 
+    43              1                      14001           ALSU_if_golden.red_op_A = seq_item_stimulus.red_op_A; 
+    44              1                      14001           ALSU_if_golden.red_op_B = seq_item_stimulus.red_op_B;
+    45              1                      14001           ALSU_if_golden.bypass_A = seq_item_stimulus.bypass_A; 
+    46              1                      14001           ALSU_if_golden.bypass_B = seq_item_stimulus.bypass_B; 
+    47              1                      14001           ALSU_if_golden.direction = seq_item_stimulus.direction; 
+    48              1                      14001           ALSU_if_golden.serial_in = seq_item_stimulus.serial_in; 
+    49              1                      14001           ALSU_if_golden.opcode = seq_item_stimulus.opcode;
+    50              1                      14001           ALSU_if_golden.A = seq_item_stimulus.A;
+    51              1                      14001           ALSU_if_golden.B = seq_item_stimulus.B;
+    52              1                      14001     
     53                                               
-    54              1                      14001           ALSU_if_golden.rst = seq_item_stimulus.rst;
-    55              1                      14001           ALSU_if_golden.cin = seq_item_stimulus.cin; 
-    56              1                      14001           ALSU_if_golden.red_op_A = seq_item_stimulus.red_op_A; 
-    57              1                      14001           ALSU_if_golden.red_op_B = seq_item_stimulus.red_op_B;
-    58              1                      14001           ALSU_if_golden.bypass_A = seq_item_stimulus.bypass_A; 
-    59              1                      14001           ALSU_if_golden.bypass_B = seq_item_stimulus.bypass_B; 
-    60              1                      14001           ALSU_if_golden.direction = seq_item_stimulus.direction; 
-    61              1                      14001           ALSU_if_golden.serial_in = seq_item_stimulus.serial_in; 
-    62              1                      14001           ALSU_if_golden.opcode = seq_item_stimulus.opcode;
-    63              1                      14001           ALSU_if_golden.A = seq_item_stimulus.A;
-    64              1                      14001           ALSU_if_golden.B = seq_item_stimulus.B;
-    65                                               
-    66                                               
-    67              1                      14001           @(negedge ALSU_vif.clk);
-    68              1                      14001           @(negedge ALSU_vif.clk);
-    69              1                      14001           seq_item_port.item_done();
-    70                                                   end
-    71                                                 endtask
-    72                                               
-    73                                               endclass
-    74                                               endpackage
-    75                                               
-    76                                               /*
-    77                                               input clk, cin, rst, red_op_A, red_op_B, bypass_A, bypass_B, direction, serial_in;
-    78                                               input [2:0] opcode;
-    79                                               input signed [2:0] A, B;
-    80                                               
-    81                                               output reg [15:0] leds;
-    82                                               output reg signed [5:0] out;
-    83                                               */
+    54              1                      14001           @(negedge ALSU_vif.clk);
+    55              1                      14001           @(negedge ALSU_vif.clk);
+    56              1                      14001           seq_item_port.item_done();
+    57              1                      14001         end
+    58              1                      14001       endtask
+    59              1                      14001     
+    60              1                      14001     endclass
+    61              1                      14001     endpackage
+    62              1                      14001     
+    63              1                      14001     /*
+    64              1                      14001     input clk, cin, rst, red_op_A, red_op_B, bypass_A, bypass_B, direction, serial_in;
+    65                                               input [2:0] opcode;
+    66                                               input signed [2:0] A, B;
+    67              1                      14001     
+    68              1                      14001     output reg [15:0] leds;
+    69              1                      14001     output reg signed [5:0] out;
+    70                                               */
 
 Branch Coverage:
     Enabled Coverage            Active      Hits    Misses % Covered
@@ -1438,16 +1426,17 @@ Branch Coverage:
 ================================Branch Details================================
 
 Branch Coverage for file ../../VS_code/Session6/Assignment6/ALSU_drv.sv --
+NOTE: The modification timestamp for source file '../../VS_code/Session6/Assignment6/ALSU_drv.sv' has been altered since compilation.
 
 ------------------------------------IF Branch------------------------------------
     24                                         1     Count coming in to IF
-    24              1                    ***0***         if (!uvm_config_db #(ALSU_config)::get(this, "", "CFG", ALSU_cfg)) begin
+    24              1                    ***0***         seq_item_stimulus = ALSU_seq_item::type_id::create("seq_item");
                                                1     All False Count
 Branch totals: 1 hit of 2 branches = 50.0%
 
 ------------------------------------IF Branch------------------------------------
     25                                   ***0***     Count coming in to IF
-    25              1                    ***0***           `uvm_fatal("build_phase", "Unable to get configuration object")
+    25              1                    ***0***     
                                          ***0***     All False Count
 Branch totals: 0 hits of 2 branches = 0.0%
 

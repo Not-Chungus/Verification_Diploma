@@ -18,19 +18,6 @@ class ALSU_driver extends uvm_driver #(ALSU_seq_item);
     super.new(name, parent);
   endfunction
 
-  function void build_phase(uvm_phase phase);
-    super.build_phase(phase);
-    //ALSU_cfg = ALSU_config::type_id::create("ALSU_cfg"); we handle the object implicitly below to achieve that both objects (this one here and one in test)are pointing to the object: sharing the memory and no copies needed made
-    if (!uvm_config_db #(ALSU_config)::get(this, "", "CFG", ALSU_cfg)) begin
-      `uvm_fatal("build_phase", "Unable to get configuration object")
-    end
-  endfunction
-
-  function void connect_phase(uvm_phase phase);
-    super.connect_phase(phase);
-    ALSU_vif = ALSU_cfg.ALSU_vif;
-    ALSU_if_golden = ALSU_cfg.ALSU_if_golden;
-  endfunction
 
   task run_phase(uvm_phase phase);
     super.run_phase(phase);

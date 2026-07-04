@@ -57,10 +57,10 @@
         <instance type=" shift_coverage "> 
            cov 
   
-           <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
+           <export if_type = "uvm_analysis_export" txn_type = "anonymous"> 
               cov_export 
               <connection>  uvm_test_top.env.cov.cov_fifo.analysis_export  </connection> 
-           </port> 
+           </export> 
   
            <instance type=" uvm_tlm_analysis_fifo #(T) "> 
               cov_fifo 
@@ -92,10 +92,10 @@
         <instance type=" shift_scoreboard "> 
            sb 
   
-           <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
+           <export if_type = "uvm_analysis_export" txn_type = "anonymous"> 
               sb_export 
               <connection>  uvm_test_top.env.sb.sb_fifo.analysis_export  </connection> 
-           </port> 
+           </export> 
   
            <instance type=" uvm_tlm_analysis_fifo #(T) "> 
               sb_fifo 

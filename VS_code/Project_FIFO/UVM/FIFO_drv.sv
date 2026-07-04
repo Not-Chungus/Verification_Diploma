@@ -17,18 +17,6 @@ class FIFO_driver extends uvm_driver #(FIFO_seq_item);
     super.new(name, parent);
   endfunction
 
-  function void build_phase(uvm_phase phase);
-    super.build_phase(phase);
-    //FIFO_cfg = FIFO_config::type_id::create("FIFO_cfg"); we handle the object implicitly below to achieve that both objects (this one here and one in test)are pointing to the object: sharing the memory and no copies needed made
-    if (!uvm_config_db #(FIFO_config)::get(this, "", "CFG", FIFO_cfg)) begin
-      `uvm_fatal("build_phase", "Unable to get configuration object")
-    end
-  endfunction
-
-  function void connect_phase(uvm_phase phase);
-    super.connect_phase(phase);
-    FIFO_vif = FIFO_cfg.FIFO_vif;
-  endfunction
 
   task run_phase(uvm_phase phase);
     super.run_phase(phase);
