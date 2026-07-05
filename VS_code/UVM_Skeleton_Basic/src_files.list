@@ -1,0 +1,16 @@
+../../VS_code/Project_FIFO/UVM/shared_package.sv
+../../VS_code/Project_FIFO/UVM/FIFO_if.sv
+../../VS_code/Project_FIFO/UVM/FIFO.sv
+../../VS_code/Project_FIFO/UVM/FIFO_sva.sv
+../../VS_code/Project_FIFO/UVM/FIFO_seq_item.sv
+../../VS_code/Project_FIFO/UVM/FIFO_sequencer.sv
+../../VS_code/Project_FIFO/UVM/FIFO_sequences.sv
+../../VS_code/Project_FIFO/UVM/FIFO_cfg.sv
+../../VS_code/Project_FIFO/UVM/FIFO_monitor.sv
+../../VS_code/Project_FIFO/UVM/FIFO_drv.sv
+../../VS_code/Project_FIFO/UVM/FIFO_agent.sv
+../../VS_code/Project_FIFO/UVM/FIFO_coverage_collector.sv
+../../VS_code/Project_FIFO/UVM/FIFO_scoreboard.sv
+../../VS_code/Project_FIFO/UVM/FIFO_env.sv
+../../VS_code/Project_FIFO/UVM/FIFO_test.sv
+../../VS_code/Project_FIFO/UVM/top.sv
