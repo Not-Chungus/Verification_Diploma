@@ -1,0 +1,8 @@
+# Sources that must be compiled before the DUT.
+# FIFO.sv imports shared_pkg and uses FIFO_if in its module port.
+
++incdir+./pkg
++incdir+./tb
+
+pkg/shared_package.sv
+tb/FIFO_if.sv

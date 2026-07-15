@@ -1,0 +1,76 @@
+# vsim -coverage -L mtiUvm -c work.tb_top "+UVM_TESTNAME=fifo_write_only_test" -sv_seed 3 "+SEED=3" "+UVM_VERBOSITY=UVM_MEDIUM" "+UVM_NO_RELNOTES" -l build/logs/fifo_write_only_test_seed3.log -do "coverage save -onexit {build/coverage/cov_fifo_write_only_test_3.ucdb};  run -all; quit -f" 
+# Start time: 23:48:36 on Jul 15,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.6c win64 Jul 26 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.FIFO_if(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.shared_pkg(fast)
+# Loading work.FIFO_seq_item_pkg(fast)
+# Loading work.FIFO_seq_pkg(fast)
+# Loading work.FIFO_coverage_pkg(fast)
+# Loading work.FIFO_scoreboard_pkg(fast)
+# Loading work.FIFO_monitor_pkg(fast)
+# Loading work.FIFO_sqr_pkg(fast)
+# Loading work.FIFO_cfg_pkg(fast)
+# Loading work.FIFO_drv_pkg(fast)
+# Loading work.FIFO_agent_pkg(fast)
+# Loading work.FIFO_env_pkg(fast)
+# Loading work.FIFO_test_pkg(fast)
+# Loading work.tb_top(fast)
+# Loading work.FIFO_if(fast)
+# Loading work.FIFO(fast)
+# Loading work.FIFO_sva(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading F:/IEEE_Digital/Installation/questasim64_10.6c/uvm-1.1d\win64\uvm_dpi.dll
+# coverage save -onexit {build/coverage/cov_fifo_write_only_test_3.ucdb}
+#   run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test fifo_write_only_test...
+# UVM_INFO ./tests/FIFO_base_test.sv(28) @ 0: uvm_test_top [fifo_write_only_test] Applying FIFO reset
+# UVM_INFO ./tests/FIFO_base_test.sv(30) @ 30000: uvm_test_top [fifo_write_only_test] FIFO reset released
+# UVM_INFO ./tests/FIFO_base_test.sv(44) @ 30000: uvm_test_top [fifo_write_only_test] Write-only sequence started
+# UVM_INFO ./tests/FIFO_base_test.sv(46) @ 1030000: uvm_test_top [fifo_write_only_test] Write-only sequence completed
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1030000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO env/FIFO_scoreboard.sv(158) @ 1030000: uvm_test_top.env.sb [report_phase] correct_count:         103
+# UVM_INFO env/FIFO_scoreboard.sv(159) @ 1030000: uvm_test_top.env.sb [report_phase] error_count:           0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   10
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [fifo_write_only_test]     4
+# [report_phase]     2
+# ** Note: $finish    : F:/IEEE_Digital/Installation/questasim64_10.6c/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1030 ns  Iteration: 61  Instance: /tb_top
+# Saving coverage database on exit...
+# End time: 23:48:39 on Jul 15,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

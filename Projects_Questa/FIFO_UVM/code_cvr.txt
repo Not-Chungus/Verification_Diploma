@@ -895,12 +895,11 @@ Toggle Coverage      =      100.0% (0 of 0 bins)
 Statement Coverage:
     Enabled Coverage            Active      Hits    Misses % Covered
     ----------------            ------      ----    ------ ---------
-    Stmts                           18        15         3      83.3
+    Stmts                           14        12         2      85.7
 
 ================================Statement Details================================
 
 Statement Coverage for file ../../VS_code/Project_FIFO/UVM/FIFO_drv.sv --
-NOTE: The modification timestamp for source file '../../VS_code/Project_FIFO/UVM/FIFO_drv.sv' has been altered since compilation.
 
     1                                                package FIFO_drv_pkg;
     2                                                import uvm_pkg::*;
@@ -924,55 +923,36 @@ NOTE: The modification timestamp for source file '../../VS_code/Project_FIFO/UVM
     18                                                 endfunction
     19                                               
     20                                               
-    21              1                          1       task run_phase(uvm_phase phase);
-    22                                                   super.run_phase(phase);
-    23                                                   seq_item_stimulus = FIFO_seq_item::type_id::create("seq_item");
-    24              1                    ***0***     
-    25                                                   forever begin
-    26                                                     seq_item_port.get_next_item(seq_item_stimulus); // I want, waiting for finish | seq_item_port is a predefined data member of the uvm_driver parent class
+    21                                                 task run_phase(uvm_phase phase);
+    22              1                          1         super.run_phase(phase);
+    23              1                          1         seq_item_stimulus = FIFO_seq_item::type_id::create("seq_item");
+    24                                               
+    25              1                          1         forever begin
+    26              1                        402           seq_item_port.get_next_item(seq_item_stimulus); // I want, waiting for finish | seq_item_port is a predefined data member of the uvm_driver parent class
     27                                               
-    28                                                     FIFO_vif.rst_n = seq_item_stimulus.rst_n;
-    29              1                          1           FIFO_vif.data_in =  seq_item_stimulus.data_in; 
-    30              1                          1           FIFO_vif.wr_en = seq_item_stimulus.wr_en; 
-    31                                                     FIFO_vif.rd_en = seq_item_stimulus.rd_en; 
+    28              1                        401           FIFO_vif.rst_n = seq_item_stimulus.rst_n;
+    29              1                        401           FIFO_vif.data_in =  seq_item_stimulus.data_in; 
+    30              1                        401           FIFO_vif.wr_en = seq_item_stimulus.wr_en; 
+    31              1                        401           FIFO_vif.rd_en = seq_item_stimulus.rd_en; 
     32                                                 
-    33                                                       @(negedge FIFO_vif.clk);
-    34              1                          1     
-    35              1                          1           seq_item_port.item_done();
+    33              1                        401             @(negedge FIFO_vif.clk);
+    34                                               
+    35              1                        401           seq_item_port.item_done();
     36                                                   end
-    37              1                          1       endtask
-    38              1                        402     
+    37                                                 endtask
+    38                                               
     39                                               endclass
-    40              1                        401     endpackage
-    41              1                        401     
-    42              1                        401     /*
-    43              1                        401     input clk, reset, serial_in, direction, mode;
+    40                                               endpackage
+    41                                               
+    42                                               /*
+    43                                               input clk, reset, serial_in, direction, mode;
     44                                               input [5:0] datain;
-    45              1                        401     output reg [5:0] dataout;*/
+    45                                               output reg [5:0] dataout;*/
 
 Branch Coverage:
     Enabled Coverage            Active      Hits    Misses % Covered
     ----------------            ------      ----    ------ ---------
-    Branches                         4         1         3      25.0
-
-================================Branch Details================================
-
-Branch Coverage for file ../../VS_code/Project_FIFO/UVM/FIFO_drv.sv --
-NOTE: The modification timestamp for source file '../../VS_code/Project_FIFO/UVM/FIFO_drv.sv' has been altered since compilation.
-
-------------------------------------IF Branch------------------------------------
-    23                                         1     Count coming in to IF
-    23              1                    ***0***         seq_item_stimulus = FIFO_seq_item::type_id::create("seq_item");
-                                               1     All False Count
-Branch totals: 1 hit of 2 branches = 50.0%
-
-------------------------------------IF Branch------------------------------------
-    24                                   ***0***     Count coming in to IF
-    24              1                    ***0***     
-                                         ***0***     All False Count
-Branch totals: 0 hits of 2 branches = 0.0%
-
-
+    Branches                         0         0         0     100.0
 Condition Coverage:
     Enabled Coverage            Active   Covered    Misses % Covered
     ----------------            ------      ----    ------ ---------
@@ -2880,5 +2860,5 @@ Name                 File(Line)           Failure Pass
 /FIFO_seq_pkg/FIFO_main_seq_2/body/#ublk#225236087#124/immed__128
                      ../../VS_code/Project_FIFO/UVM/FIFO_sequences.sv(128)       0     1
 
-Total Coverage By File (code coverage only, filtered view): 77.5%
+Total Coverage By File (code coverage only, filtered view): 77.7%
 

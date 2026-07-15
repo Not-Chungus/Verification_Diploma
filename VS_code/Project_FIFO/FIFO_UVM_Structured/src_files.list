@@ -1,0 +1,30 @@
+# Verification source file list
+#
+# The RTL is intentionally NOT listed here. The Makefile compiles DUT_SRCS
+# separately, allowing the DUT path to be overridden from the make command line.
+# shared_package.sv and FIFO_if.sv are compiled earlier through
+# harness_files.list because the DUT directly depends on them.
+
++incdir+./pkg
++incdir+./tb
++incdir+./env
++incdir+./env/agent
++incdir+./sequences
++incdir+./tests
++incdir+./assertions
+
+env/agent/FIFO_cfg.sv
+env/agent/FIFO_seq_item.sv
+env/agent/FIFO_sequencer.sv
+env/agent/FIFO_driver.sv
+env/agent/FIFO_monitor.sv
+env/agent/FIFO_agent.sv
+
+env/FIFO_coverage_collector.sv
+env/FIFO_scoreboard.sv
+env/FIFO_env.sv
+
+sequences/FIFO_sequences.sv
+tests/FIFO_test_pkg.sv
+assertions/FIFO_sva.sv
+tb/tb_top.sv
