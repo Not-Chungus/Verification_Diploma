@@ -6,6 +6,9 @@ class fifo_read_only_test extends FIFO_base_test;
     super.new(name, parent);
   endfunction
 
+  //No need for build phase description or env preperation or config to set
+  //Inherited apply_reset() task
+
   task run_phase(uvm_phase phase);
     FIFO_rd_only_seq seq;
 

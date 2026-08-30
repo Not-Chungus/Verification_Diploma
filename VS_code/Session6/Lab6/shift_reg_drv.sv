@@ -23,16 +23,18 @@ class shift_driver extends uvm_driver #(shift_reg_seq_item);
     super.run_phase(phase);
     seq_item_stimulus = shift_reg_seq_item::type_id::create("seq_item");
 
-    forever begin
-      seq_item_port.get_next_item(seq_item_stimulus); // I want, waiting for finish | seq_item_port is a predefined data member of the uvm_driver parent class
-
+    forever begin // seq_item_port is a predefined data member of the uvm_driver parent class
+      seq_item_port.get_next_item(seq_item_stimulus); // I want, waiting for seq_iem to be set
+      
+      //after finish of seq_item by sequence, drive:
       shift_vif.reset = seq_item_stimulus.reset;
       shift_vif.serial_in = seq_item_stimulus.serial_in;
       shift_vif.direction = direction_e'(seq_item_stimulus.direction);
       shift_vif.mode = mode_e'(seq_item_stimulus.mode);
       shift_vif.datain = seq_item_stimulus.datain;
       @(negedge shift_vif.clk);
-      seq_item_port.item_done();
+      seq_item_port.item_done(); //Thanks, sequence
+      //No waiting
     end
   endtask
 

@@ -28,6 +28,8 @@ class FIFO_monitor extends uvm_monitor;
 
     forever begin
       rsp_seq_item = FIFO_seq_item::type_id::create("rsp_seq_item");
+      //should be modified to have inputs sampled on active "posedge"
+      //and the outputs on the "negedge" after settling for a combinational operation??
       @(negedge FIFO_vif.clk); //driver drives interface and the virtual interface now has the corrct output calculated 
       
       rsp_seq_item.rst_n = FIFO_vif.rst_n; //old set by driver

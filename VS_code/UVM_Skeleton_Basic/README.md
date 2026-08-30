@@ -1,4 +1,4 @@
--No wrapper for a .v design
+-No wrapper if the design is in .v
 
 -Recommended order to adjust enviroment:
 

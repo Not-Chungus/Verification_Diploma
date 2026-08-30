@@ -16,13 +16,15 @@ class shift_reg_reset_seq extends uvm_sequence #(shift_reg_seq_item);
   task body;
     seq_item = shift_reg_seq_item::type_id::create("seq_item");
     
-    start_item(seq_item);
+    start_item(seq_item); //I am ready and waiting
+    //after driver requests:   get_next_item();
     seq_item.reset = 1;
     seq_item.serial_in = 0;
     seq_item.direction = direction_e'(0); //direction_e'(0)
     seq_item.mode = mode_e'(0);  //mode_e'(0)
     seq_item.datain = 6'b00_0000;
-    finish_item(seq_item);
+    finish_item(seq_item);//sequence item ready for driver
+    //waiting for driver to drive to continue
   endtask
 
 endclass
